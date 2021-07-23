@@ -1,0 +1,20 @@
+.btn-mob {
+  @apply cursor-pointer text-white bg-bright-purp-600 hover:bg-bright-purp-600 shadow-xl px-2 py-1 inline-block rounded;
+  width: 160px;
+}
+
+.btn-3 {
+  @apply cursor-pointer text-white bg-bright-purp-600 hover:bg-bright-purp-600 shadow-xl px-10 py-1 pr-10 inline-block rounded;
+  min-width: 170px;
+}
+
+.btn-4 {
+  @apply cursor-pointer text-white shadow-xl px-0 py-1 pr-5 text-center inline-block rounded;
+  width: 156px;
+}
+
+
+.fa-home {
+  color: $pink;
+}
+
