@@ -39,7 +39,6 @@
   .bg-grey {
     background-color: #f5f5f5;
   }
-  
 
   .bg-dark-yellow {
     background-color: #f0c42e;
@@ -52,8 +51,6 @@
   .w-16-1 {
     width: 16%;
   }
-
-
 
   .bg-bright-purp-600 {
     --tw-bg-opacity: 1;
@@ -152,13 +149,20 @@
     color: #94268F;
   }
 
-
   .bg-orange {
     background-color: #F37121;
   }
 
   .placeholder-blue::placeholder {
     color: #5592D9;
+  }
+
+  .w-70 {
+    width: 70%;
+  }
+
+  .w-30 {
+    width: 30%;
   }
 
 }

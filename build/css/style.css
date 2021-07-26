@@ -121,6 +121,12 @@
   .placeholder-blue::placeholder {
     color: #5592D9;
   }
+  .w-70 {
+    width: 70%;
+  }
+  .w-30 {
+    width: 30%;
+  }
 }
 
 @font-face {
@@ -225,6 +231,57 @@ body {
   line-height: 54px;
 }
 
+.catalog .card {
+  height: 850px;
+}
+
+.map {
+  height: 650px;
+}
+
+.map #wrapMap {
+  position: relative;
+  cursor: help;
+  overflow: hidden;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #cccccc;
+  border-image: initial;
+}
+
+.map .mapTitle {
+  position: absolute;
+  z-index: 1000;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 5px;
+  display: none;
+  padding: 5px 20px;
+  border-radius: 5px;
+  background: white;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #cccccc;
+  border-image: initial;
+}
+
+.popular .card {
+  height: 470px;
+}
+
+.popular .card-2 {
+  height: 460px;
+}
+
+.popular .bg-cards {
+  background: url("../img/greyder.png") no-repeat left top;
+  background-size: cover;
+  width: 117%;
+  height: 460px;
+}
+
+.question form {
+  width: 300px;
+}
+
 .block-rents .round-digit {
   width: 141px;
   height: 141px;
@@ -252,6 +309,25 @@ body {
   color: #333333;
 }
 
+.block-rents .bg-image {
+  background: url(../img/bg-image.jpg) no-repeat center 35%;
+  height: 700px;
+}
+
+.block-rents .line-title {
+  position: absolute;
+  width: 580px;
+  height: 15px;
+  bottom: 45px;
+  left: 0;
+  z-index: 9;
+}
+
+.block-rents span {
+  position: relative;
+  z-index: 20;
+}
+
 .block-service .line-title {
   position: absolute;
   width: 580px;
@@ -261,139 +337,16 @@ body {
   z-index: 9;
 }
 
-.footer .title {
-  font-family: "ArialBold", sans-serif;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 15px;
-  line-height: 20px;
-  color: #FFFFFF;
-  padding-bottom: .5rem;
-  margin-bottom: .5rem;
-}
-
-.footer p {
-  font-family: "ArialRegular", sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 12px;
-  line-height: 20px;
-  color: #C5D7EC;
-}
-
-.footer .menu-title {
-  font-family: "ArialRegular", sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 12px;
-  line-height: 14px;
-  color: #C5D7EC;
-}
-
-.footer .services {
-  width: 25%;
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
-  .footer .services {
-    width: 33%;
-    padding-left: 0px;
-    padding-right: 0px;
-  }
-}
-
-@media (min-width: 480px) and (max-width: 767px) {
-  .footer .services {
-    display: none;
-  }
-}
-
-@media (min-width: 480px) and (max-width: 767px) {
-  .footer .times {
-    display: none;
-  }
-}
-
-.footer .menu-title,
-.footer .contacts-footer,
-.footer .times {
-  width: 25%;
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
-  .footer .menu-title,
-  .footer .contacts-footer,
-  .footer .times {
-    width: 33%;
-    padding-left: .5rem;
-    padding-right: .5rem;
-  }
-}
-
-@media (min-width: 480px) and (max-width: 767px) {
-  .footer .menu-title,
-  .footer .contacts-footer,
-  .footer .times {
-    width: auto;
-  }
-}
-
-@media (max-width: 480px) {
-  .footer .menu-title,
-  .footer .contacts-footer,
-  .footer .times {
-    width: 100%;
-  }
-}
-
-.footer .contacts-footer .phone {
-  font-family: "ArialBold", sans-serif;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 18px;
-  color: #C5D7EC;
-}
-
-.footer .contacts-footer .phone-title {
-  font-family: "ArialRegular", sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 8px;
-  line-height: 8px;
-  color: #C5D7EC;
-}
-
-.footer .manager {
-  font-family: "ArialRegular", sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 12px;
-  line-height: 14px;
-  color: #C5D7EC;
-}
-
-.footer .times {
-  font-family: "ArialRegular", sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 12px;
-  line-height: 20px;
-  color: #C5D7EC;
-}
-
 .footer .sub-footer {
-  background-color: #132233;
+  background-color: #ffffff;
 }
 
-@media (max-width: 767px) {
-  .footer .sub-footer {
-    background-color: #173152;
-  }
+.footer img {
+  width: 188px;
+}
+
+.footer .border-top-footer {
+  border-top: 1px solid #f0c42e;
 }
 
 header .block-header {
