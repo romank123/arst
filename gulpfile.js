@@ -126,13 +126,9 @@ gulp.task('dev_styles', () => {
 					darkMode: false,
 					theme: {
 						screens: {
-							'2sm': '425px',
-							// => @media (min-width: 640px) { ... }
-							'sm': '640px',
-							'md': '768px',
-							'lg': '1024px',
-							'xl': '1280px',
-							'2xl': '1536px',
+							'sm': {'min': '0px'},
+							'md': {'min': '768px'},
+							'lg': {'min': '1290px'},
 						},
 						fontFamily: {
 							'MontserratBlack': ['"MontserratBlack"','sans-serif'],

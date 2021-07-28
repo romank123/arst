@@ -27,68 +27,103 @@
 <!--header-->
 <header>
     <div class="container mx-auto">
-
         <div class="flex items-center justify-between py-2">
             <img class="logo" src="img/logo.svg" alt="">
-            <div class="flex flex-col block-header">
-                <div class="py-3.5 adress flex justify-between font-MontserratMedium uppercase text-base text-dark-grey">
-                    <div>
-                        <i class="fa fa-map-marker" aria-hidden="true"></i>                       
-                        <span>г. Краснодар, ул. советская 12</span>
+            <div class="pl-10 xl:pl-0 flex flex-col block-header">
+                <div class="hidden md:flex py-3.5 adress justify-end lg:justify-between font-MontserratMedium uppercase text-xs lg:text-base text-dark-grey">
+
+                    <div class="flex items-baseline hidden lg:flex">
+                        <i class="fa fa-lg fa-map-marker pr-2" aria-hidden="true"></i>
+                        <span class="">г. Краснодар, ул. советская 12</span>
                     </div>
-                    <div>
-                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                    <div class="pr-10 lg:pr-0 flex items-baseline">
+                        <i class="fa fa-lg fa-envelope" aria-hidden="true"></i>
                         <span>info.arst@mail.ru</span>
                     </div>
-                    <div>
-                        <i class="fa fa-phone" aria-hidden="true"></i>
+                    <div class="flex items-center">
+                        <i class="fa fa-lg fa-phone" aria-hidden="true"></i>
                         <span>тел: 8 800 987 65 43</span>
                     </div>
+
                 </div>
 
-                <div class="flex justify-between items-center py-3.5">
+                <div class="hidden md:flex justify-end lg:justify-between items-center py-3.5">
                     <div class="menu menu-width">
-                        <ul class="flex justify-between text-brownish-grey text-base">
+                        <ul class="flex justify-between text-brownish-grey font-MontserratRegular text-base">
                             <li><a href="#">Каталог</a></li>
                             <li><a href="#">Заказчикам</a></li>
                             <li><a href="#">Владельцам</a></li>
                             <li><a href="#">Контакты</a></li>
                         </ul>
                     </div>
-                    <a class="btn-1 text-dark-grey font-MontserratBold" href="#">заказать звонок</a>
+                    <a class="hidden lg:block btn-1 text-dark-grey font-MontserratBold" href="#">заказать звонок</a>
+                </div>
+            </div>
+            <!--burger menu-->
+            <div class="flex md:hidden relative menu-mob">
+                <div class="burger">
+                    <span></span>
+                </div>
+                <div class="menu_mob">
+                    <div class="w-full flex justify-center">
+                        <div class="flex flex-col">
+                            <ul class="items-start flex flex-col justify-between text-brownish-grey font-MontserratRegular text-xl mb-4">
+                                <li class="py-3"><a href="#">Каталог</a></li>
+                                <li class="py-3"><a href="#">Заказчикам</a></li>
+                                <li class="py-3"><a href="#">Владельцам</a></li>
+                                <li class="py-3"><a href="#">Контакты</a></li>
+                            </ul>
+
+                            <div class="flex flex-col font-MontserratMedium uppercase 2sm:text-base text-sm text-dark-grey">
+                                <div class="flex items-baseline py-3">
+                                    <i class="fa fa-lg fa-map-marker pr-4" aria-hidden="true"></i>
+                                    <span class="">г. Краснодар, ул. советская 12</span>
+                                </div>
+                                <div class="flex items-baseline py-3">
+                                    <i class="fa fa-lg fa-envelope  pr-2" aria-hidden="true"></i>
+                                    <span>info.arst@mail.ru</span>
+                                </div>
+                                <div class="flex items-center py-3">
+                                    <i class="fa fa-lg fa-phone  pr-2" aria-hidden="true"></i>
+                                    <span>тел: 8 800 987 65 43</span>
+                                </div>
+                            </div>
+                           <a class="btn-1 text-dark-grey font-MontserratBold text-center" href="#">заказать звонок</a>
+
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </header>
-
 <!--main banner-->
 <section class="main-banner">
     <div class="container-fluid bg-grey">
-        <div class="container-3xl relative mx-auto">
-            <div class="container mx-auto">
-                <div class="flex flex-row items-center justify-start">
-                    <div class="w-2/5">
+        <div class="container-3xl relative mx-auto bg-image">
+            <div class="container h-full md:w-full mx-auto pt-0 2sm:pt-24 sm:pt-52 md:pt-0">
 
-                        <div class="relative">
+                <div class="flex h-full flex-row md:items-center items-end justify-center md:justify-start">
 
+                    <div class="xl:w-1/2 md:w-3/5 w-full flex flex-col items-center md:items-start">
+
+                        <div class="relative w-full flex justify-center">
                             <span class="absolute font-MontserratBlack text-dark-grey-2 abs-text uppercase text-base"> Надёжная аренда для вас</span>
-
                             <div class="line-title bg-dark-yellow"></div>
 
-                            <span class="relative z-10 font-MontserratBold text-7xl leading-tight">Аренда спецтехники для вашего бизнеса</span>
+                            <span class="main-title mx-auto relative z-10 font-MontserratBold text-16 md:text-dark-grey text-54 sm:text-54 lg:text-7xl leading-tight ">Аренда спецтехники <br> для вашего бизнеса</span>
 
 
                         </div>
-                        <p class="text-light-grey text-xl my-5">Очевидно, что эксимер спонтанно стабилизирует
+                        <p class="hidden md:block subtitle text-dark-grey-2 text-xl my-5">Очевидно, что эксимер спонтанно стабилизирует
                             наносекундный гамма-квант. Взвесь,
                             вследствие квантового характера явления, наблюдаема. Тело случайно.</p>
 
-                        <a class="btn-2 uppercase font-MontserratBold my-5 text-base" href="#">заказать технику</a>
+                        <a class="btn-1 w-9/12 md:w-auto uppercase font-MontserratBold my-5 text-base text-center" href="#">заказать технику</a>
                     </div>
 
-                    <div class="w-1/2 bg-image">
-                        <img class="absolute right-0" src="img/lib.png" alt="">
+                    <div class="hidden md:flex w-1/2 ">
+<!--                        <img class="absolute right-0" src="img/lib.png" alt="">-->
                     </div>
                 </div>
             </div>
@@ -101,16 +136,16 @@
 </section>
 <!--section block-service-->
 <section class="block-service">
-    <div class="container mx-auto py-10 border-b-2">
-        <div class="flex items-center">
-            <div class="w-1/2 relative">
-                <span class="relative z-10 font-MontserratBold text-5xl leading-tight">АРСТ - это удобный <br>
+    <div class="container px-0 mx-auto py-10 border-b-2">
+        <div class="flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 w-full relative">
+                <span class="relative z-10 font-MontserratBold text-35 md:text-33 lg:text-53 lg:leading-tight md:leading-tight leading-normal">АРСТ - это удобный <br>
 и надёжный сервис
 аренды спецтехники</span>
                 <div class="line-title bg-dark-yellow"></div>
             </div>
-            <div class="w-1/2">
-                <p class="font-MontserratRegular text-light-grey text-xl">Зачем содержать свой парк, если можно иметь доступ
+            <div class="md:w-1/2 w-full">
+                <p class="font-MontserratRegular text-light-grey mdtext-xl text-base md:text-sm lg:text-xl">Зачем содержать свой парк, если можно иметь доступ
                     к 7 000 единицам техники, которые не нужно обслуживать, заправлять, и держать в штате машиниста.
                     <br> <br>
                     В нашем сервисе вы платите только за часы аренды технки.
@@ -121,32 +156,31 @@
 </section>
 <!--section 4-blocks-->
 <section class="four-blocks">
-    <div class="container mx-auto my-16">
-        <div class="flex justify-between">
-
+    <div class="container mx-auto my-8">
+        <div class="grid grid-cols-1 2sm:grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
             <!--block-1-->
-            <div class="w-16-1">
+            <div class="mx-auto lg:px-8">
                 <span class="font-MontserratBold text-2xl text-dark-grey bg-image pl-16">Клиентов</span>
                 <p class="pt-6 font-MontserratMedium text-base text-light-grey leading-7">Более 400 корпоративных
                     клиентов заказывают
                     технику у нас.</p>
             </div>
             <!--block-2-->
-            <div class="w-16-1">
+            <div class="mx-auto lg:px-8">
                 <span class="font-MontserratBold text-2xl text-dark-grey bg-image-2 pl-16">Безопасность</span>
                 <p class="pt-6 font-MontserratMedium text-base text-light-grey leading-7">Более 400 корпоративных
                     клиентов заказывают
                     технику у нас.</p>
             </div>
             <!--block-3-->
-            <div class="w-16-1">
+            <div class="mx-auto lg:px-8">
                 <span class="font-MontserratBold text-2xl text-dark-grey bg-image-3 pl-16">Спецтехника</span>
                 <p class="pt-6 font-MontserratMedium text-base text-light-grey leading-7">Более 400 корпоративных
                     клиентов заказывают
                     технику у нас.</p>
             </div>
             <!--block-4-->
-            <div class="w-16-1">
+            <div class="mx-auto lg:px-8">
                 <span class="font-MontserratBold text-2xl text-dark-grey bg-image-4 pl-16">Нам 12 лет</span>
                 <p class="pt-6 font-MontserratMedium text-base text-light-grey leading-7">Более 400 корпоративных
                     клиентов заказывают
@@ -159,43 +193,41 @@
 <section class="block-rents">
     <div class="container-fluid bg-dark-grey">
         <div class="container mx-auto">
-            <p class="text-dark-grey text-center font-MontserratSemiBold text-5xl pt-16">Арендуйте технику в <span
-                    class="text-dark-yellow">3 простых шага</span></p>
-
-            <div class="pt-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5">
+            <p class="text-dark-grey text-center font-MontserratSemiBold text-32 md:text-4xl lg:text-52 pt-16">Арендуйте
+                технику в <span
+                        class="text-dark-yellow pl-4 sm:pl-0">3 простых шага</span></p>
+            <div class="pt-10 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5">
                 <!--Card 1-->
-                <div class="card cursor-pointer text-center rounded-xl bg-white overflow-hidden shadow-lg py-10 px-2">
+                <div class="card mx-auto cursor-pointer text-center rounded-xl bg-white overflow-hidden shadow-lg py-10 px-2">
                     <div class="mx-auto round-digit font-MontserratSemiBold text-4xl">
                         01
                     </div>
                     <div class="pt-8">
-                        <div class="font-MontserratMedium text-3xl title mb-2">Аренда</div>
+                        <div class="font-MontserratMedium text-28 lg:text-32 md:text-lg title mb-2">Аренда</div>
                         <p class="font-MontserratRegular text-light-grey text-gray-700 text-base">
                             Описание первого шага, описание первого шага, описание первого шага, описание паервого шага
                         </p>
                     </div>
                 </div>
-
                 <!--Card 2-->
-                <div class="card cursor-pointer text-center rounded-xl bg-white overflow-hidden shadow-lg py-10 px-2">
+                <div class="card mx-auto cursor-pointer text-center rounded-xl bg-white overflow-hidden shadow-lg py-10 px-2">
                     <div class="mx-auto round-digit font-MontserratSemiBold text-4xl">
                         02
                     </div>
                     <div class="pt-8">
-                        <div class="font-MontserratMedium text-3xl title mb-2">Оплата</div>
+                        <div class="font-MontserratMedium text-28 lg:text-32 md:text-lg title mb-2">Оплата</div>
                         <p class="font-MontserratRegular text-light-grey text-gray-700 text-base">
                             Описание второго шага, описание второго шага, описание второго шага, описание второго шага
                         </p>
                     </div>
                 </div>
-
                 <!--Card 3-->
-                <div class="card cursor-pointer text-center rounded-xl bg-white overflow-hidden shadow-lg py-10 px-2">
+                <div class="card mx-auto cursor-pointer text-center rounded-xl bg-white overflow-hidden shadow-lg py-10 px-2">
                     <div class="mx-auto round-digit font-MontserratSemiBold text-4xl">
                         03
                     </div>
                     <div class="pt-8">
-                        <div class="font-MontserratMedium text-3xl title mb-2">Безопасность</div>
+                        <div class="font-MontserratMedium text-28 lg:text-32 md:text-lg title mb-2">Безопасность</div>
                         <p class="font-MontserratRegular text-light-grey text-gray-700 text-base">
                             Описание третьего шага, описание третьего шага, описание третьего шага, описание третьего
                             шага
@@ -205,12 +237,15 @@
             </div>
         </div>
         <div class="bg-image mt-16">
-            <div class="container mx-auto py-10 flex h-full relative">
+            <div class="container px-0 mx-auto py-10 flex h-full relative justify-center items-center">
+                <div class="relative self-center md:self-end title-block">
+                    <p class="font-MontserratBold text-white lg:text-7xl md:text-56 text-43 leading-tight">
+                        <span class="lg:block inline-block">На нашем сайте</span> вы можете арендовать <span class="pr-7 md:pr-0">спецтехнику</span> за 6 минут</p>
+                    <div class="line-title  bg-dark-yellow">
+                </div>
 
-                <span class="font-MontserratBold text-white text-7xl self-end leading-tight">На нашем сайте <br> вы можете арендовать спецтехнику за 6 минут</span>
-                <div class="line-title  bg-dark-yellow"></div>
+                </div>
             </div>
-
         </div>
     </div>
 </section>
@@ -218,80 +253,121 @@
 <section class="popular">
     <div class="container-fluid  bg-dark-grey">
         <div class="container mx-auto pb-16">
-            <p class="text-dark-grey text-center font-MontserratSemiBold text-5xl pt-16">Самые популярные <span
-                    class="text-dark-yellow">предложения</span></p>
+            <p class="text-dark-grey text-center font-MontserratSemiBold lg:text-52 md:text-4xl text-32 leading-none pt-16">
+                Самые популярные <span
+                    class="text-dark-yellow leading-none">предложения</span></p>
+
             <div class="pt-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-5">
                 <!--Card 1-->
-                <div class="card cursor-pointer text-center rounded-xl bg-white overflow-hidden shadow-lg py-10 px-16 flex flex-col">
-                    <div class="flex flex-col flex-grow justify-between">
-                        <div>
-                            <div class="py-5 uppercase mx-auto round-digit font-MontserratBlack text-base text-dark-grey-2">
+                <div class="card cursor-pointer text-center rounded-xl bg-white overflow-hidden shadow-lg py-10 px-7 md:px-5 lg:px-16 flex flex-col justify-between h-full">
+                    <div class="flex flex-col h-full justify-start">
+                        <div class="">
+                            <div class="md:py-5 uppercase mx-auto round-digit font-MontserratBlack text-base text-dark-grey-2">
                                 арендовать технику сейчас
                             </div>
-                            <div class="font-MontserratMedium text-3xl text-dark-grey px-10">Заказать спецтехнику
+                            <div class="font-MontserratMedium lg:text-32 md:text-26 text-2xl leading-none text-dark-grey lg:px-10">
+                                Заказать спецтехнику
                                 онлайн
                             </div>
                         </div>
-                        <p class="font-MontserratMedium text-light-grey text-light-grey text-base leading-9">Вы
+                        <p class="font-MontserratMedium text-light-grey text-light-grey text-base leading-9 py-5 my-auto">
+                            Вы
                             можете
                             заказать спецтехнику напрямую из каталога сервиса. Вам нужно перейти в наш каталог,
-                            выбрать от, что вам нужно и оформить заявку в 3 простых этапа.</p>
+                            выбрать от, что вам нужно и оформить заявку в 3 простых этапа. Вы
+                            можете
+                        </p>
                     </div>
-                    <a class="mx-auto self-end btn-2 uppercase font-MontserratBold my-5 text-base" href="#">перейти в
+                    <a class="mx-auto self-end btn-2 md:w-full lg:px-16 lg:w-auto px-1 w-full uppercase font-MontserratBold text-base self-end"
+                       href="#">перейти в
                         каталог</a>
                 </div>
+
                 <!--Card 2-->
-                <div class="card cursor-pointer text-center rounded-xl bg-white overflow-hidden shadow-lg py-10 px-16 flex flex-col">
-                    <div class="flex flex-col flex-grow justify-between">
-                        <div>
-                            <div class="py-5 uppercase mx-auto round-digit font-MontserratBlack text-base text-dark-grey-2">
+                <div class="card cursor-pointer text-center rounded-xl bg-white overflow-hidden shadow-lg py-10 px-7 md:px-5 lg:px-16 flex flex-col justify-between h-full">
+                    <div class="flex flex-col h-full justify-start">
+                        <div class="">
+                            <div class="md:py-5 uppercase mx-auto round-digit font-MontserratBlack text-base text-dark-grey-2">
                                 арендовать технику сейчас
                             </div>
-                            <div class="font-MontserratMedium text-3xl text-dark-grey px-10">Заказать спецтехнику
+                            <div class="font-MontserratMedium lg:text-32 md:text-26 text-2xl leading-none text-dark-grey lg:px-10">
+                                Заказать спецтехнику
                                 онлайн
                             </div>
                         </div>
-                        <p class="font-MontserratMedium text-light-grey text-light-grey text-base leading-9">Вы
+                        <p class="font-MontserratMedium text-light-grey text-light-grey text-base leading-9 py-5 my-auto">
+                            Вы
                             можете
                             заказать спецтехнику напрямую из каталога сервиса. Вам нужно перейти в наш каталог,
-                            выбрать от, что вам нужно и оформить заявку в 3 простых этапа.</p>
+                            выбрать от, что вам нужно и оформить заявку в 3 простых этапа. Вы
+                            можете
+                        </p>
                     </div>
-                    <a class="mx-auto self-end btn-2 uppercase font-MontserratBold my-5 text-base" href="#">перейти в
+                    <a class="mx-auto self-end btn-2 md:w-full lg:px-16 lg:w-auto px-1 w-full uppercase font-MontserratBold text-base self-end"
+                       href="#">перейти в
                         каталог</a>
                 </div>
             </div>
-
 
             <div class="pt-5 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-1 gap-5">
-            <!--Card 3-->
-            <div class="card-2 w-full cursor-pointer text-center rounded-xl bg-white overflow-hidden shadow-lg py-10 flex">
-                <div class="px-16 w-1/2 text-left">
-                    <div class="text-left flex flex-col flex-grow justify-between">
-                        <div>
-                            <div class="py-5 uppercase mx-auto round-digit font-MontserratBlack text-base text-dark-grey-2">
-                                арендовать технику сейчас
+                <!--Card 3-->
+                <div class="card cursor-pointer text-center rounded-xl bg-white overflow-hidden shadow-lg pt-10 pl-7 pt-7  md:pl-5 md:pt-5 lg:pl-16 lg:pt-16 flex md:flex-row flex-col relative">
+                    <div class="flex flex-col md:pb-10 md:w-1/2 lg:pb-10 lg:pr-14 pr-7 lg:pr-28 md:pr-10 ">
+                        <div class="flex flex-col h-full justify-start">
+                            <div class="">
+                                <div class="md:py-5 uppercase mx-auto round-digit font-MontserratBlack text-base text-dark-grey-2">
+                                    арендовать технику сейчас
+                                </div>
+                                <div class="font-MontserratMedium lg:text-32 md:text-26 text-2xl leading-none text-dark-grey lg:px-10">
+                                    Спецпредложение для шеринга автогрейдера
+                                </div>
                             </div>
-                            <div class="font-MontserratMedium text-3xl text-dark-grey">Спецпредложение
-                                для шеринга автогрейдера</div>
+                            <p class="font-MontserratMedium text-light-grey text-light-grey text-base leading-9 py-5 my-auto">
+                                Вы
+                                можете
+                                заказать спецтехнику напрямую из каталога сервиса. Вам нужно перейти в наш каталог,
+                                выбрать от, что вам нужно и оформить заявку в 3 простых этапа. Вы
+                                можете
+                            </p>
                         </div>
-                        <p class="font-MontserratMedium text-light-grey text-light-grey text-base leading-9">Вы
-                            можете
-                            заказать спецтехнику напрямую из каталога сервиса. Вам нужно перейти в наш каталог,
-                            выбрать от, что вам нужно и оформить заявку в 3 простых этапа.</p>
+                        <a class="mx-auto self-end btn-2 md:w-full lg:px-16 lg:w-auto px-1 w-full uppercase font-MontserratBold text-base self-end"
+                           href="#">перейти в
+                            каталог</a>
                     </div>
-                    <a class="self-end btn-2 uppercase font-MontserratBold my-5 text-base" href="#">перейти в
-                        каталог</a></div>
-                <div class="w-1/2">
-                    <div class="bg-cards"></div>
+                    <div class="bg-cards pt-10 md:pt-0">
+                        <img class="absolute" src="img/greyder.png" alt="">
+                    </div>
                 </div>
-            </div>
+
+
+                <!--            <div class="card-2 w-full cursor-pointer text-center rounded-xl bg-white overflow-hidden shadow-lg py-10 flex">-->
+                <!--                <div class="px-16 w-1/2 text-left">-->
+                <!--                    <div class="text-left flex flex-col flex-grow justify-between">-->
+                <!--                        <div>-->
+                <!--                            <div class="py-5 uppercase mx-auto round-digit font-MontserratBlack text-base text-dark-grey-2">-->
+                <!--                                арендовать технику сейчас-->
+                <!--                            </div>-->
+                <!--                            <div class="font-MontserratMedium text-3xl text-dark-grey">Спецпредложение-->
+                <!--                                для шеринга автогрейдера</div>-->
+                <!--                        </div>-->
+                <!--                        <p class="font-MontserratMedium text-light-grey text-light-grey text-base leading-9">Вы-->
+                <!--                            можете-->
+                <!--                            заказать спецтехнику напрямую из каталога сервиса. Вам нужно перейти в наш каталог,-->
+                <!--                            выбрать от, что вам нужно и оформить заявку в 3 простых этапа.</p>-->
+                <!--                    </div>-->
+                <!--                    <a class="self-end btn-2 uppercase font-MontserratBold my-5 text-base" href="#">перейти в-->
+                <!--                        каталог</a></div>-->
+                <!--                <div class="w-1/2">-->
+                <!--                    <div class="bg-cards"></div>-->
+                <!--                </div>-->
+                <!--            </div>-->
+                <!--            </div>-->
+
             </div>
 
         </div>
-
-    </div>
 </section>
-<!--section block-catalog-->
+<!--section ыыыыыыыыыblock-catalog-->
 <section class="catalog bg-grey">
     <div class="container mx-auto pb-16">
         <p class="text-dark-grey text-center font-MontserratSemiBold text-5xl pt-16">Каталог <span
@@ -404,148 +480,13 @@
 
 </section>
 <!--section block-partners-->
-<section class="partners bg-grey">
-    <div class="container mx-auto pb-16">
-        <p class="text-dark-grey text-center font-MontserratSemiBold text-5xl pt-16">Наши <span
-                class="text-dark-yellow">партнеры</span></p>
-        <div class="pt-10 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-5">
-            <div class="font-MontserratSemiBold text-5xl text-light-grey">компания 1</div>
-            <div class="mx-auto font-MontserratSemiBold text-5xl text-light-grey">компания 2</div>
-            <div class="mr-0 ml-auto font-MontserratSemiBold text-5xl text-light-grey">компания 3</div>
-            <div class="font-MontserratSemiBold text-5xl text-light-grey">компания 4</div>
-            <div class="mx-auto font-MontserratSemiBold text-5xl text-light-grey">компания 5</div>
-            <div class="mr-0 ml-auto font-MontserratSemiBold text-5xl text-light-grey">компания 6</div>
-            <div class="font-MontserratSemiBold text-5xl text-light-grey">компания 7</div>
-            <div class="mx-auto font-MontserratSemiBold text-5xl text-light-grey">компания 8</div>
-            <div class="mr-0 ml-auto font-MontserratSemiBold text-5xl text-light-grey">компания 9</div>
-        </div>
-    </div>
-    </div>
-</section>
 
 <!--section block-question-->
-<section class="question bg-dark-grey py-20">
-    <div class="container mx-auto">
-        <div class="flex">
-            <div class="w-70">
-                <span class="font-MontserratBold text-7xl text-dark-grey">Остались вопросы?</span>
-                <p class="font-MontserratRegular text-xl text-light-grey">У вас остались вопросы или требуется консультация в выборе техники?
-                    <br> Оставьте заявку. Поможем с выбором техники, рассчитаем стоимость, расскажем о сервисе.</p>
-            </div>
-            <div class="w-30 ">
-                <form class="mr-0 ml-auto" action="">
-                    <input type="text" autofocus id="name" class="rounded-sm px-4 py-3 mt-3 focus:outline-none bg-white w-full" placeholder="Имя" />
-                    <input type="phone" autofocus id="phone" class="rounded-sm px-4 py-3 mt-3 focus:outline-none bg-white w-full" placeholder="Телефон" />
-                    <button class="mx-auto self-end btn-2 uppercase font-MontserratBold my-5 text-base duration-300 hover:bg-dark-yellow w-full">отправить</button>
-                    <p class="font-MontserratRegular text-light-grey text-sm">*Нажимая на кнопку, вы даете согласие на обработку персональных данных и соглашаетесь c политикой конфиденциальности</p>
-                </form>
-            </div>
-        </div>
-    </div>
-</section>
+
 <!--section block-cointact-->
-<section class="contact bg-grey pb-20">
-    <div class="container mx-auto">
-        <p class="text-dark-grey text-center font-MontserratSemiBold text-5xl pt-16">Наши <span
-                class="text-dark-yellow">контакты</span></p>
 
-
-        <div class="flex justify-between items-center">
-
-            <div class="w-1/3 mail flex flex-col justify-center">
-
-                <span class="py-3 font-MontserratSemiBold text-3xl text-dark-grey">Email:</span>
-
-                <div class="inline-flex items-center">
-                    <i class="fa fa-2x fa-envelope" aria-hidden="true"></i>
-                    <span class="pl-3 uppercase font-MontserratMedium text-dark-grey text-xl">info.arst@mail</span>
-                </div>
-
-            </div>
-
-            <div class="w-1/3 phone flex flex-col justify-center items-center">
-                <div class="text-left">
-                    <span class="py-3 block font-MontserratSemiBold text-3xl text-dark-grey">Телефон:</span>
-
-                    <div class="inline-flex items-center">
-                        <i class="fa fa-2x fa-phone" aria-hidden="true"></i>
-                        <span class="pl-3 block uppercase font-MontserratMedium text-dark-grey text-xl">тел: 8 800 987 65 43</span>
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="w-1/3 flex justify-end">
-                <button class="btn-2 uppercase font-MontserratBold my-5 text-base duration-300 hover:bg-dark-yellow">
-                    перейти на карту
-                </button>
-            </div>
-
-        </div>
-    </div>
-</section>
 <!--section block-map-->
-<section class="map">
-    <div class="container-fluid">
-        <div class="container mx-auto">
-            <div id="wrapMap">
-                <iframe  style="pointer-events: none;" src="https://yandex.ru/map-widget/v1/?um=constructor%3Ae19d2749e949caf6bb863d8b594ba2e141943bee75dfc5ae31aaf9238883d3c4&amp;source=constructor"
-                        width="100%" height="650" frameborder="0" scroll="false"></iframe>
-            </div>
-            <div>
-            </div>
-        </div>
-    </div>
-</section>
+
 <!--footer-->
-<footer class="footer">
-        <div class="container mx-auto">
-            <div class="sm:flex sm:mt-8">
-                <div class="w-full flex justify-between py-10">
-                    <div class="flex flex-col">
-                        <img class="w-full" src="img/logo.svg" alt="">
-                    </div>
 
-                        <div class="flex flex-col">
-                            <span class="font-MontserratMedium text-2xl text-dark-grey pb-3">Карта сайта</span>
-                            <span class="font-MontserratRegular text-base text-brownish-grey py-3"><a href="#">Каталог</a></span>
-                            <span class="font-MontserratRegular text-base text-brownish-grey py-3"><a href="#">Заказчикам</a></span>
-                            <span class="font-MontserratRegular text-base text-brownish-grey py-3"><a href="#" >Владельцам</a></span>
-                            <span class="font-MontserratRegular text-base text-brownish-grey py-3"><a href="#" >Контакты</a></span>
-                        </div>
-
-                    <div class="flex flex-col">
-                        <span class="font-MontserratMedium text-2xl text-dark-grey pb-3">Заказчикам</span>
-                        <span class="font-MontserratRegular text-base text-brownish-grey py-3"><a href="#">Оплата заказа</a></span>
-                        <span class="font-MontserratRegular text-base text-brownish-grey py-3"><a href="#">Договор оферты</a></span>
-                        <span class="font-MontserratRegular text-base text-brownish-grey py-3"><a href="#">Для заказчиков</a></span>
-                        <span class="font-MontserratRegular text-base text-brownish-grey py-3"><a href="#">Политика конфиденциальности</a></span>
-                    </div>
-
-                    <div class="flex flex-col">
-                        <span class="font-MontserratMedium text-2xl text-dark-grey pb-3">Контакты</span>
-                        <span class="font-MontserratRegular text-base text-brownish-grey py-3">Адрес: г.Краснодар, ул.Советская 12</span>
-                        <span class="font-MontserratRegular text-base text-brownish-grey py-3">Email: info.arst@mail</span>
-                        <span class="font-MontserratRegular text-base text-brownish-grey py-3">  Тел: 800 987 65 43</span>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-
-        <div class="container-fluid sub-footer">
-            <div class="container mx-auto text-center border-top-footer">
-                <div class="flex items-center justify-between py-12">
-
-                    <p class="font-MontserratRegular text-light-grey text-sm">Copyright 2021 - ARST. All Rights Reserved</p>
-                    <p class="font-MontserratRegular text-light-grey text-sm">Create by - dev-pro.ru</p>
-
-                </div>
-            </div>
-        </div>
-</footer>
  <!--footer components-->
-<script src="js/libs.min.js"></script>
-<script src="js/main.min.js"></script>
-</body>
-</html>

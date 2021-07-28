@@ -2,16 +2,59 @@
 @tailwind components;
 @tailwind utilities;
 .btn-1 {
-  @apply cursor-pointer bg-dark-yellow hover:bg-dark-yellow shadow-xl px-4 py-2.5 inline-block rounded;
+  @apply cursor-pointer bg-dark-yellow hover:bg-dark-yellow shadow-xl px-6 py-2.5 rounded-lg;
+}
+
+.btn-header {
+  @apply cursor-pointer bg-dark-yellow hover:bg-dark-yellow shadow-xl py-2.5 rounded-lg;
 }
 
 .btn-2 {
-  @apply cursor-pointer bg-dark-yellow hover:bg-dark-yellow shadow-xl px-16 py-4 inline-block rounded;
+  @apply cursor-pointer bg-dark-yellow hover:bg-dark-yellow shadow-xl py-4 inline-block rounded-lg;
 }
 
 @layer components {
   .text-dark-grey {
     color: #333333;
+  }
+  .line-h-5rem {
+    line-height: 5rem;
+  }
+  .text-26 {
+    font-size: 26px;
+  }
+  .text-28 {
+    font-size: 28px;
+  }
+  .text-33 {
+    font-size: 33px;
+  }
+  .text-32 {
+    font-size: 32px;
+  }
+  .text-35 {
+    font-size: 35px;
+  }
+  .text-43 {
+    font-size: 43px;
+  }
+  .text-44 {
+    font-size: 44px;
+  }
+  .text-52 {
+    font-size: 52px;
+  }
+  .text-56 {
+    font-size: 56px;
+  }
+  .text-53 {
+    font-size: 53px;
+  }
+  .text-54 {
+    font-size: 54px;
+  }
+  .text-16 {
+    color: #161616;
   }
   .text-dark-grey-2 {
     color: #cccccc;
@@ -58,9 +101,6 @@
   }
   .lavand-color {
     background-color: #d4eefb;
-  }
-  .container-fluid {
-    max-width: 100%;
   }
   .border-purple-cstm {
     --tw-border-opacity: 1;
@@ -184,6 +224,12 @@ body {
   min-width: 320px;
 }
 
+@media (max-width: 425px) {
+  body {
+    min-width: 425px;
+  }
+}
+
 .btn-mob {
   @apply cursor-pointer text-white bg-bright-purp-600 hover:bg-bright-purp-600 shadow-xl px-2 py-1 inline-block rounded;
   width: 160px;
@@ -263,19 +309,16 @@ body {
   border-image: initial;
 }
 
-.popular .card {
-  height: 470px;
+@media (max-width: 768px) {
+  .popular .bg-cards {
+    height: 300px;
+  }
 }
 
-.popular .card-2 {
-  height: 460px;
-}
-
-.popular .bg-cards {
-  background: url("../img/greyder.png") no-repeat left top;
-  background-size: cover;
-  width: 117%;
-  height: 460px;
+@media (max-width: 768px) {
+  .popular .bg-cards img {
+    max-width: 130%;
+  }
 }
 
 .question form {
@@ -294,6 +337,10 @@ body {
 
 .block-rents .title {
   color: #666666;
+}
+
+.block-rents .title-block {
+  width: 1050px;
 }
 
 .block-rents .card:hover {
@@ -316,11 +363,34 @@ body {
 
 .block-rents .line-title {
   position: absolute;
-  width: 580px;
-  height: 15px;
-  bottom: 45px;
-  left: 0;
   z-index: 9;
+}
+
+@media (min-width: 0px) {
+  .block-rents .line-title {
+    width: 312px;
+    height: 15px;
+    bottom: 49px;
+    left: -5px;
+  }
+}
+
+@media (min-width: 768px) {
+  .block-rents .line-title {
+    width: 405px;
+    height: 15px;
+    bottom: -1px;
+    left: -8px;
+  }
+}
+
+@media (min-width: 1290px) {
+  .block-rents .line-title {
+    width: 580px;
+    height: 15px;
+    bottom: 7px;
+    left: -8px;
+  }
 }
 
 .block-rents span {
@@ -328,13 +398,41 @@ body {
   z-index: 20;
 }
 
+.block-rents .ml-next {
+  padding-left: 10px;
+}
+
+.block-rents .pr-10px {
+  padding-right: 100px;
+}
+
 .block-service .line-title {
   position: absolute;
-  width: 580px;
   height: 15px;
-  top: 108px;
-  right: 80px;
-  z-index: 9;
+}
+
+@media (min-width: 0px) {
+  .block-service .line-title {
+    left: -4px;
+    width: 393px;
+    top: 90px;
+  }
+}
+
+@media (min-width: 768px) {
+  .block-service .line-title {
+    left: -4px;
+    width: 370px;
+    top: 72px;
+  }
+}
+
+@media (min-width: 1290px) {
+  .block-service .line-title {
+    width: 600px;
+    top: 117px;
+    left: -10px;
+  }
 }
 
 .footer .sub-footer {
@@ -347,6 +445,82 @@ body {
 
 .footer .border-top-footer {
   border-top: 1px solid #f0c42e;
+}
+
+header .menu-mob {
+  height: 45px;
+}
+
+header .burger {
+  position: absolute;
+  right: 10px;
+  top: 0px;
+  width: 69px;
+  height: 45px;
+  cursor: pointer;
+}
+
+.burger span, .burger span:before, .burger span:after {
+  width: 100%;
+  position: absolute;
+  height: 5px;
+  background: #333;
+  display: block;
+  transition: .3s;
+  border-radius: 5px;
+}
+
+.burger span:before {
+  content: "";
+  top: -20px;
+  transition: top 300ms 300ms, transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.burger span {
+  top: 20px;
+}
+
+.burger span:after {
+  content: "";
+  bottom: -20px;
+  transition: bottom 300ms 300ms, transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.burger span.active:before {
+  width: 90%;
+  content: "";
+  top: 0px;
+  transform: rotate(45deg);
+  transition: top 300ms, transform 300ms 300ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.burger span.active:after {
+  width: 90%;
+  content: "";
+  bottom: 0;
+  transform: rotate(-45deg);
+  transition: bottom 300ms, transform 300ms 300ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.burger span.active {
+  background: rgba(255, 255, 255, 0);
+}
+
+.menu_mob {
+  width: 100%;
+  top: 100px;
+  height: auto;
+  background: #ffffff;
+  color: #ccc;
+  padding: 10px;
+  position: fixed;
+  right: -100%;
+  transition: right 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  z-index: 100;
+}
+
+.menu_mob.animate {
+  right: 0;
 }
 
 header .block-header {
@@ -363,11 +537,130 @@ header .menu-width {
 
 .main-banner .bg-image {
   height: 960px;
+  background-image: url(../img/lib.png);
+  background-repeat: no-repeat;
+  background-position: center right;
+  background-size: contain;
+}
+
+@media (max-width: 1649px) {
+  .main-banner .bg-image {
+    background-position: 115% 100%;
+    background-size: contain;
+  }
+}
+
+@media (max-width: 1485px) {
+  .main-banner .bg-image {
+    background-position: 130% 100%;
+  }
+}
+
+@media (max-width: 1380px) {
+  .main-banner .bg-image {
+    background-position: 150% 100%;
+  }
+}
+
+@media (max-width: 1279px) {
+  .main-banner .bg-image {
+    background-position: 165% 100%;
+  }
+}
+
+@media (max-width: 1140px) {
+  .main-banner .bg-image {
+    background-position: 185% 0%;
+    background-size: 80%;
+  }
+}
+
+@media (max-width: 1023px) {
+  .main-banner .bg-image {
+    background-position: 25em 0%;
+    background-size: contain;
+    height: 855px;
+  }
+}
+
+@media (max-width: 800px) {
+  .main-banner .bg-image {
+    background-position: 19em 0%;
+    background-size: 88%;
+    height: 713px;
+  }
+}
+
+@media (max-width: 767px) {
+  .main-banner .bg-image {
+    background-image: url(../img/bg-mob.png);
+    background-repeat: no-repeat;
+    background-position: 150% top;
+    background-size: contain;
+    height: 696px;
+  }
+}
+
+@media (max-width: 640px) {
+  .main-banner .bg-image {
+    height: 495px;
+  }
+}
+
+@media (max-width: 425px) {
+  .main-banner .bg-image {
+    height: 480px;
+  }
+}
+
+.main-banner .subtitle {
+  width: auto;
+}
+
+@media (max-width: 1279px) {
+  .main-banner .subtitle {
+    width: 85%;
+  }
+}
+
+@media (max-width: 1220px) {
+  .main-banner .subtitle {
+    width: 80%;
+  }
 }
 
 .main-banner .abs-text {
   top: 110px;
-  right: -50px;
+  right: -14px;
+  z-index: 10;
+}
+
+@media (max-width: 1279px) {
+  .main-banner .abs-text {
+    right: -57px;
+    color: #666666;
+  }
+}
+
+@media (max-width: 1023px) {
+  .main-banner .abs-text {
+    right: 0;
+    top: 85px;
+  }
+}
+
+@media (max-width: 767px) {
+  .main-banner .abs-text {
+    right: 90px;
+    color: #ffffff;
+  }
+}
+
+@media (max-width: 639px) {
+  .main-banner .abs-text {
+    top: 58px;
+    right: 62px;
+  }
 }
 
 .main-banner .line-title {
@@ -375,11 +668,73 @@ header .menu-width {
   width: 610px;
   height: 15px;
   top: 179px;
-  right: -76px;
+  right: -40px;
   z-index: 9;
 }
 
+@media (max-width: 1279px) {
+  .main-banner .line-title {
+    right: -80px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .main-banner .line-title {
+    right: -8px;
+    top: 143px;
+    width: 470px;
+  }
+}
+
+@media (max-width: 767px) {
+  .main-banner .line-title {
+    left: 70px;
+    top: 144px;
+    width: 461px;
+  }
+}
+
+@media (max-width: 639px) {
+  .main-banner .line-title {
+    left: -5px;
+    top: 108px;
+    width: 355px;
+  }
+}
+
+.main-banner .main-title {
+  width: 465px;
+}
+
 /* NOTE - import here your style modules */
+.container-fluid {
+  max-width: 100%;
+}
+
+.container {
+  padding-right: .75rem;
+  padding-left: .75rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.px-0 {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+@media (min-width: 0px) {
+  .container {
+    max-width: 384px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 740px;
+  }
+}
+
 @media (min-width: 1290px) {
   .container {
     max-width: 1290px;

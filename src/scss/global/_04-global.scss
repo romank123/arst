@@ -8,3 +8,10 @@ body {
   overflow-x: hidden;
   min-width: 320px;
 }
+
+@media (max-width: 425px) {
+  body {
+    min-width: 425px;
+  }
+}
+
