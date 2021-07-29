@@ -12,7 +12,7 @@
 
 
 .btn-2 {
-  @apply cursor-pointer bg-dark-yellow hover:bg-dark-yellow shadow-xl py-4 inline-block rounded-lg;
+  @apply cursor-pointer bg-dark-yellow hover:bg-dark-yellow shadow-xl py-5 inline-block rounded-lg;
 }
 
 @layer components {
@@ -23,6 +23,10 @@
 
   .line-h-5rem {
     line-height: 5rem;
+  }
+
+  .text-22 {
+    font-size: 22px;
   }
 
   .text-26 {
@@ -43,6 +47,10 @@
 
   .text-35 {
     font-size: 35px;
+  }
+
+  .text-42 {
+    font-size: 42px;
   }
 
   .text-43 {
@@ -69,6 +77,19 @@
   .text-54 {
     font-size: 54px;
   }
+
+  .text-67 {
+    font-size: 67px;
+  }
+
+  .text-72 {
+    font-size: 72px;
+  }
+
+  .text-82 {
+    font-size: 82px;
+  }
+
 
 
   .text-16 {
