@@ -13,12 +13,25 @@
   @apply cursor-pointer bg-dark-yellow hover:bg-dark-yellow shadow-xl py-5 inline-block rounded-lg;
 }
 
+.btn-zakaz {
+  @apply cursor-pointer bg-dark-yellow hover:bg-dark-yellow shadow-xl lg:py-4 md:py-2 py-2 rounded-lg;
+}
+
 @layer components {
   .text-dark-grey {
     color: #333333;
   }
   .line-h-5rem {
     line-height: 5rem;
+  }
+  .text-12 {
+    font-size: 12px;
+  }
+  .text-15 {
+    font-size: 15px;
+  }
+  .text-17 {
+    font-size: 17px;
   }
   .text-22 {
     font-size: 22px;
@@ -76,6 +89,12 @@
   }
   .text-light-grey {
     color: #999999;
+  }
+  .bg-light-gray {
+    background-color: #999999;
+  }
+  .bg-light-gray-line {
+    background-color: #cdcdcd;
   }
   .text-brownish-grey {
     color: #666666;
@@ -181,6 +200,9 @@
   }
   .w-30 {
     width: 30%;
+  }
+  .shadow-mass-button {
+    box-shadow: -2px 1px 15px 0px rgba(0, 0, 0, 0.2);
   }
 }
 
@@ -290,6 +312,14 @@ body {
   height: 54px;
   display: inline-block;
   line-height: 54px;
+}
+
+.page-error {
+  min-height: 600px;
+}
+
+.advant .bg-check {
+  background: url("../img/check.png") no-repeat left 20%;
 }
 
 .catalog .bg-kran {
@@ -484,6 +514,42 @@ body {
   .question form {
     width: 300px;
   }
+}
+
+.block-rents-zakaz .round-digit {
+  width: 141px;
+  height: 141px;
+  line-height: 141px;
+  background: #f2f2f2;
+  color: #fff;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.block-rents-zakaz .title {
+  color: #666666;
+}
+
+.block-rents-zakaz .title-block {
+  width: 1050px;
+}
+
+.block-rents-zakaz .card:hover {
+  --tw-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.block-rents-zakaz .card:hover > .round-digit {
+  background: #f0c42e;
+}
+
+.block-rents-zakaz .card:hover .title {
+  color: #333333;
+}
+
+.block-rents-zakaz .bg-image {
+  background: url(../img/bg-image.jpg) no-repeat center 35%;
+  height: 700px;
 }
 
 .block-rents .round-digit {
@@ -864,6 +930,59 @@ header .menu-width {
 
 .main-banner .main-title {
   width: 465px;
+}
+
+.zakaz .bg-not-active {
+  background-color: #e0e0e0;
+}
+
+.zakaz td {
+  padding: 5px 0;
+}
+
+.zakaz input[type=range]::-webkit-slider-thumb {
+  pointer-events: all;
+  width: 24px;
+  height: 24px;
+  -webkit-appearance: none;
+}
+
+.zakaz .marker {
+  position: absolute;
+  width: auto;
+  top: -30px;
+  right: 6px;
+}
+
+.zakaz .marker input {
+  width: 10px;
+}
+
+.zakaz [x-cloak] {
+  display: none;
+}
+
+.zakaz .counter input[type='number']::-webkit-inner-spin-button,
+.zakaz .counter input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.zakaz .counter .custom-number-input input:focus {
+  outline: none !important;
+}
+
+.zakaz .counter .custom-number-input button:focus {
+  outline: none !important;
+}
+
+.zakaz .map {
+  height: 150px;
+}
+
+.main-banner-zakaz .bg-main-banner-zakaz {
+  background: url("../img/bg-main-banner-zakaz.jpg") no-repeat center center;
+  min-height: 600px;
 }
 
 /* NOTE - import here your style modules */

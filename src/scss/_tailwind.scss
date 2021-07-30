@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 .btn-1 {
   @apply cursor-pointer bg-dark-yellow hover:bg-dark-yellow shadow-xl px-6 py-2.5 rounded-lg;
 }
@@ -15,6 +16,10 @@
   @apply cursor-pointer bg-dark-yellow hover:bg-dark-yellow shadow-xl py-5 inline-block rounded-lg;
 }
 
+.btn-zakaz {
+  @apply cursor-pointer bg-dark-yellow hover:bg-dark-yellow shadow-xl lg:py-4 md:py-2 py-2 rounded-lg;
+}
+
 @layer components {
 
   .text-dark-grey {
@@ -23,6 +28,17 @@
 
   .line-h-5rem {
     line-height: 5rem;
+  }
+
+  .text-12 {
+    font-size: 12px;
+  }
+  .text-15 {
+    font-size: 15px;
+  }
+
+  .text-17 {
+    font-size: 17px;
   }
 
   .text-22 {
@@ -90,8 +106,6 @@
     font-size: 82px;
   }
 
-
-
   .text-16 {
     color: #161616;
   }
@@ -103,6 +117,15 @@
   .text-light-grey {
     color: #999999;
   }
+
+  .bg-light-gray {
+    background-color: #999999;
+  }
+
+  .bg-light-gray-line {
+    background-color: #cdcdcd;
+  }
+
 
   .text-brownish-grey {
     color: #666666;
@@ -239,6 +262,10 @@
 
   .w-30 {
     width: 30%;
+  }
+
+  .shadow-mass-button {
+    box-shadow: -2px 1px 15px 0px rgba(0, 0, 0, 0.2);
   }
 
 }
