@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+          content="@@description">
+    <meta name="keywords"
+          content="@@keywords">
+    <link rel="shortcut icon"
+          href="@@favicon"
+          type="image/x-icon">
+    <link rel="stylesheet"
+          href="css/libs.min.css">
+    <link rel="stylesheet"
+          href="css/style.min.css">
+    <title>@@title</title>
+    <!-- Add icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+
+</head>
+<body>
+
+
+
+<!--header-->
+<header>
+    <div class="container mx-auto">
+        <div class="flex items-center justify-between py-2">
+            <a href="index.html"><img class="logo" src="img/logo.svg" alt=""></a>
+            <div class="pl-10 xl:pl-0 flex flex-col block-header">
+                <div class="hidden md:flex py-3.5 adress justify-end lg:justify-between font-MontserratMedium uppercase text-xs lg:text-base text-dark-grey">
+                    <div class="flex items-baseline hidden lg:flex">
+                        <i class="fa fa-lg fa-map-marker pr-2" aria-hidden="true"></i>
+                        <span class="">г. Краснодар, ул. советская 12</span>
+                    </div>
+                    <div class="pr-10 lg:pr-0 flex items-baseline">
+                        <i class="fa fa-lg fa-envelope pr-2" aria-hidden="true"></i>
+                        <span>info.arst@mail.ru</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fa fa-lg fa-phone pr-2" aria-hidden="true"></i>
+                        <span>тел: 8 800 987 65 43</span>
+                    </div>
+                </div>
+                <div class="hidden md:flex justify-end lg:justify-between items-center py-3.5">
+                    <div class="menu menu-width">
+                        <ul class="flex justify-between text-brownish-grey font-MontserratRegular text-base">
+                            <li><a href="#blockCatalog">Каталог</a></li>
+                            <li><a href="zakazchikam.html">Заказчикам</a></li>
+                            <li><a href="vladelcam.html">Владельцам</a></li>
+                            <li><a href="#">Контакты</a></li>
+                        </ul>
+                    </div>
+                    <a id="" class="hidden lg:block btn-1 text-dark-grey font-MontserratBold" href="#callTo">заказать звонок</a>
+                </div>
+            </div>
+            <!--burger menu-->
+            <div class="flex md:hidden relative menu-mob">
+                <div class="burger">
+                    <span></span>
+                </div>
+                <div class="menu_mob">
+                    <div class="w-full flex justify-center">
+                        <div class="flex flex-col">
+                            <ul class="items-start flex flex-col justify-between text-brownish-grey font-MontserratRegular text-xl mb-4">
+                                <li class="py-3"><a href="zakazat.html">Каталог</a></li>
+                                <li class="py-3"><a href="zakazchikam.html">Заказчикам</a></li>
+                                <li class="py-3"><a href="vladelcam.html">Владельцам</a></li>
+                                <li class="py-3"><a href="#">Контакты</a></li>
+                            </ul>
+                            <div class="flex flex-col font-MontserratMedium uppercase 2sm:text-base text-sm text-dark-grey">
+                                <div class="flex items-baseline py-3">
+                                    <i class="fa fa-lg fa-map-marker pr-4" aria-hidden="true"></i>
+                                    <span class="">г. Краснодар, ул. советская 12</span>
+                                </div>
+                                <div class="flex items-baseline py-3">
+                                    <i class="fa fa-lg fa-envelope  pr-2" aria-hidden="true"></i>
+                                    <span>info.arst@mail.ru</span>
+                                </div>
+                                <div class="flex items-center py-3">
+                                    <i class="fa fa-lg fa-phone  pr-2" aria-hidden="true"></i>
+                                    <span>тел: 8 800 987 65 43</span>
+                                </div>
+                            </div>
+                           <a class="btn-1 text-dark-grey font-MontserratBold text-center" href="#">заказать звонок</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!--main-banner-zakazchikam-->
+<section class="main-banner-zakaz">
+    <div class="container-fluid bg-main-banner-zakaz relative">
+
+        <div class="container absolute top-0 right-0 bottom-0 left-0">
+            <div class="flex flex-col items-center justify-center lg:px-28 md:px-14 h-full relative">
+                <span class="absolute font-MontserratBlack text-dark-grey-2 abs-text uppercase lg:text-base md:text-base text-sm"> Надёжная аренда для вас</span>
+                <span class="font-MontserratBold lg:text-82 md:text-72 text-52 text-white">Заказчикам</span>
+                <div class="line-title bg-dark-yellow"></div>
+
+                <p class="font-MontserratSemiBold lg:text-xl md:text-base text-base  text-dark-grey-2 text-center leading-loose">Очевидно, что эксимер спонтанно
+                    стабилизирует наносекундный гамма-квант. Взвесь, вследствие квантового характера явления,
+                    наблюдаема. Тело случайно.</p>
+                <a class="btn-2 text-dark-grey font-MontserratBold my-8 px-16 md:w-auto w-full text-center" href="#">перейти в каталог</a>
+            </div>
+        </div>
+    </div>
+</section>
+<!--section block-service-->
+<section class="block-service">
+    <div class="container px-0 mx-auto py-10 border-b-2">
+        <div class="flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 w-full relative">
+                <span class="relative z-10 font-MontserratBold text-35 md:text-33 lg:text-53 lg:leading-tight md:leading-tight leading-normal">АРСТ - это удобный <br>
+и надёжный сервис
+аренды спецтехники</span>
+                <div class="line-title bg-dark-yellow"></div>
+            </div>
+            <div class="md:w-1/2 w-full">
+                <p class="font-MontserratRegular text-light-grey mdtext-xl text-base md:text-sm lg:text-xl">Зачем содержать свой парк, если можно иметь доступ
+                    к 7 000 единицам техники, которые не нужно обслуживать, заправлять, и держать в штате машиниста.
+                    <br> <br>
+                    В нашем сервисе вы платите только за часы аренды технки.
+                    В нашем сервисе вы платите только за часы аренды технки.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<!--section 4-blocks-->
+<section class="four-blocks">
+    <div class="container mx-auto my-8">
+        <div class="grid grid-cols-1 2sm:grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+            <!--block-1-->
+            <div class="mx-auto lg:px-8">
+                <span class="font-MontserratBold text-2xl text-dark-grey bg-image pl-16">Клиентов</span>
+                <p class="pt-6 font-MontserratMedium text-base text-light-grey leading-7">Более 400 корпоративных
+                    клиентов заказывают
+                    технику у нас.</p>
+            </div>
+            <!--block-2-->
+            <div class="mx-auto lg:px-8">
+                <span class="font-MontserratBold text-2xl text-dark-grey bg-image-2 pl-16">Безопасность</span>
+                <p class="pt-6 font-MontserratMedium text-base text-light-grey leading-7">Более 400 корпоративных
+                    клиентов заказывают
+                    технику у нас.</p>
+            </div>
+            <!--block-3-->
+            <div class="mx-auto lg:px-8">
+                <span class="font-MontserratBold text-2xl text-dark-grey bg-image-3 pl-16">Спецтехника</span>
+                <p class="pt-6 font-MontserratMedium text-base text-light-grey leading-7">Более 400 корпоративных
+                    клиентов заказывают
+                    технику у нас.</p>
+            </div>
+            <!--block-4-->
+            <div class="mx-auto lg:px-8">
+                <span class="font-MontserratBold text-2xl text-dark-grey bg-image-4 pl-16">Нам 12 лет</span>
+                <p class="pt-6 font-MontserratMedium text-base text-light-grey leading-7">Более 400 корпоративных
+                    клиентов заказывают
+                    технику у нас.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<!--section block-rents-zakaz-->
+<section class="block-rents-zakaz">
+    <div class="container-fluid bg-dark-grey pb-16">
+        <div class="container mx-auto">
+            <p class="text-dark-grey text-center font-MontserratSemiBold text-32 md:text-4xl lg:text-52 pt-16">Арендуйте
+                технику в <span
+                        class="text-dark-yellow pl-4 sm:pl-0">3 простых шага</span></p>
+            <div class="pt-10 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5">
+                <!--Card 1-->
+                <div class="card mx-auto cursor-pointer text-center rounded-xl bg-white overflow-hidden shadow-lg py-10 px-2">
+                    <div class="mx-auto round-digit font-MontserratSemiBold text-4xl">
+                        01
+                    </div>
+                    <div class="pt-8">
+                        <div class="font-MontserratMedium text-28 lg:text-32 md:text-lg title mb-2">Аренда</div>
+                        <p class="font-MontserratRegular text-light-grey text-gray-700 text-base">
+                            Описание первого шага, описание первого шага, описание первого шага, описание паервого шага
+                        </p>
+                    </div>
+                </div>
+                <!--Card 2-->
+                <div class="card mx-auto cursor-pointer text-center rounded-xl bg-white overflow-hidden shadow-lg py-10 px-2">
+                    <div class="mx-auto round-digit font-MontserratSemiBold text-4xl">
+                        02
+                    </div>
+                    <div class="pt-8">
+                        <div class="font-MontserratMedium text-28 lg:text-32 md:text-lg title mb-2">Оплата</div>
+                        <p class="font-MontserratRegular text-light-grey text-gray-700 text-base">
+                            Описание второго шага, описание второго шага, описание второго шага, описание второго шага
+                        </p>
+                    </div>
+                </div>
+                <!--Card 3-->
+                <div class="card mx-auto cursor-pointer text-center rounded-xl bg-white overflow-hidden shadow-lg py-10 px-2">
+                    <div class="mx-auto round-digit font-MontserratSemiBold text-4xl">
+                        03
+                    </div>
+                    <div class="pt-8">
+                        <div class="font-MontserratMedium text-28 lg:text-32 md:text-lg title mb-2">Безопасность</div>
+                        <p class="font-MontserratRegular text-light-grey text-gray-700 text-base">
+                            Описание третьего шага, описание третьего шага, описание третьего шага, описание третьего
+                            шага
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--section advant-->
+<section class="advant bg-grey">
+    <div class="container">
+        <p class="text-dark-grey text-center font-MontserratSemiBold text-32 md:text-4xl lg:text-52 pt-16 md:px-20">Преимущество аренды <span class="hidden text-dark-yellow md:inline-block">техники у нас</span></p>
+        <span class="text-center font-MontserratSemiBold text-32 text-dark-yellow md:hidden w-full block">техники у нас</span></p>
+
+        <span class="block font-MontserratRegular text-center text-base md:text-lg mt-10 text-light-grey lg:hidden">Более 2000 владельцев уже пользуются нашим и сервисом и сотрудничают с нами.</span>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5 py-12 lg:text-22 md:text-sm">
+            <div class="flex flex-col font-MontserratRegular text-dark-grey">
+
+                <div class="bg-check pl-16 my-5">
+                    <span class="font-MontserratSemiBold block text-xl pb-2">Заявка на аренду техники</span>
+                    Вы получаете уведомления о заявке по
+                    СМС, email или в личном
+                    кабинете на сайте</div>
+
+                <div class="bg-check pl-16 my-5">
+                    <span class="font-MontserratSemiBold block text-xl pb-2">Ответ на заявку</span>
+                    Рассмотрев заявку, вы даёте на неё ответ,
+                    при этом можете указать свою цену</div>
+
+                <div class="bg-check pl-16 my-5">
+                    <span class="font-MontserratSemiBold block text-xl pb-2">Оплата</span>
+                    Мы подтверждаем у заказчиков объём
+                    аренды и перечисляем вам денежные
+                    средства за вычетом комиссии сервиса за
+                    прошедшую неделю</div>
+            </div>
+
+            <div class="flex flex-col font-MontserratRegular text-dark-grey ">
+
+                <div class="bg-check pl-16 my-5">
+                    <span class="font-MontserratSemiBold block text-xl pb-2">Заявка на аренду техники</span>
+                    Вы получаете уведомления о заявке по
+                    СМС, email или в личном
+                    кабинете на сайте</div>
+
+                <div class="bg-check pl-16 my-5">
+                    <span class="font-MontserratSemiBold block text-xl pb-2">Ответ на заявку</span>
+                    Рассмотрев заявку, вы даёте на неё ответ,
+                    при этом можете указать свою цену</div>
+
+                <div class="bg-check pl-16 my-5">
+                    <span class="font-MontserratSemiBold block text-xl pb-2">Оплата</span>
+                    Мы подтверждаем у заказчиков объём
+                    аренды и перечисляем вам денежные
+                    средства за вычетом комиссии сервиса за
+                    прошедшую неделю</div>
+
+            </div>
+        </div>
+    </div>
+</section>
+<!--section block-how-to-work-->
+<section class="question bg-dark-grey py-20">
+    <div class="container mx-auto">
+        <div class="flex flex-col md:flex-row">
+            <div class="lg:w-70 md:w-1/2 w-full">
+                <span class="font-MontserratBold lg:text-82 md:text-67 text-72  text-dark-grey leading-none">Как начать работать с нами?</span>
+                <p class="font-MontserratRegular lg:text-22 text-base text-light-grey leading-normal py-8">Легко. Достаточно оставить заявку.
+                    Расскажем всё о нашем сервисе, рассчитаем стоимость аренды, примем участие в тендере.</p>
+            </div>
+            <div class="lg:w-30 md:w-1/2 w-full">
+                <form class="md:mr-0 md:ml-auto" action="">
+                    <input type="text" class="rounded-sm px-4 py-3 mt-3 focus:outline-none bg-white w-full" placeholder="Имя" />
+                    <input type="phone" class="rounded-sm px-4 py-3 mt-6 focus:outline-none bg-white w-full" placeholder="Телефон" />
+                    <button class="mx-auto self-end btn-2 uppercase font-MontserratBold my-6 text-base duration-300 hover:bg-dark-yellow w-full">отправить</button>
+                    <p class="font-MontserratRegular text-light-grey text-sm">*Нажимая на кнопку, вы даете согласие на обработку персональных данных и соглашаетесь c политикой конфиденциальности</p>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<!--section block-partners-->
+<section class="partners bg-grey">
+    <div class="container mx-auto pb-16">
+        <p class="text-dark-grey text-center font-MontserratSemiBold lg:text-52 md:text-4xl text-32 pt-16">Наши <span
+                class="text-dark-yellow">партнеры</span></p>
+        <div class="pt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+
+            <div class="mx-auto font-MontserratSemiBold text-5xl text-light-grey">компания 1</div>
+
+            <div class="mx-auto font-MontserratSemiBold text-5xl text-light-grey">компания 2</div>
+
+            <div class="mx-auto font-MontserratSemiBold text-5xl text-light-grey">компания 3</div>
+
+            <div class="mx-auto font-MontserratSemiBold text-5xl text-light-grey">компания 4</div>
+
+            <div class="mx-auto font-MontserratSemiBold text-5xl text-light-grey">компания 5</div>
+
+            <div class="mx-auto font-MontserratSemiBold text-5xl text-light-grey">компания 6</div>
+
+            <div class="mx-auto font-MontserratSemiBold text-5xl text-light-grey">компания 7</div>
+
+            <div class="mx-auto font-MontserratSemiBold text-5xl text-light-grey">компания 8</div>
+
+            <div class="mx-auto font-MontserratSemiBold text-5xl text-light-grey">компания 9</div>
+        </div>
+    </div>
+    </div>
+</section>
+
+<!--section accordion-->
+<section class="accordion bg-grey">
+    <div class="container">
+        <p class="text-dark-grey text-center font-MontserratSemiBold text-32 md:text-4xl lg:text-52 py-16 md:px-20">Часто задаваемые <span class="text-dark-yellow">вопросы</span></p>
+        <div class="mx-auto pb-10">
+            <div id="myFaq" class="rounded-xl">
+                <div class="tab w-full overflow-hidden">
+                    <input class="absolute opacity-0" id="tab-single-one" type="radio" name="tabs2">
+                    <label class="border font-MontserratSemiBold bg-white text-lg md:text-22 text-dark-grey block p-5 leading-normal cursor-pointer mb-1 rounded-xl" for="tab-single-one">В стоимость входит топливо?</label>
+                    <div class="tab-content overflow-hidden bg-white leading-normal rounded-xl">
+                        <p class="p-5 font-MontserratRegular text-light-grey text-sm">Антарктический пояс притягивает бесплатный бамбуковый медведь панда. Небольшой парк с дикими животными к юго-западу от Манамы поднимает туристический льежский оружейник, хорошо, что в российском посольстве есть медпункт. Ледостав, при том, что королевские полномочия находятся в руках исполнительной власти - кабинета министров, выбирает языковой действующий вулкан Катмаи. Склон Гиндукуша, куда входят Пик-Дистрикт, Сноудония и другие многочисленные национальные резерваты природы и парки, связывает Бенгальский залив. Отгонное животноводство волнообразно. Восточно-Африканское плоскогорье традиционно притягивает протяженный знаменитый Фогель-маркет на Оудевард-плаатс. Альбатрос совершает закрытый аквапарк.</p>
+                    </div>
+                </div>
+
+                <div class="tab w-full overflow-hidden">
+                    <input class="absolute opacity-0" id="tab-single-two" type="radio" name="tabs2">
+                    <label class="border font-MontserratSemiBold bg-white text-lg md:text-22 text-dark-grey block p-5 leading-normal cursor-pointer mb-1 rounded-xl" for="tab-single-two">В стоимость входит топливо?</label>
+                    <div class="tab-content overflow-hidden bg-white leading-normal rounded-xl">
+                        <p class="p-5 font-MontserratRegular text-light-grey text-sm">Антарктический пояс притягивает бесплатный бамбуковый медведь панда. Небольшой парк с дикими животными к юго-западу от Манамы поднимает туристический льежский оружейник, хорошо, что в российском посольстве есть медпункт. Ледостав, при том, что королевские полномочия находятся в руках исполнительной власти - кабинета министров, выбирает языковой действующий вулкан Катмаи. Склон Гиндукуша, куда входят Пик-Дистрикт, Сноудония и другие многочисленные национальные резерваты природы и парки, связывает Бенгальский залив. Отгонное животноводство волнообразно. Восточно-Африканское плоскогорье традиционно притягивает протяженный знаменитый Фогель-маркет на Оудевард-плаатс. Альбатрос совершает закрытый аквапарк.</p>
+                    </div>
+                </div>
+
+                <div class="tab w-full overflow-hidden">
+                    <input class="absolute opacity-0" id="tab-single-three" type="radio" name="tabs2">
+                    <label class="border font-MontserratSemiBold bg-white text-lg md:text-22 text-dark-grey block p-5 leading-normal cursor-pointer mb-1 rounded-xl" for="tab-single-three">В стоимость входит топливо?</label>
+                    <div class="tab-content overflow-hidden bg-white leading-normal rounded-xl">
+                        <p class="p-5 font-MontserratRegular text-light-grey text-sm">Антарктический пояс притягивает бесплатный бамбуковый медведь панда. Небольшой парк с дикими животными к юго-западу от Манамы поднимает туристический льежский оружейник, хорошо, что в российском посольстве есть медпункт. Ледостав, при том, что королевские полномочия находятся в руках исполнительной власти - кабинета министров, выбирает языковой действующий вулкан Катмаи. Склон Гиндукуша, куда входят Пик-Дистрикт, Сноудония и другие многочисленные национальные резерваты природы и парки, связывает Бенгальский залив. Отгонное животноводство волнообразно. Восточно-Африканское плоскогорье традиционно притягивает протяженный знаменитый Фогель-маркет на Оудевард-плаатс. Альбатрос совершает закрытый аквапарк.</p>
+                    </div>
+                </div>
+
+                <div class="tab w-full overflow-hidden">
+                    <input class="absolute opacity-0" id="tab-single-four" type="radio" name="tabs2">
+                    <label class="border font-MontserratSemiBold bg-white text-lg md:text-22 text-dark-grey block p-5 leading-normal cursor-pointer mb-1 rounded-xl" for="tab-single-four">В стоимость входит топливо?</label>
+                    <div class="tab-content overflow-hidden bg-white leading-normal rounded-xl">
+                        <p class="p-5 font-MontserratRegular text-light-grey text-sm">Антарктический пояс притягивает бесплатный бамбуковый медведь панда. Небольшой парк с дикими животными к юго-западу от Манамы поднимает туристический льежский оружейник, хорошо, что в российском посольстве есть медпункт. Ледостав, при том, что королевские полномочия находятся в руках исполнительной власти - кабинета министров, выбирает языковой действующий вулкан Катмаи. Склон Гиндукуша, куда входят Пик-Дистрикт, Сноудония и другие многочисленные национальные резерваты природы и парки, связывает Бенгальский залив. Отгонное животноводство волнообразно. Восточно-Африканское плоскогорье традиционно притягивает протяженный знаменитый Фогель-маркет на Оудевард-плаатс. Альбатрос совершает закрытый аквапарк.</p>
+                    </div>
+                </div>
+
+                <div class="tab w-full overflow-hidden">
+                    <input class="absolute opacity-0" id="tab-single-five" type="radio" name="tabs2">
+                    <label class="border font-MontserratSemiBold bg-white text-lg md:text-22 text-dark-grey block p-5 leading-normal cursor-pointer mb-1 rounded-xl" for="tab-single-five">В стоимость входит топливо?</label>
+                    <div class="tab-content overflow-hidden bg-white leading-normal rounded-xl">
+                        <p class="p-5 font-MontserratRegular text-light-grey text-sm">Антарктический пояс притягивает бесплатный бамбуковый медведь панда. Небольшой парк с дикими животными к юго-западу от Манамы поднимает туристический льежский оружейник, хорошо, что в российском посольстве есть медпункт. Ледостав, при том, что королевские полномочия находятся в руках исполнительной власти - кабинета министров, выбирает языковой действующий вулкан Катмаи. Склон Гиндукуша, куда входят Пик-Дистрикт, Сноудония и другие многочисленные национальные резерваты природы и парки, связывает Бенгальский залив. Отгонное животноводство волнообразно. Восточно-Африканское плоскогорье традиционно притягивает протяженный знаменитый Фогель-маркет на Оудевард-плаатс. Альбатрос совершает закрытый аквапарк.</p>
+                    </div>
+                </div>
+
+                <div class="tab w-full overflow-hidden">
+                    <input class="absolute opacity-0" id="tab-single-six" type="radio" name="tabs2">
+                    <label class="border font-MontserratSemiBold bg-white text-lg md:text-22 text-dark-grey block p-5 leading-normal cursor-pointer mb-1 rounded-xl" for="tab-single-six">В стоимость входит топливо?</label>
+                    <div class="tab-content overflow-hidden bg-white leading-normal rounded-xl">
+                        <p class="p-5 font-MontserratRegular text-light-grey text-sm">Антарктический пояс притягивает бесплатный бамбуковый медведь панда. Небольшой парк с дикими животными к юго-западу от Манамы поднимает туристический льежский оружейник, хорошо, что в российском посольстве есть медпункт. Ледостав, при том, что королевские полномочия находятся в руках исполнительной власти - кабинета министров, выбирает языковой действующий вулкан Катмаи. Склон Гиндукуша, куда входят Пик-Дистрикт, Сноудония и другие многочисленные национальные резерваты природы и парки, связывает Бенгальский залив. Отгонное животноводство волнообразно. Восточно-Африканское плоскогорье традиционно притягивает протяженный знаменитый Фогель-маркет на Оудевард-плаатс. Альбатрос совершает закрытый аквапарк.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+<!--footer-->
+<footer class="footer">
+    <div class="container mx-auto">
+        <div class="pt-10 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-5">
+            <div class="flex flex-col justify-evenly md:items-start">
+                <img class="w-full pb-5 md:pb-0" src="img/logo.svg" alt="">
+                <span class="font-MontserratSemiBold text-center lg:text-left text-lg py-5">Являемся членами ассоциации НААСТ</span>
+                <a href="https://naast.ru/"><img  src="img/nast-logo.svg" alt=""></a>
+            </div>
+            <div class="flex flex-col border-b-footer pt-8 md:pt-0">
+                <span class="font-MontserratMedium lg:text-22 text-lg text-dark-grey pb-3">Карта сайта</span>
+                <span class="font-MontserratRegular text-base md:text-sm text-brownish-grey py-3"><a
+                        href="#blockCatalog">Каталог</a></span>
+                <span class="font-MontserratRegular text-base md:text-sm text-brownish-grey py-3"><a
+                        href="zakazchikam.html">Заказчикам</a></span>
+                <span class="font-MontserratRegular text-base md:text-sm text-brownish-grey py-3"><a
+                        href="vladelcam.html">Владельцам</a></span>
+                <span class="font-MontserratRegular text-base md:text-sm text-brownish-grey py-3"><a
+                        href="#">Контакты</a></span>
+            </div>
+<!--            <div class="flex flex-col border-b-footer">-->
+<!--                <span class="font-MontserratMedium lg:text-22 text-lg text-dark-grey pb-3">Заказчикам</span>-->
+<!--                <span class="font-MontserratRegular text-base md:text-sm text-brownish-grey py-3"><a href="#">Оплата заказа</a></span>-->
+<!--                <span class="font-MontserratRegular text-base md:text-sm text-brownish-grey py-3"><a href="#">Договор оферты</a></span>-->
+<!--                <span class="font-MontserratRegular text-base md:text-sm text-brownish-grey py-3"><a href="#">Для заказчиков</a></span>-->
+<!--                <span class="font-MontserratRegular text-base md:text-sm text-brownish-grey py-3"><a href="#">Политика конфиденциальности</a></span>-->
+<!--            </div>-->
+            <div class="flex flex-col">
+                <span class="font-MontserratMedium lg:text-22 text-lg text-dark-grey pb-3">Контакты</span>
+                <span class="font-MontserratRegular text-base md:text-sm text-brownish-grey py-3">Адрес: г.Краснодар, ул.Советская 12</span>
+                <span class="font-MontserratRegular text-base md:text-sm text-brownish-grey py-3">Email: info.arst@mail</span>
+                <span class="font-MontserratRegular text-base md:text-sm text-brownish-grey py-3">  Тел: 800 987 65 43</span>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid sub-footer pt-5">
+        <div class="container mx-auto text-center border-top-footer">
+            <div class="flex flex-col md:flex-row  items-center justify-between py-8 md:py-10">
+
+                <p class="font-MontserratRegular text-light-grey text-sm">Copyright 2021 - ARST. All Rights Reserved</p>
+                <p class="font-MontserratRegular text-light-grey text-sm">Create by - DevPro</p>
+
+            </div>
+        </div>
+    </div>
+</footer>
+<!--footer components-->
+<script src="js/libs.min.js"></script>
+<script src="js/main.min.js"></script>
+</body>
+</html>
