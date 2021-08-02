@@ -3,7 +3,12 @@ var mapTitle = document.createElement('div'); mapTitle.className = 'mapTitle';
 // вписываем нужный нам текст внутрь элемента
 mapTitle.textContent = 'Для активации карты нажмите по ней';
 // добавляем элемент с подсказкой последним элементов внутрь нашего <div> с id wrapMap
-wrapMap.appendChild(mapTitle);
+wrapMap = document.getElementById('wrapMap');
+console.log(wrapMap);
+
+if (wrapMap !== null) {
+    wrapMap.appendChild(mapTitle);
+
 // по клику на карту
 wrapMap.onclick = function() {
     // убираем атрибут "style", в котором прописано свойство "pointer-events"
@@ -24,3 +29,4 @@ wrapMap.onmouseleave = function() {
     // прячем подсказку
     mapTitle.style.display = 'none';
 }
+};

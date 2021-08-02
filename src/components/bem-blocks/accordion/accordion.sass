@@ -1,0 +1,58 @@
+.accordion
+ .tab-content
+   max-height: 0
+   -webkit-transition: max-height .35s
+   -o-transition: max-height .35s
+   transition: max-height .35s
+
+ .tab input:checked ~ .tab-content
+    max-height: 100vh
+    border-width: 1px
+    margin-bottom: 5px
+
+ .tab input:checked + label
+    background-color: #ffffff
+    color: #333333
+
+ .tab label::after
+   float: right
+   right: 0
+   top: 0
+   display: block
+   width: 1.5em
+   height: 1.5em
+   line-height: 1.5
+   font-size: 1.25rem
+   text-align: center
+   -webkit-transition: all .35s
+   -o-transition: all .35s
+   transition: all .35s
+
+ .tab input[type=checkbox] + label::after
+   content: "+"
+   font-weight: bold
+   border-width: 0px
+   border-radius: 9999px
+   border-color: #b8c2cc
+
+ .tab input[type=radio] + label::after
+   content: "\23F7"
+   font-weight: bold
+
+ .tab input[type=checkbox]:checked + label::after
+   transform: rotate(315deg)
+   background-color: #ffffff
+   color: #f8fafc
+
+ .tab input[type=radio]:checked + label::after
+   transform: rotateX(180deg)
+   background-color: #ffffff
+   color: #000
+
+ .tab input[type=radio]:checked > div
+   transform: rotateX(180deg)
+   background-color: #ffffff
+   color: #000
+
+ label
+

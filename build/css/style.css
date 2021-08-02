@@ -51,6 +51,9 @@
   .text-35 {
     font-size: 35px;
   }
+  .text-38 {
+    font-size: 38px;
+  }
   .text-42 {
     font-size: 42px;
   }
@@ -318,8 +321,137 @@ body {
   min-height: 600px;
 }
 
+.accordion .tab-content {
+  max-height: 0;
+  -webkit-transition: max-height .35s;
+  -o-transition: max-height .35s;
+  transition: max-height .35s;
+}
+
+.accordion .tab input:checked ~ .tab-content {
+  max-height: 100vh;
+  border-width: 1px;
+  margin-bottom: 5px;
+}
+
+.accordion .tab input:checked + label {
+  background-color: #ffffff;
+  color: #333333;
+}
+
+.accordion .tab label::after {
+  float: right;
+  right: 0;
+  top: 0;
+  display: block;
+  width: 1.5em;
+  height: 1.5em;
+  line-height: 1.5;
+  font-size: 1.25rem;
+  text-align: center;
+  -webkit-transition: all .35s;
+  -o-transition: all .35s;
+  transition: all .35s;
+}
+
+.accordion .tab input[type=checkbox] + label::after {
+  content: "+";
+  font-weight: bold;
+  border-width: 0px;
+  border-radius: 9999px;
+  border-color: #b8c2cc;
+}
+
+.accordion .tab input[type=radio] + label::after {
+  content: "\23F7";
+  font-weight: bold;
+}
+
+.accordion .tab input[type=checkbox]:checked + label::after {
+  transform: rotate(315deg);
+  background-color: #ffffff;
+  color: #f8fafc;
+}
+
+.accordion .tab input[type=radio]:checked + label::after {
+  transform: rotateX(180deg);
+  background-color: #ffffff;
+  color: #000;
+}
+
+.accordion .tab input[type=radio]:checked > div {
+  transform: rotateX(180deg);
+  background-color: #ffffff;
+  color: #000;
+}
+
 .advant .bg-check {
-  background: url("../img/check.png") no-repeat left 20%;
+  background: url("../img/check.png") no-repeat left 5%;
+}
+
+.block-about-our-service .round-digit {
+  width: 141px;
+  height: 141px;
+  line-height: 141px;
+  background: #f2f2f2;
+  color: #fff;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.block-about-our-service .title {
+  color: #666666;
+}
+
+.block-about-our-service .title-block {
+  width: 1050px;
+}
+
+.block-about-our-service .card:hover {
+  --tw-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.block-about-our-service .card:hover > .round-digit {
+  background: #f0c42e;
+}
+
+.block-about-our-service .card:hover .title {
+  color: #333333;
+}
+
+.block-about-our-service .bg-image {
+  background: url(../img/bg-image.jpg) no-repeat center 35%;
+  height: 700px;
+}
+
+.banner-vladelcam .img-card {
+  left: 22%;
+  top: 80px;
+}
+
+@media (min-width: 0) {
+  .banner-vladelcam .img-card {
+    left: 0;
+    top: 0;
+    width: 190%;
+  }
+}
+
+@media (min-width: 768px) {
+  .banner-vladelcam .img-card {
+    left: 0;
+    top: 80px;
+    width: 160%;
+  }
+}
+
+@media (min-width: 1290px) {
+  .banner-vladelcam .img-card {
+    left: 0%;
+    top: 80px;
+    width: 120%;
+  }
 }
 
 .catalog .bg-kran {
@@ -455,6 +587,10 @@ body {
   }
 }
 
+.how-to-work .bg-check {
+  background: url("../img/check.png") no-repeat left 5%;
+}
+
 .map {
   height: 650px;
 }
@@ -508,6 +644,34 @@ body {
     top: 0px;
     max-width: 130%;
   }
+}
+
+.four-blocks-vladelcam .bg-image {
+  background: url("../img/users.png") no-repeat left center;
+  height: 54px;
+  display: inline-block;
+  line-height: 54px;
+}
+
+.four-blocks-vladelcam .bg-image-2 {
+  background: url("../img/shield.png") no-repeat left center;
+  height: 54px;
+  display: inline-block;
+  line-height: 54px;
+}
+
+.four-blocks-vladelcam .bg-image-3 {
+  background: url("../img/auto.png") no-repeat left center;
+  height: 54px;
+  display: inline-block;
+  line-height: 54px;
+}
+
+.four-blocks-vladelcam .bg-image-4 {
+  background: url("../img/raketa.png") no-repeat left center;
+  height: 54px;
+  display: inline-block;
+  line-height: 54px;
 }
 
 @media (min-width: 768px) {
@@ -747,7 +911,7 @@ header .burger {
 
 .menu_mob {
   width: 100%;
-  top: 100px;
+  top: 60px;
   height: auto;
   background: #ffffff;
   color: #ccc;
@@ -772,6 +936,136 @@ header .logo {
 
 header .menu-width {
   width: 467px;
+}
+
+.main-banner-vladelcam .bg-main-banner-vladelcam {
+  background: url("../img/main-banner-vladelcam.jpg") no-repeat center center;
+  min-height: 600px;
+}
+
+@media (min-width: 0px) {
+  .main-banner-vladelcam .abs-text {
+    width: 100%;
+    top: 21%;
+    left: 52%;
+    z-index: 10;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@media (min-width: 768px) {
+  .main-banner-vladelcam .abs-text {
+    top: 24%;
+    left: 67%;
+    z-index: 10;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@media (min-width: 1290px) {
+  .main-banner-vladelcam .abs-text {
+    top: 25%;
+    left: 79%;
+    z-index: 10;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.main-banner-vladelcam .line-title {
+  position: absolute;
+}
+
+@media (min-width: 0px) {
+  .main-banner-vladelcam .line-title {
+    height: 15px;
+    width: 360px;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@media (min-width: 768px) {
+  .main-banner-vladelcam .line-title {
+    height: 15px;
+    width: 490px;
+    top: 37%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@media (min-width: 1290px) {
+  .main-banner-vladelcam .line-title {
+    height: 15px;
+    width: 550px;
+    top: 39%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+  }
+}
+
+@media (min-width: 0px) {
+  .main-banner-zakaz .abs-text {
+    width: 100%;
+    top: 21%;
+    left: 54%;
+    z-index: 10;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@media (min-width: 768px) {
+  .main-banner-zakaz .abs-text {
+    top: 24%;
+    left: 68%;
+    z-index: 10;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@media (min-width: 1290px) {
+  .main-banner-zakaz .abs-text {
+    top: 25%;
+    left: 79%;
+    z-index: 10;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.main-banner-zakaz .line-title {
+  position: absolute;
+}
+
+@media (min-width: 0px) {
+  .main-banner-zakaz .line-title {
+    height: 15px;
+    width: 340px;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@media (min-width: 768px) {
+  .main-banner-zakaz .line-title {
+    height: 15px;
+    width: 470px;
+    top: 37%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@media (min-width: 1290px) {
+  .main-banner-zakaz .line-title {
+    height: 15px;
+    width: 530px;
+    top: 39%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
 
 .main-banner .bg-image {
