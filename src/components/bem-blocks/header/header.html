@@ -1,32 +1,38 @@
-<header>
+<div class="header">
     <div class="container mx-auto">
         <div class="flex items-center justify-between py-2">
-            <a href="index.html"><img class="logo" src="img/logo.svg" alt=""></a>
-            <div class="pl-10 xl:pl-0 flex flex-col block-header">
-                <div class="hidden md:flex py-3.5 adress justify-end lg:justify-between font-MontserratMedium uppercase text-xs lg:text-base text-dark-grey">
-                    <div class="flex items-baseline hidden lg:flex">
-                        <i class="fa fa-lg fa-map-marker pr-2" aria-hidden="true"></i>
-                        <span class="">г. Краснодар, ул. советская 12</span>
-                    </div>
-                    <div class="pr-10 lg:pr-0 flex items-baseline">
-                        <i class="fa fa-lg fa-envelope pr-2" aria-hidden="true"></i>
-                        <span>info.arst@mail.ru</span>
-                    </div>
-                    <div class="flex items-center">
+            <a class="w-full md:w-auto" href="index.html"><img class="logo" src="img/logo.svg" alt=""></a>
+            <div class="pl-10 lg:pl-10 xl:pl-0 flex flex-1 flex-col block-header">
+                <div class="lg:hidden flex items-center hidden md:flex pt-3.5 adress justify-between font-MontserratMedium uppercase text-xs lg:text-base text-dark-grey">
+<!--                    <div class="flex items-baseline hidden lg:flex">-->
+<!--                        <i class="fa fa-lg fa-map-marker pr-2" aria-hidden="true"></i>-->
+<!--                        <span class="">г. Краснодар, ул. советская 12</span>-->
+<!--                    </div>-->
+<!--                    <div class="pr-10 lg:pr-0 flex items-baseline">-->
+<!--                        <i class="fa fa-lg fa-envelope pr-2" aria-hidden="true"></i>-->
+<!--                        <span>info.arst@mail.ru</span>-->
+<!--                    </div>-->
+
+                    <div class="">
                         <i class="fa fa-lg fa-phone pr-2" aria-hidden="true"></i>
-                        <span>тел: 8 800 987 65 43</span>
+                        <a class="" href="tel:">тел: 8 800 987 65 43</a>
                     </div>
+
+                    <a id="11" class="lg:block btn-1 text-dark-grey font-MontserratBold" href="#callTo">заказать
+                        звонок</a>
                 </div>
-                <div class="hidden md:flex justify-end lg:justify-between items-center py-3.5">
-                    <div class="menu menu-width">
-                        <ul class="flex justify-between text-brownish-grey font-MontserratRegular text-base">
+                <div class="hidden md:flex justify-end lg:justify-between items-center py-3.5 pt-5 pb-2">
+                    <div class="menu menu-width flex-1">
+                        <ul class="flex lg:justify-evenly md:justify-between text-brownish-grey font-MontserratRegular text-base">
                             <li><a href="#blockCatalog">Каталог</a></li>
                             <li><a href="zakazchikam.html">Заказчикам</a></li>
                             <li><a href="vladelcam.html">Владельцам</a></li>
-                            <li><a href="#">Контакты</a></li>
+                            <li class="md:hidden lg:block"><i class="fa fa-lg fa-phone pr-2" aria-hidden="true"></i>
+                                <a class="" href="tel:">тел: 8 800 987 65 43</a></li>
                         </ul>
                     </div>
-                    <a id="" class="hidden lg:block btn-1 text-dark-grey font-MontserratBold" href="#callTo">заказать звонок</a>
+                    <a id="" class="hidden lg:block btn-1 text-dark-grey font-MontserratBold" href="#callTo">заказать
+                        звонок</a>
                 </div>
             </div>
             <!--burger menu-->
@@ -41,7 +47,7 @@
                                 <li class="py-3"><a href="zakazat.html">Каталог</a></li>
                                 <li class="py-3"><a href="zakazchikam.html">Заказчикам</a></li>
                                 <li class="py-3"><a href="vladelcam.html">Владельцам</a></li>
-                                <li class="py-3"><a href="#">Контакты</a></li>
+                                <!--                                <li class="py-3"><a href="#">Контакты</a></li>-->
                             </ul>
                             <div class="flex flex-col font-MontserratMedium uppercase 2sm:text-base text-sm text-dark-grey">
                                 <div class="flex items-baseline py-3">
@@ -57,11 +63,11 @@
                                     <span>тел: 8 800 987 65 43</span>
                                 </div>
                             </div>
-                           <a class="btn-1 text-dark-grey font-MontserratBold text-center" href="#">заказать звонок</a>
+                            <a class="btn-1 text-dark-grey font-MontserratBold text-center" href="#">заказать звонок</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</header>
+</div>

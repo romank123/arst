@@ -1,51 +1,90 @@
+.h-screen
+ // min-height: 600px
+  //max-height: 800px
+
 .main-banner
+  .image-block-1_1
+    left: -90px
+  .image-block img
+    height: 100%
+    max-width: 600%
+    object-fit: cover
+
+  .image-block-1 img
+    max-width: 600%
+    object-fit: cover
+
+  .title
+    @media (min-width: 376px) and (max-width: 414px)
+      justify-content: center
+
+  .image-block
+    left: -70px
+    height: 100%
+    max-width: 600%
+    object-fit: cover
+
+  .image-block-1_1
+    display: none
+    @media (min-width: 769px)
+      display: block
+
+  .image-block-2
+    display: none
+    @media (min-width: 768px)
+      display: block
+    @media (min-width: 769px)
+      display: none
+
+
   .bg-image
-    height: 960px
-    background-image: url(../img/lib.png)
-    background-repeat: no-repeat
-    background-position: center right
-    background-size: contain
-
-    @media (max-width: 1649px)
-      background-position: 115% 100%
-      background-size: contain
-
-    @media (max-width: 1485px)
-      background-position: 130% 100%
-
-    @media (max-width: 1380px)
-      background-position: 150% 100%
-
-    @media (max-width: 1279px)
-      background-position: 165% 100%
-
-    @media (max-width: 1140px)
-      background-position: 210% 0%
-      background-size: 80%
-
-    @media (max-width: 1023px)
-      background-position: 25em 0%
-      background-size: contain
-      height: 855px
-
-    @media (max-width: 800px)
-      background-position: 19em 0%
-      background-size: 88%
-      height: 713px
-
-
-    @media (max-width: 767px)
-      background-image: url(../img/bg-mob.png)
-      background-repeat: no-repeat
-      background-position: 150% top
-      background-size: contain
-      height: 696px
-
-    @media (max-width: 640px)
-      height: 495px
-
-    @media (max-width: 425px)
-      height: 480px
+    //width: 912px
+    //height: 960px
+    //background-image: url(../img/lib.png)
+    //background-repeat: no-repeat
+    //background-position: left center
+    //background-size: contain
+    //
+    //@media (max-width: 1649px)
+    //  background-position: 115% 100%
+    //  background-size: contain
+    //
+    //@media (max-width: 1485px)
+    //  background-position: 130% 100%
+    //
+    //@media (max-width: 1380px)
+    //  background-position: 150% 100%
+    //
+    //@media (max-width: 1279px)
+    //  background-position: 165% 100%
+    //
+    //@media (max-width: 1140px)
+    //  background-position: 210% 0%
+    //  background-size: 80%
+    //
+    //@media (max-width: 1023px)
+    //  background-position: 25em 0%
+    //  background-size: contain
+    //  height: 855px
+    //
+    //@media (max-width: 800px)
+    //  background-position: 19em 0%
+    //  background-size: 88%
+    //  height: 713px
+    //
+    //
+    //@media (max-width: 767px)
+    //  background-image: url(../img/bg-mob.png)
+    //  background-repeat: no-repeat
+    //  background-position: 150% top
+    //  background-size: contain
+    //  height: 696px
+    //
+    //@media (max-width: 640px)
+    //  height: 495px
+    //
+    //@media (max-width: 425px)
+    //  height: 480px
 
 
   .subtitle
@@ -64,12 +103,12 @@
 
     @media (min-width: 768px)
       top: 67px
-      right: 50px
+      right: -10px
       z-index: 10
 
     @media (min-width: 1290px)
       top: 110px
-      right: 126px
+      right: 70px
       z-index: 10
 
   .line-title
@@ -80,25 +119,23 @@
     right: -15px
     z-index: 9
     @media (min-width: 0px)
-      width: 410px
+      width: 395px
       height: 15px
       top: 120px
       right: -25px
     @media (min-width: 768px)
-      width: 410px
+      width: 400px
       height: 15px
       top: 118px
-      right: 30px
+      right: -25px
 
     @media (min-width: 1290px)
       width: 610px
       height: 15px
       top: 179px
-      right: 90px
-
-
+      right: 40px
 
   .main-title
-    width: 465px
+    //width: 465px
 
 
