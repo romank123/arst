@@ -1168,6 +1168,24 @@ body {
   }
 }
 
+@media (min-width: 0px) {
+  .min-screen {
+    min-height: 515px;
+  }
+}
+
+@media (min-width: 768px) {
+  .min-screen {
+    min-height: 752px;
+  }
+}
+
+@media (min-width: 1290px) {
+  .min-screen {
+    min-height: 752px;
+  }
+}
+
 .main-banner .image-block-1_1 {
   left: -90px;
 }
