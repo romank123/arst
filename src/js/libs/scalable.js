@@ -1,4 +1,4 @@
-window.onload = function() {
+document.addEventListener("DOMContentLoaded", function(event) {
 
     window.addEventListener(`resize`, event => {
 
@@ -12,7 +12,7 @@ window.onload = function() {
             view.setAttribute('content', 'width=device-width, initial-scale=1.0');
         }
     });
-};
+});
 
 //
 // document.addEventListener("DOMContentLoaded", function(event)
