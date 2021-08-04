@@ -34,7 +34,7 @@ function resize_height() {
 
 document.addEventListener("DOMContentLoaded", function() {
 
-   setTimeout(resize_height, 100)
+   setTimeout(resize_height, 200)
 
 });
 
@@ -45,7 +45,7 @@ window.addEventListener("resize", function() {
         column.style.height =  "";
     }
 
-    setTimeout(resize_height,100)
+    setTimeout(resize_height,200)
 
 });
 
