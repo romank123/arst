@@ -2408,15 +2408,9 @@ body {
   }
 }
 
-@media (max-width: 414px) {
+@media (min-width: 0px) {
   .min-screen {
     min-height: 700px;
-    max-height: 700px;
-  }
-}
-
-@media (min-width: 415px) {
-  .min-screen {
     max-height: 700px;
   }
 }
