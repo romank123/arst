@@ -261,12 +261,12 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  min-width: 320px;
+  width: 100%;
 }
 
-@media (max-width: 425px) {
+@media (max-width: 414px) {
   body {
-    min-width: 425px;
+    min-width: 414px;
   }
 }
 
@@ -1168,9 +1168,16 @@ body {
   }
 }
 
-@media (min-width: 0px) {
+@media (max-width: 414px) {
   .min-screen {
-    min-height: 515px;
+    min-height: 700px;
+    max-height: 700px;
+  }
+}
+
+@media (min-width: 415px) {
+  .min-screen {
+    max-height: 700px;
   }
 }
 
