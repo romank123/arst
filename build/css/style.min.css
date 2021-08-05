@@ -1173,6 +1173,9 @@ video {
 .pt-0 {
 	padding-top: 0px;
 }
+.pt-36 {
+	padding-top: 9rem;
+}
 .text-left {
 	text-align: left;
 }
@@ -1909,6 +1912,14 @@ body {
   }
 }
 
+.catalog .card-box {
+  margin: -.75rem;
+}
+
+.catalog .card-box > * {
+  margin: .75rem;
+}
+
 .how-to-work .bg-check {
   background: url("../img/check.png") no-repeat left 5%;
 }
@@ -2476,7 +2487,12 @@ body {
 @media (min-width: 0px) {
   .min-screen {
     min-height: 700px;
-    max-height: 700px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .min-screen {
+    min-height: 840px;
   }
 }
 
@@ -2488,7 +2504,7 @@ body {
 
 @media (min-width: 1290px) {
   .min-screen {
-    min-height: 752px;
+    min-height: 855px;
   }
 }
 
