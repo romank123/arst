@@ -1,0 +1,209 @@
+<!--head-->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta id="view" name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+          href="css/style.min.css">
+    <title>@@title</title>
+    <!-- Add icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+
+</head>
+<body>
+
+
+
+<!--header-->
+<div class="header">
+    <div class="container mx-auto">
+        <div class="flex items-center justify-between py-2">
+            <a class="md:w-auto" href="index.html"><img class="logo" src="/img/logo.svg" alt=""></a>
+            <div class="pl-10 lg:pl-10 xl:pl-0 flex flex-1 flex-col block-header">
+                <div class="lg:hidden flex items-center hidden md:flex pt-3.5 adress justify-between font-MontserratMedium uppercase text-xs lg:text-base text-dark-grey">
+
+                    <div class="">
+                        <i class="fa fa-lg fa-phone pr-2" aria-hidden="true"></i>
+                        <a class="" href="tel:">тел: 8 800 987 65 43</a>
+                    </div>
+
+                    <button class="myBtn-open lg:block btn-1 text-dark-grey font-MontserratBold" type="button">заказать
+                        звонок</button>
+                </div>
+                <div class="hidden md:flex justify-end lg:justify-between items-center py-3.5 pt-5 pb-2">
+                    <div class="menu menu-width flex-1">
+                        <ul class="flex lg:justify-evenly md:justify-between text-brownish-grey font-MontserratRegular text-base">
+                            <li class="md:py-0 py-3"><a href="#">Каталог</a></li>
+                            <li class="md:py-0 py-3"><a href="zakazchikam.html">Заказчикам</a></li>
+                            <li class="md:py-0 py-3"><a href="vladelcam.html">Владельцам</a></li>
+                            <li class="md:hidden lg:block"><i class="fa fa-lg fa-phone pr-2" aria-hidden="true"></i>
+                                <a class="" href="tel:">тел: 8 800 987 65 43</a></li>
+                        </ul>
+                    </div>
+                    <button class="myBtn-open hidden lg:block btn-1 text-dark-grey font-MontserratBold">заказать
+                        звонок</button>
+                </div>
+            </div>
+            <!--burger menu-->
+            <div class="flex md:hidden relative menu-mob">
+                <div class="burger">
+                    <span></span>
+                </div>
+                <div class="menu_mob">
+                    <div class="w-full flex justify-center">
+                        <div class="flex flex-col">
+                            <ul class="items-start flex flex-col justify-between text-brownish-grey font-MontserratRegular text-xl mb-4">
+                                <li class="md:py-0 py-3"><a href="zakazat.html">Каталог</a></li>
+                                <li class="md:py-0 py-3"><a href="zakazchikam.html">Заказчикам</a></li>
+                                <li class="md:py-0 py-3"><a href="vladelcam.html">Владельцам</a></li>
+                                <!--                                <li class="py-3"><a href="#">Контакты</a></li>-->
+                            </ul>
+                            <div class="flex flex-col font-MontserratMedium uppercase 2sm:text-base text-sm text-dark-grey">
+                                <div class="flex items-baseline py-3">
+                                    <i class="fa fa-lg fa-map-marker pr-4" aria-hidden="true"></i>
+                                    <span class="">г. Краснодар, ул. советская 12</span>
+                                </div>
+                                <div class="flex items-baseline py-3">
+                                    <i class="fa fa-lg fa-envelope  pr-2" aria-hidden="true"></i>
+                                    <span>info.arst@mail.ru</span>
+                                </div>
+                                <div class="flex items-center py-3">
+                                    <i class="fa fa-lg fa-phone  pr-2" aria-hidden="true"></i>
+                                    <span>тел: 8 800 987 65 43</span>
+                                </div>
+                            </div>
+                            <button class="myBtn-open btn-1 text-dark-grey font-MontserratBold text-center" type="button">заказать звонок</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--modal-->
+<div id="myModal" class="modal-block">
+    <div class="modal absolute">
+        <form name = "" id = "form" action = "" method = "post" class="bg-white border rounded-lg md:p-6 p-5">
+
+            <div class="flex items-center justify-between">
+                <p class="font-MontserratSemiBold text-32 md:text-lg text-base">Контактная информация</p>
+                <img class="close-btn w-full items-center cursor-pointer pt-1" src="/img/cancel.svg" alt="">
+            </div>
+
+            <div class="mb-4">
+                <label class="block font-MontserratMedium text-base md:text-xs py-3 md:py-2 py-1" for="username">
+                    Ваше имя
+                </label>
+                <input class="text-base w-full block w-full bg-grey text-grey-darker border border-grey-lighter rounded-lg  py-2 md:py-1 px-4"
+                       id="username" type="text" placeholder="Ф.И.О.">
+            </div>
+
+            <div class="mb-4">
+                <label class="block font-MontserratMedium text-base md:text-xs py-3 md:py-2 py-1" for="phone">
+                    Номер телефона
+                </label>
+                <input class="text-base w-full block w-full bg-grey text-grey-darker border border-grey-lighter rounded-lg  py-2 md:py-1 px-4"
+                       id="phone" type="text" placeholder="+7 (9хх)-ххх-хх-хх">
+
+            </div>
+
+
+            <div class="flex flex-col w-full">
+                <span class="font-MontserratMedium text-base md:text-xs py-3 md:py-2 py-1">Описание</span>
+                <div class="flex-auto w-full text-xs space-y-2">
+                    <label class=""></label>
+                    <textarea required="" name="message" id=""
+                              class="text-base w-full min-h-[100px] max-h-[300px] h-28 appearance-none block w-full bg-grey text-grey-darker border border-grey-lighter rounded-lg  py-4 px-4"
+                              placeholder="Введите сообщение..." spellcheck="false"></textarea>
+
+                </div>
+
+
+            </div>
+
+            <div class="flex flex-col items-center justify-center pt-10">
+                <button class="btn-1  text-black font-bold py-2 px-7 rounded focus:outline-none focus:shadow-outline uppercase"
+                        type="submit">
+                    заказать звонок
+                </button>
+                <div class="flex pt-5">
+                    <img class="self-start" src="/img/info.svg" alt="">
+                    <p class="pl-1 font-MontserratRegular text-light-grey lg:text-base md:text-xxs text-12">С вами свяжется наш менеджер для подтверждения заказа. После этого вам
+                        начнут поступать предложения от владельцев техники. Выберите подходящее предложение и оплатите
+                        заказ. В данный момент вы не совершаете оплату.</p>
+
+
+                </div>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+<!--footer components-->
+<div id="myModal" class="modal-block">
+    <div class="modal absolute">
+        <form name = "" id = "form" action = "" method = "post" class="bg-white border rounded-lg md:p-6 p-5">
+
+            <div class="flex items-center justify-between">
+                <p class="font-MontserratSemiBold text-32 md:text-lg text-base">Контактная информация</p>
+                <img class="close-btn w-full items-center cursor-pointer pt-1" src="/img/cancel.svg" alt="">
+            </div>
+
+            <div class="mb-4">
+                <label class="block font-MontserratMedium text-base md:text-xs py-3 md:py-2 py-1" for="username">
+                    Ваше имя
+                </label>
+                <input class="text-base w-full block w-full bg-grey text-grey-darker border border-grey-lighter rounded-lg  py-2 md:py-1 px-4"
+                       id="username" type="text" placeholder="Ф.И.О.">
+            </div>
+
+            <div class="mb-4">
+                <label class="block font-MontserratMedium text-base md:text-xs py-3 md:py-2 py-1" for="phone">
+                    Номер телефона
+                </label>
+                <input class="text-base w-full block w-full bg-grey text-grey-darker border border-grey-lighter rounded-lg  py-2 md:py-1 px-4"
+                       id="phone" type="text" placeholder="+7 (9хх)-ххх-хх-хх">
+
+            </div>
+
+
+            <div class="flex flex-col w-full">
+                <span class="font-MontserratMedium text-base md:text-xs py-3 md:py-2 py-1">Описание</span>
+                <div class="flex-auto w-full text-xs space-y-2">
+                    <label class=""></label>
+                    <textarea required="" name="message" id=""
+                              class="text-base w-full min-h-[100px] max-h-[300px] h-28 appearance-none block w-full bg-grey text-grey-darker border border-grey-lighter rounded-lg  py-4 px-4"
+                              placeholder="Введите сообщение..." spellcheck="false"></textarea>
+
+                </div>
+
+
+            </div>
+
+            <div class="flex flex-col items-center justify-center pt-10">
+                <button class="btn-1  text-black font-bold py-2 px-7 rounded focus:outline-none focus:shadow-outline uppercase"
+                        type="submit">
+                    заказать звонок
+                </button>
+                <div class="flex pt-5">
+                    <img class="self-start" src="/img/info.svg" alt="">
+                    <p class="pl-1 font-MontserratRegular text-light-grey lg:text-base md:text-xxs text-12">С вами свяжется наш менеджер для подтверждения заказа. После этого вам
+                        начнут поступать предложения от владельцев техники. Выберите подходящее предложение и оплатите
+                        заказ. В данный момент вы не совершаете оплату.</p>
+
+
+                </div>
+            </div>
+
+        </form>
+    </div>
+</div>
+<script src="js/libs.min.js"></script>
+<script src="js/main.min.js"></script>
+</body>
+</html>
