@@ -4,15 +4,6 @@
     <meta charset="UTF-8">
     <meta id="view" name="viewport"
           content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-          content="@@description">
-    <meta name="keywords"
-          content="@@keywords">
-    <link rel="shortcut icon"
-          href="@@favicon"
-          type="image/x-icon">
-    <link rel="stylesheet"
-          href="css/libs.min.css">
     <link rel="stylesheet"
           href="css/style.min.css">
     <title>@@title</title>
@@ -29,38 +20,30 @@
 <div class="header">
     <div class="container mx-auto">
         <div class="flex items-center justify-between py-2">
-            <a class="md:w-auto" href="index.html"><img class="logo" src="img/logo.svg" alt=""></a>
+            <a class="md:w-auto" href="index.html"><img class="logo" src="/img/logo.svg" alt=""></a>
             <div class="pl-10 lg:pl-10 xl:pl-0 flex flex-1 flex-col block-header">
                 <div class="lg:hidden flex items-center hidden md:flex pt-3.5 adress justify-between font-MontserratMedium uppercase text-xs lg:text-base text-dark-grey">
-<!--                    <div class="flex items-baseline hidden lg:flex">-->
-<!--                        <i class="fa fa-lg fa-map-marker pr-2" aria-hidden="true"></i>-->
-<!--                        <span class="">г. Краснодар, ул. советская 12</span>-->
-<!--                    </div>-->
-<!--                    <div class="pr-10 lg:pr-0 flex items-baseline">-->
-<!--                        <i class="fa fa-lg fa-envelope pr-2" aria-hidden="true"></i>-->
-<!--                        <span>info.arst@mail.ru</span>-->
-<!--                    </div>-->
 
                     <div class="">
                         <i class="fa fa-lg fa-phone pr-2" aria-hidden="true"></i>
                         <a class="" href="tel:">тел: 8 800 987 65 43</a>
                     </div>
 
-                    <a id="11" class="lg:block btn-1 text-dark-grey font-MontserratBold" href="#callTo">заказать
-                        звонок</a>
+                    <button class="myBtn-open lg:block btn-1 text-dark-grey font-MontserratBold" type="button">заказать
+                        звонок</button>
                 </div>
                 <div class="hidden md:flex justify-end lg:justify-between items-center py-3.5 pt-5 pb-2">
                     <div class="menu menu-width flex-1">
                         <ul class="flex lg:justify-evenly md:justify-between text-brownish-grey font-MontserratRegular text-base">
-                            <li><a href="#blockCatalog">Каталог</a></li>
-                            <li><a href="zakazchikam.html">Заказчикам</a></li>
-                            <li><a href="vladelcam.html">Владельцам</a></li>
+                            <li class="md:py-0 py-3"><a href="#">Каталог</a></li>
+                            <li class="md:py-0 py-3"><a href="zakazchikam.html">Заказчикам</a></li>
+                            <li class="md:py-0 py-3"><a href="vladelcam.html">Владельцам</a></li>
                             <li class="md:hidden lg:block"><i class="fa fa-lg fa-phone pr-2" aria-hidden="true"></i>
                                 <a class="" href="tel:">тел: 8 800 987 65 43</a></li>
                         </ul>
                     </div>
-                    <a id="" class="hidden lg:block btn-1 text-dark-grey font-MontserratBold" href="#callTo">заказать
-                        звонок</a>
+                    <button class="myBtn-open hidden lg:block btn-1 text-dark-grey font-MontserratBold">заказать
+                        звонок</button>
                 </div>
             </div>
             <!--burger menu-->
@@ -72,9 +55,9 @@
                     <div class="w-full flex justify-center">
                         <div class="flex flex-col">
                             <ul class="items-start flex flex-col justify-between text-brownish-grey font-MontserratRegular text-xl mb-4">
-                                <li class="py-3"><a href="zakazat.html">Каталог</a></li>
-                                <li class="py-3"><a href="zakazchikam.html">Заказчикам</a></li>
-                                <li class="py-3"><a href="vladelcam.html">Владельцам</a></li>
+                                <li class="md:py-0 py-3"><a href="zakazat.html">Каталог</a></li>
+                                <li class="md:py-0 py-3"><a href="zakazchikam.html">Заказчикам</a></li>
+                                <li class="md:py-0 py-3"><a href="vladelcam.html">Владельцам</a></li>
                                 <!--                                <li class="py-3"><a href="#">Контакты</a></li>-->
                             </ul>
                             <div class="flex flex-col font-MontserratMedium uppercase 2sm:text-base text-sm text-dark-grey">
@@ -91,7 +74,7 @@
                                     <span>тел: 8 800 987 65 43</span>
                                 </div>
                             </div>
-                            <a class="btn-1 text-dark-grey font-MontserratBold text-center" href="#">заказать звонок</a>
+                            <button class="myBtn-open btn-1 text-dark-grey font-MontserratBold text-center" type="button">заказать звонок</button>
                         </div>
                     </div>
                 </div>
@@ -229,14 +212,14 @@
                     <p class="font-MontserratBold lg:text-38 text-26">Если вы физическое лицо
                         то можете стать самозанятым
                         и работать с нашим сервисом.</p>
-                    <a class="btn-2 text-dark-grey font-MontserratBold my-8 w-full md:w-auto md:px-16 text-center self-start"
+                    <a class="btn-2 text-dark-grey font-MontserratBold my-8 w-full md:w-auto md:px-7 text-center self-start"
                        href="sotrud.html">сотрудничать с нами</a>
                 </div>
 
 
                 <div class="md:w-1/2 w-full">
                     <div class="img-card relative">
-                        <img src="img/banner-card.png" alt="">
+                        <img src="/img/banner-card.png" alt="">
                     </div>
                 </div>
 
@@ -302,48 +285,7 @@
     </div>
 </section>
 <!--section tender-->
-<section class="tender">
-    <div class="container-fluid  bg-dark-grey">
-        <div class="container mx-auto pb-16">
-            <p class="text-dark-grey text-center font-MontserratSemiBold lg:text-52 md:text-4xl text-32 leading-none pt-16">
-                Поможем с оформлением <span
-                    class="text-dark-yellow leading-none">тендеров</span></p>
-            <div class="pt-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-5">
-            </div>
 
-            <div class="pt-5 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-1 gap-5">
-                <!--Card 3-->
-                <div class="card cursor-pointer text-center rounded-xl bg-white overflow-hidden shadow-lg pt-10 pl-7 pt-7  md:pl-8 md:pt-5 lg:pl-16 lg:pt-16 flex md:flex-row flex-col relative">
-                    <div class="flex flex-col md:pb-10 md:w-1/2 lg:pb-10 lg:pr-14 pr-7 lg:pr-28 md:pr-14 ">
-                        <div class="flex flex-col h-full justify-start">
-                            <div class="">
-                                <div class="md:py-5 uppercase mx-auto round-digit font-MontserratBlack text-base text-dark-grey-2">
-                                    арендовать технику сейчас
-                                </div>
-                                <div class="font-MontserratMedium lg:text-32 md:text-26 text-2xl leading-none text-dark-grey lg:px-10">
-                                    Спецпредложение для шеринга автогрейдера
-                                </div>
-                            </div>
-                            <p class="font-MontserratMedium text-light-grey text-light-grey text-base leading-9 py-5 my-auto">
-                                Вы
-                                можете
-                                заказать спецтехнику напрямую из каталога сервиса. Вам нужно перейти в наш каталог,
-                                выбрать от, что вам нужно и оформить заявку в 3 простых этапа. Вы
-                                можете
-                            </p>
-                        </div>
-                        <a class="mx-auto self-end btn-2 md:w-full lg:px-16 lg:w-auto px-1 w-full uppercase font-MontserratBold text-base self-end"
-                           href="#">перейти в
-                            каталог</a>
-                    </div>
-                    <div class="bg-cards pt-10 md:pt-0">
-                        <img class="absolute" src="img/greyder.png" alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 <!--section question-->
 <section id="callTo" class="question bg-dark-grey py-20">
     <div class="container mx-auto">
@@ -356,8 +298,8 @@
             <div class="lg:w-30 md:w-1/2 w-full">
                 <form class="md:mr-0 md:ml-auto" action="">
                     <input type="text"  class="rounded-sm px-4 py-3 mt-3 focus:outline-none bg-white w-full" placeholder="Имя" />
-                    <input type="phone"  class="rounded-sm px-4 py-3 mt-6 focus:outline-none bg-white w-full" placeholder="Телефон" />
-                    <button class="mx-auto self-end btn-2 uppercase font-MontserratBold my-6 text-base duration-300 hover:bg-dark-yellow w-full">заказать обратную связь</button>
+                    <input type="tel"  class="rounded-sm px-4 py-3 mt-6 focus:outline-none bg-white w-full" placeholder="Телефон" />
+                    <button class="mx-auto self-end btn-2 uppercase font-MontserratBold my-6 text-base duration-300 hover:bg-dark-yellow w-full" type="submit">заказать обратную связь</button>
                     <p class="font-MontserratRegular text-light-grey text-sm">*Нажимая на кнопку, вы даете согласие на обработку персональных данных и соглашаетесь c политикой конфиденциальности</p>
                 </form>
             </div>
@@ -429,38 +371,28 @@
 
             <div class="flex justify-center">
                 <div class="flex flex-col justify-evenly items-start w-full md:w-auto">
-                    <img class="pb-5 md:pb-0" src="img/logo.svg" alt="">
+                    <img class="pb-5 md:pb-0" src="/img/logo.svg" alt="">
                     <span class="title font-MontserratSemiBold text-center lg:text-left text-lg py-5">Являемся членами ассоциации НААСТ</span>
-                    <a class="w-full" href="https://naast.ru/"><img src="img/nast-logo.svg" alt=""></a></div>
+                    <a class="w-full" href="https://naast.ru/"><img src="/img/nast-logo.svg" alt=""></a></div>
             </div>
-
             <div class="flex justify-center">
                 <div class="flex flex-col border-b-footer w-full md:w-auto"><span class="font-MontserratMedium lg:text-22 text-lg text-dark-grey pb-3">Карта сайта</span>
-                    <span class="font-MontserratRegular text-base md:text-sm text-brownish-grey py-3"><a
-                            href="#blockCatalog">Каталог</a></span>
-                    <span class="font-MontserratRegular text-base md:text-sm text-brownish-grey py-3"><a
-                            href="zakazchikam.html">Заказчикам</a></span>
-                    <span class="font-MontserratRegular text-base md:text-sm text-brownish-grey py-3"><a
-                            href="vladelcam.html">Владельцам</a></span>
-                    <span class="font-MontserratRegular text-base md:text-sm text-brownish-grey py-3"><a
-                            href="sotrud.html">Сотрудничество</a></span>
+                    <a class="font-MontserratRegular text-base md:text-sm text-brownish-grey py-3"
+                            href="#">Каталог</a>
+                   <a class="font-MontserratRegular text-base md:text-sm text-brownish-grey py-3"
+                            href="zakazchikam.html">Заказчикам</a>
+                    <a class="font-MontserratRegular text-base md:text-sm text-brownish-grey py-3"
+                            href="vladelcam.html">Владельцам</a>
+                    <a class="font-MontserratRegular text-base md:text-sm text-brownish-grey py-3"
+                            href="sotrud.html">Сотрудничество</a>
                     </div>
             </div>
-<!--
- <div class="flex flex-col border-b-footer">-->
-<!--                <span class="font-MontserratMedium lg:text-22 text-lg text-dark-grey pb-3">Заказчикам</span>-->
-<!--                <span class="font-MontserratRegular text-base md:text-sm text-brownish-grey py-3"><a href="#">Оплата заказа</a></span>-->
-<!--                <span class="font-MontserratRegular text-base md:text-sm text-brownish-grey py-3"><a href="#">Договор оферты</a></span>-->
-<!--                <span class="font-MontserratRegular text-base md:text-sm text-brownish-grey py-3"><a href="#">Для заказчиков</a></span>-->
-<!--                <span class="font-MontserratRegular text-base md:text-sm text-brownish-grey py-3"><a href="#">Политика конфиденциальности</a></span>-->
-<!--            </div>-->
-
             <div class="flex justify-center">
                 <div class="flex flex-col w-full md:w-auto">
                     <span class="font-MontserratMedium lg:text-22 text-lg text-dark-grey pb-3">Контакты</span>
                     <span class="font-MontserratRegular text-base md:text-sm text-brownish-grey py-3">Адрес: г.Краснодар, ул.Советская 12</span>
-                    <span class="font-MontserratRegular text-base md:text-sm text-brownish-grey py-3">Email: info.arst@mail</span>
-                    <span class="font-MontserratRegular text-base md:text-sm text-brownish-grey py-3">  Тел: 800 987 65 43</span>
+                    <a class="font-MontserratRegular text-base md:text-sm text-brownish-grey py-3">Email: info.arst@mail</a>
+                    <a class="font-MontserratRegular text-base md:text-sm text-brownish-grey py-3">  Тел: 800 987 65 43</a>
                 </div>
             </div>
         </div>
@@ -477,6 +409,64 @@
     </div>
 </footer>
 <!--footer components-->
+<div id="myModal" class="modal-block">
+    <div class="modal absolute">
+        <form name = "" id = "form" action = "" method = "post" class="bg-white border rounded-lg md:p-6 p-5">
+
+            <div class="flex items-center justify-between">
+                <p class="font-MontserratSemiBold text-32 md:text-lg text-base">Контактная информация</p>
+                <img class="close-btn w-full items-center cursor-pointer pt-1" src="/img/cancel.svg" alt="">
+            </div>
+
+            <div class="mb-4">
+                <label class="block font-MontserratMedium text-base md:text-xs py-3 md:py-2 py-1" for="username">
+                    Ваше имя
+                </label>
+                <input class="text-base w-full block w-full bg-grey text-grey-darker border border-grey-lighter rounded-lg  py-2 md:py-1 px-4"
+                       id="username" type="text" placeholder="Ф.И.О.">
+            </div>
+
+            <div class="mb-4">
+                <label class="block font-MontserratMedium text-base md:text-xs py-3 md:py-2 py-1" for="phone">
+                    Номер телефона
+                </label>
+                <input class="text-base w-full block w-full bg-grey text-grey-darker border border-grey-lighter rounded-lg  py-2 md:py-1 px-4"
+                       id="phone" type="text" placeholder="+7 (9хх)-ххх-хх-хх">
+
+            </div>
+
+
+            <div class="flex flex-col w-full">
+                <span class="font-MontserratMedium text-base md:text-xs py-3 md:py-2 py-1">Описание</span>
+                <div class="flex-auto w-full text-xs space-y-2">
+                    <label class=""></label>
+                    <textarea required="" name="message" id=""
+                              class="text-base w-full min-h-[100px] max-h-[300px] h-28 appearance-none block w-full bg-grey text-grey-darker border border-grey-lighter rounded-lg  py-4 px-4"
+                              placeholder="Введите сообщение..." spellcheck="false"></textarea>
+
+                </div>
+
+
+            </div>
+
+            <div class="flex flex-col items-center justify-center pt-10">
+                <button class="btn-1  text-black font-bold py-2 px-7 rounded focus:outline-none focus:shadow-outline uppercase"
+                        type="submit">
+                    заказать звонок
+                </button>
+                <div class="flex pt-5">
+                    <img class="self-start" src="/img/info.svg" alt="">
+                    <p class="pl-1 font-MontserratRegular text-light-grey lg:text-base md:text-xxs text-12">С вами свяжется наш менеджер для подтверждения заказа. После этого вам
+                        начнут поступать предложения от владельцев техники. Выберите подходящее предложение и оплатите
+                        заказ. В данный момент вы не совершаете оплату.</p>
+
+
+                </div>
+            </div>
+
+        </form>
+    </div>
+</div>
 <script src="js/libs.min.js"></script>
 <script src="js/main.min.js"></script>
 </body>

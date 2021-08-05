@@ -1,30 +1,29 @@
-document.addEventListener("DOMContentLoaded", function(event) {
+document.addEventListener("DOMContentLoaded", function(){
 
-    window.addEventListener(`resize`, event => {
+    resize_viewport ();
+
+    function resize_viewport (){
+
+        let view = document.getElementById('view');
 
         if (screen.width < 414) {
-            var view = document.getElementById('view');
+
             view.setAttribute('content', 'width=320');
 
         } else {
 
-            var view = document.getElementById('view');
             view.setAttribute('content', 'width=device-width, initial-scale=1.0');
         }
+
+    }
+
+    window.addEventListener(`resize`, () => {
+
+        resize_viewport ();
+
+
     });
 });
 
-//
-// document.addEventListener("DOMContentLoaded", function(event)
-// {
-//     window.onresize = function() {
-//         resize_info();
-//     };
-// });
-//
-// function resize_info()
-// {
-//     // resize data
-// }
 
 

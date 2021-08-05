@@ -1,0 +1,58 @@
+<div id="myModal" class="modal-block">
+    <div class="modal absolute">
+        <form name = "" id = "form" action = "" method = "post" class="bg-white border rounded-lg md:p-6 p-5">
+
+            <div class="flex items-center justify-between">
+                <p class="font-MontserratSemiBold text-32 md:text-lg text-base">Контактная информация</p>
+                <img class="close-btn w-full items-center cursor-pointer pt-1" src="/img/cancel.svg" alt="">
+            </div>
+
+            <div class="mb-4">
+                <label class="block font-MontserratMedium text-base md:text-xs py-3 md:py-2 py-1" for="username">
+                    Ваше имя
+                </label>
+                <input class="text-base w-full block w-full bg-grey text-grey-darker border border-grey-lighter rounded-lg  py-2 md:py-1 px-4"
+                       id="username" type="text" placeholder="Ф.И.О.">
+            </div>
+
+            <div class="mb-4">
+                <label class="block font-MontserratMedium text-base md:text-xs py-3 md:py-2 py-1" for="phone">
+                    Номер телефона
+                </label>
+                <input class="text-base w-full block w-full bg-grey text-grey-darker border border-grey-lighter rounded-lg  py-2 md:py-1 px-4"
+                       id="phone" type="text" placeholder="+7 (9хх)-ххх-хх-хх">
+
+            </div>
+
+
+            <div class="flex flex-col w-full">
+                <span class="font-MontserratMedium text-base md:text-xs py-3 md:py-2 py-1">Описание</span>
+                <div class="flex-auto w-full text-xs space-y-2">
+                    <label class=""></label>
+                    <textarea required="" name="message" id=""
+                              class="text-base w-full min-h-[100px] max-h-[300px] h-28 appearance-none block w-full bg-grey text-grey-darker border border-grey-lighter rounded-lg  py-4 px-4"
+                              placeholder="Введите сообщение..." spellcheck="false"></textarea>
+
+                </div>
+
+
+            </div>
+
+            <div class="flex flex-col items-center justify-center pt-10">
+                <button class="btn-1  text-black font-bold py-2 px-7 rounded focus:outline-none focus:shadow-outline uppercase"
+                        type="submit">
+                    заказать звонок
+                </button>
+                <div class="flex pt-5">
+                    <img class="self-start" src="/img/info.svg" alt="">
+                    <p class="pl-1 font-MontserratRegular text-light-grey lg:text-base md:text-xxs text-12">С вами свяжется наш менеджер для подтверждения заказа. После этого вам
+                        начнут поступать предложения от владельцев техники. Выберите подходящее предложение и оплатите
+                        заказ. В данный момент вы не совершаете оплату.</p>
+
+
+                </div>
+            </div>
+
+        </form>
+    </div>
+</div>

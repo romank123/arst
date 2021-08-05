@@ -21,5 +21,24 @@
     <inspection_tool class="AngularUndefinedBinding" enabled="true" level="SERVER PROBLEM" enabled_by_default="true" />
     <inspection_tool class="AngularUndefinedModuleExport" enabled="true" level="SERVER PROBLEM" enabled_by_default="true" />
     <inspection_tool class="AngularUndefinedTag" enabled="true" level="SERVER PROBLEM" enabled_by_default="true" />
+    <inspection_tool class="Annotator" enabled="false" level="ERROR" enabled_by_default="false" />
+    <inspection_tool class="DuplicatedCode" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
+    <inspection_tool class="HtmlFormInputWithoutLabel" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="HtmlUnknownAttribute" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="myValues">
+        <value>
+          <list size="2">
+            <item index="0" class="java.lang.String" itemvalue="x-bind:min" />
+            <item index="1" class="java.lang.String" itemvalue="x-bind:style" />
+          </list>
+        </value>
+      </option>
+      <option name="myCustomValuesEnabled" value="true" />
+    </inspection_tool>
+    <inspection_tool class="SpellCheckingInspection" enabled="false" level="TYPO" enabled_by_default="false">
+      <option name="processCode" value="true" />
+      <option name="processLiterals" value="true" />
+      <option name="processComments" value="true" />
+    </inspection_tool>
   </profile>
 </component>

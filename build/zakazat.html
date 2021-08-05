@@ -4,15 +4,6 @@
     <meta charset="UTF-8">
     <meta id="view" name="viewport"
           content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-          content="@@description">
-    <meta name="keywords"
-          content="@@keywords">
-    <link rel="shortcut icon"
-          href="@@favicon"
-          type="image/x-icon">
-    <link rel="stylesheet"
-          href="css/libs.min.css">
     <link rel="stylesheet"
           href="css/style.min.css">
     <title>@@title</title>
@@ -29,38 +20,30 @@
 <div class="header">
     <div class="container mx-auto">
         <div class="flex items-center justify-between py-2">
-            <a class="md:w-auto" href="index.html"><img class="logo" src="img/logo.svg" alt=""></a>
+            <a class="md:w-auto" href="index.html"><img class="logo" src="/img/logo.svg" alt=""></a>
             <div class="pl-10 lg:pl-10 xl:pl-0 flex flex-1 flex-col block-header">
                 <div class="lg:hidden flex items-center hidden md:flex pt-3.5 adress justify-between font-MontserratMedium uppercase text-xs lg:text-base text-dark-grey">
-<!--                    <div class="flex items-baseline hidden lg:flex">-->
-<!--                        <i class="fa fa-lg fa-map-marker pr-2" aria-hidden="true"></i>-->
-<!--                        <span class="">г. Краснодар, ул. советская 12</span>-->
-<!--                    </div>-->
-<!--                    <div class="pr-10 lg:pr-0 flex items-baseline">-->
-<!--                        <i class="fa fa-lg fa-envelope pr-2" aria-hidden="true"></i>-->
-<!--                        <span>info.arst@mail.ru</span>-->
-<!--                    </div>-->
 
                     <div class="">
                         <i class="fa fa-lg fa-phone pr-2" aria-hidden="true"></i>
                         <a class="" href="tel:">тел: 8 800 987 65 43</a>
                     </div>
 
-                    <a id="11" class="lg:block btn-1 text-dark-grey font-MontserratBold" href="#callTo">заказать
-                        звонок</a>
+                    <button class="myBtn-open lg:block btn-1 text-dark-grey font-MontserratBold" type="button">заказать
+                        звонок</button>
                 </div>
                 <div class="hidden md:flex justify-end lg:justify-between items-center py-3.5 pt-5 pb-2">
                     <div class="menu menu-width flex-1">
                         <ul class="flex lg:justify-evenly md:justify-between text-brownish-grey font-MontserratRegular text-base">
-                            <li><a href="#blockCatalog">Каталог</a></li>
-                            <li><a href="zakazchikam.html">Заказчикам</a></li>
-                            <li><a href="vladelcam.html">Владельцам</a></li>
+                            <li class="md:py-0 py-3"><a href="#">Каталог</a></li>
+                            <li class="md:py-0 py-3"><a href="zakazchikam.html">Заказчикам</a></li>
+                            <li class="md:py-0 py-3"><a href="vladelcam.html">Владельцам</a></li>
                             <li class="md:hidden lg:block"><i class="fa fa-lg fa-phone pr-2" aria-hidden="true"></i>
                                 <a class="" href="tel:">тел: 8 800 987 65 43</a></li>
                         </ul>
                     </div>
-                    <a id="" class="hidden lg:block btn-1 text-dark-grey font-MontserratBold" href="#callTo">заказать
-                        звонок</a>
+                    <button class="myBtn-open hidden lg:block btn-1 text-dark-grey font-MontserratBold">заказать
+                        звонок</button>
                 </div>
             </div>
             <!--burger menu-->
@@ -72,9 +55,9 @@
                     <div class="w-full flex justify-center">
                         <div class="flex flex-col">
                             <ul class="items-start flex flex-col justify-between text-brownish-grey font-MontserratRegular text-xl mb-4">
-                                <li class="py-3"><a href="zakazat.html">Каталог</a></li>
-                                <li class="py-3"><a href="zakazchikam.html">Заказчикам</a></li>
-                                <li class="py-3"><a href="vladelcam.html">Владельцам</a></li>
+                                <li class="md:py-0 py-3"><a href="zakazat.html">Каталог</a></li>
+                                <li class="md:py-0 py-3"><a href="zakazchikam.html">Заказчикам</a></li>
+                                <li class="md:py-0 py-3"><a href="vladelcam.html">Владельцам</a></li>
                                 <!--                                <li class="py-3"><a href="#">Контакты</a></li>-->
                             </ul>
                             <div class="flex flex-col font-MontserratMedium uppercase 2sm:text-base text-sm text-dark-grey">
@@ -91,7 +74,7 @@
                                     <span>тел: 8 800 987 65 43</span>
                                 </div>
                             </div>
-                            <a class="btn-1 text-dark-grey font-MontserratBold text-center" href="#">заказать звонок</a>
+                            <button class="myBtn-open btn-1 text-dark-grey font-MontserratBold text-center" type="button">заказать звонок</button>
                         </div>
                     </div>
                 </div>
@@ -108,41 +91,13 @@
         <span class="font-MontserratSemiBold text-dark-grey text-center block lg:text-32 my-5 py-8">Заказать технику</span>
 
 
-<!--        <div class="pt-5 grid auto-rows-fr md:grid-cols-3 lg:grid-cols-3 gap-5">-->
-<!--            &lt;!&ndash;Card 1&ndash;&gt;-->
-<!--            <div class="card flex justify-center items-center cursor-pointer rounded-xl bg-white overflow-hidden shadow-lg px-7 md:pt-12 lg:pb-10 pb-5 md:px-3">-->
-<!--                <div class="bg-eks h-full flex flex-col justify-between items-center">-->
-<!--                    <img class="" src="img/eks.png" alt="">-->
-<!--                    <p class="font-MontserratSemiBold text-dark-grey lg:text-22 md:text-17 text-22 text-center md:-mt-20 lg:-mt-0">-->
-<!--                        Гусеничный экскаватор</p>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--            &lt;!&ndash;Card 2&ndash;&gt;-->
-<!--&lt;!&ndash;            <div class="card flex justify-center items-center cursor-pointer rounded-xl bg-white overflow-hidden bg-not-active shadow-sm px-7 md:pt-12 lg:pb-10 pb-5 md:px-3">&ndash;&gt;-->
-<!--&lt;!&ndash;                <div class="bg-eks h-full flex flex-col justify-between items-center">&ndash;&gt;-->
-<!--&lt;!&ndash;                    <img class="" src="img/kolesniy-eks-2.png" alt="">&ndash;&gt;-->
-<!--&lt;!&ndash;                    <p class="font-MontserratSemiBold text-dark-grey lg:text-22 md:text-17 text-22 text-center  md:-mt-20 lg:-mt-0">&ndash;&gt;-->
-<!--&lt;!&ndash;                        Колесный <br> экскаватор/погрузчик</p>&ndash;&gt;-->
-<!--&lt;!&ndash;                </div>&ndash;&gt;-->
-<!--&lt;!&ndash;            </div>&ndash;&gt;-->
-<!--            &lt;!&ndash;Card 3&ndash;&gt;-->
-<!--            <div class="card flex justify-center items-center cursor-pointer rounded-xl bg-white overflow-hidden bg-not-active shadow-sm px-7 md:pt-12 lg:pb-10 pb-5 md:px-3">-->
-<!--                <div class="bg-eks h-full flex flex-col justify-between items-center">-->
-<!--                    <img class="" src="img/kolesniy-eks.png" alt="">-->
-<!--                    <p class="font-MontserratSemiBold text-dark-grey lg:text-22 md:text-17 text-22 text-center  md:-mt-20 lg:-mt-0">-->
-<!--                        Колесный экскаватор</p>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-
-
         <div class="grid grid-cols-1 md:grid-cols-3 md:gap-5 gap-x-0">
             <!--card-1-->
             <div class="col-span-2 flex flex-col justify-center items-center rounded-xl bg-white overflow-hidden shadow-lg lg:px-12 lg:py-10 lg:pb-10 pb-5 md:px-7 md:pt-5 md:mb-4">
 
                 <span class="font-MontserratSemiBold lg:text-32 text-dark-grey text-center self-center py-5 md:py-0 md:pb-10">Гусеничный экскаватор</span>
 
-                <img src="img/eks.png" alt="">
+                <img src="/img/eks.png" alt="">
 
                 <div class="w-full -mt-48">
                     <div class="mass flex flex-col p-7 md:p-0 w-full">
@@ -175,13 +130,12 @@
                     <div class="value flex flex-col p-7 md:p-0 w-full">
                         <span class="font-MontserratMedium text-base my-5 mt-10">V ковша</span>
                         <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-5">
-                            <input type="text" id="username"
-                                   class="col-span-2 rounded-xl px-4 py-3 focus:outline-none bg-grey w-full"
+                            <input type="text" class="col-span-2 rounded-xl px-4 py-3 focus:outline-none bg-grey w-full"
                                    placeholder="Введите параметр"/>
                             <div class="flex lg:flex-col flex-wrap  lg:justify-center items-center w-full font-MontserratRegular text-sm text-brownish-grey">
                                 <span>Легкие (от 0,15. до 0,6)</span>
                                 <span>Средние (от 0,3 до 1,6)</span>
-                                <spa>Тяжелые (от 1,2 до 4)</spa>
+                                <span>Тяжелые (от 1,2 до 4)</span>
                             </div>
                         </div>
                     </div>
@@ -193,6 +147,7 @@
                         <div class="flex justify-center items-center my-5">
                             <div x-data="range()" x-init="mintrigger(); maxtrigger()" class="relative w-full">
                                 <div>
+                                    <!--suppress XmlUnboundNsPrefix -->
                                     <input type="range"
                                            step="1"
                                            x-bind:min="min" x-bind:max="max"
@@ -200,6 +155,7 @@
                                            x-model="minprice"
                                            class="absolute pointer-events-none appearance-none z-20 h-2 w-full opacity-0 cursor-pointer">
 
+                                    <!--suppress XmlUnboundNsPrefix, XmlUnboundNsPrefix, XmlUnboundNsPrefix -->
                                     <input type="range"
                                            step="1"
                                            x-bind:min="min" x-bind:max="max"
@@ -211,16 +167,20 @@
 
                                         <div class="absolute z-10 left-0 right-0 bottom-0 top-0 rounded-md bg-grey"></div>
 
+                    <!--suppress XmlUnboundNsPrefix -->
                                         <div class="absolute z-20 top-0 bottom-0 rounded-md bg-light-gray-line"
                                              x-bind:style="'right:'+maxthumb+'%; left:'+minthumb+'%'"></div>
 
+                                        <!--suppress XmlUnboundNsPrefix -->
                                         <div class="absolute z-30 top-0 left-0 bg-light-gray -mt-2 -ml-1"
                                              x-bind:style="'left: '+minthumb+'%'"></div>
 
+                                        <!--suppress XmlUnboundNsPrefix -->
                                         <div class="absolute z-30 w-6 h-6 top-0 right-0 bg-light-gray rounded-full -mt-2 -mr-3"
                                              x-bind:style="'right: '+maxthumb+'%'">
                                             <div class="relative">
                                                 <div class="marker">
+                                                    <!--suppress XmlUnboundNsPrefix -->
                                                     <input type="text" maxlength="5" x-on:input="maxtrigger"
                                                            x-model="maxprice"
                                                            class="">
@@ -310,6 +270,7 @@
 
                         <span class="font-MontserratMedium text-base my-5 mt-10">Период работы</span>
                         <div class="grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 items-end">
+
                             <div x-data="app()" x-init="[initDate(), getNoOfDays()]" x-cloak>
 
                                 <div class="">
@@ -318,7 +279,7 @@
                                            class="font-MontserratMedium text-base my-5"></label>
                                     <div class="relative">
                                         <input type="hidden" name="date" x-ref="date">
-                                        <input
+                                        <input id="datepicker"
                                                 type="text"
                                                 readonly
                                                 x-model="datepickerValue"
@@ -423,11 +384,11 @@
                             <div x-data="app()" x-init="[initDate(), getNoOfDays()]" x-cloak>
 
                                 <div class="">
-                                    <label for="datepicker"
+                                    <label for="datepicker_2"
                                            class="font-MontserratMedium text-base my-5"></label>
                                     <div class="relative">
                                         <input type="hidden" name="date" x-ref="date">
-                                        <input
+                                        <input  id="datepicker_2"
                                                 type="text"
                                                 readonly
                                                 x-model="datepickerValue"
@@ -564,9 +525,9 @@
                                                 class=" bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-l cursor-pointer outline-none">
                                             <span class="m-auto text-2xl font-thin">−</span>
                                         </button>
-                                        <input type="number"
+                                        <input id="custom-input-number" type="number"
                                                class="outline-none focus:outline-none text-center w-full bg-grey font-semibold text-md hover:text-black focus:text-black  md:text-basecursor-default flex items-center text-gray-700  outline-none"
-                                               name="custom-input-number" value="0"></input>
+                                               name="custom-input-number" value="0">
                                         <button data-action="increment"
                                                 class="bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-r cursor-pointer">
                                             <span class="m-auto text-2xl font-thin">+</span>
@@ -642,38 +603,28 @@
 
             <div class="flex justify-center">
                 <div class="flex flex-col justify-evenly items-start w-full md:w-auto">
-                    <img class="pb-5 md:pb-0" src="img/logo.svg" alt="">
+                    <img class="pb-5 md:pb-0" src="/img/logo.svg" alt="">
                     <span class="title font-MontserratSemiBold text-center lg:text-left text-lg py-5">Являемся членами ассоциации НААСТ</span>
-                    <a class="w-full" href="https://naast.ru/"><img src="img/nast-logo.svg" alt=""></a></div>
+                    <a class="w-full" href="https://naast.ru/"><img src="/img/nast-logo.svg" alt=""></a></div>
             </div>
-
             <div class="flex justify-center">
                 <div class="flex flex-col border-b-footer w-full md:w-auto"><span class="font-MontserratMedium lg:text-22 text-lg text-dark-grey pb-3">Карта сайта</span>
-                    <span class="font-MontserratRegular text-base md:text-sm text-brownish-grey py-3"><a
-                            href="#blockCatalog">Каталог</a></span>
-                    <span class="font-MontserratRegular text-base md:text-sm text-brownish-grey py-3"><a
-                            href="zakazchikam.html">Заказчикам</a></span>
-                    <span class="font-MontserratRegular text-base md:text-sm text-brownish-grey py-3"><a
-                            href="vladelcam.html">Владельцам</a></span>
-                    <span class="font-MontserratRegular text-base md:text-sm text-brownish-grey py-3"><a
-                            href="sotrud.html">Сотрудничество</a></span>
+                    <a class="font-MontserratRegular text-base md:text-sm text-brownish-grey py-3"
+                            href="#">Каталог</a>
+                   <a class="font-MontserratRegular text-base md:text-sm text-brownish-grey py-3"
+                            href="zakazchikam.html">Заказчикам</a>
+                    <a class="font-MontserratRegular text-base md:text-sm text-brownish-grey py-3"
+                            href="vladelcam.html">Владельцам</a>
+                    <a class="font-MontserratRegular text-base md:text-sm text-brownish-grey py-3"
+                            href="sotrud.html">Сотрудничество</a>
                     </div>
             </div>
-<!--
- <div class="flex flex-col border-b-footer">-->
-<!--                <span class="font-MontserratMedium lg:text-22 text-lg text-dark-grey pb-3">Заказчикам</span>-->
-<!--                <span class="font-MontserratRegular text-base md:text-sm text-brownish-grey py-3"><a href="#">Оплата заказа</a></span>-->
-<!--                <span class="font-MontserratRegular text-base md:text-sm text-brownish-grey py-3"><a href="#">Договор оферты</a></span>-->
-<!--                <span class="font-MontserratRegular text-base md:text-sm text-brownish-grey py-3"><a href="#">Для заказчиков</a></span>-->
-<!--                <span class="font-MontserratRegular text-base md:text-sm text-brownish-grey py-3"><a href="#">Политика конфиденциальности</a></span>-->
-<!--            </div>-->
-
             <div class="flex justify-center">
                 <div class="flex flex-col w-full md:w-auto">
                     <span class="font-MontserratMedium lg:text-22 text-lg text-dark-grey pb-3">Контакты</span>
                     <span class="font-MontserratRegular text-base md:text-sm text-brownish-grey py-3">Адрес: г.Краснодар, ул.Советская 12</span>
-                    <span class="font-MontserratRegular text-base md:text-sm text-brownish-grey py-3">Email: info.arst@mail</span>
-                    <span class="font-MontserratRegular text-base md:text-sm text-brownish-grey py-3">  Тел: 800 987 65 43</span>
+                    <a class="font-MontserratRegular text-base md:text-sm text-brownish-grey py-3">Email: info.arst@mail</a>
+                    <a class="font-MontserratRegular text-base md:text-sm text-brownish-grey py-3">  Тел: 800 987 65 43</a>
                 </div>
             </div>
         </div>
@@ -690,6 +641,64 @@
     </div>
 </footer>
  <!--footer components-->
+<div id="myModal" class="modal-block">
+    <div class="modal absolute">
+        <form name = "" id = "form" action = "" method = "post" class="bg-white border rounded-lg md:p-6 p-5">
+
+            <div class="flex items-center justify-between">
+                <p class="font-MontserratSemiBold text-32 md:text-lg text-base">Контактная информация</p>
+                <img class="close-btn w-full items-center cursor-pointer pt-1" src="/img/cancel.svg" alt="">
+            </div>
+
+            <div class="mb-4">
+                <label class="block font-MontserratMedium text-base md:text-xs py-3 md:py-2 py-1" for="username">
+                    Ваше имя
+                </label>
+                <input class="text-base w-full block w-full bg-grey text-grey-darker border border-grey-lighter rounded-lg  py-2 md:py-1 px-4"
+                       id="username" type="text" placeholder="Ф.И.О.">
+            </div>
+
+            <div class="mb-4">
+                <label class="block font-MontserratMedium text-base md:text-xs py-3 md:py-2 py-1" for="phone">
+                    Номер телефона
+                </label>
+                <input class="text-base w-full block w-full bg-grey text-grey-darker border border-grey-lighter rounded-lg  py-2 md:py-1 px-4"
+                       id="phone" type="text" placeholder="+7 (9хх)-ххх-хх-хх">
+
+            </div>
+
+
+            <div class="flex flex-col w-full">
+                <span class="font-MontserratMedium text-base md:text-xs py-3 md:py-2 py-1">Описание</span>
+                <div class="flex-auto w-full text-xs space-y-2">
+                    <label class=""></label>
+                    <textarea required="" name="message" id=""
+                              class="text-base w-full min-h-[100px] max-h-[300px] h-28 appearance-none block w-full bg-grey text-grey-darker border border-grey-lighter rounded-lg  py-4 px-4"
+                              placeholder="Введите сообщение..." spellcheck="false"></textarea>
+
+                </div>
+
+
+            </div>
+
+            <div class="flex flex-col items-center justify-center pt-10">
+                <button class="btn-1  text-black font-bold py-2 px-7 rounded focus:outline-none focus:shadow-outline uppercase"
+                        type="submit">
+                    заказать звонок
+                </button>
+                <div class="flex pt-5">
+                    <img class="self-start" src="/img/info.svg" alt="">
+                    <p class="pl-1 font-MontserratRegular text-light-grey lg:text-base md:text-xxs text-12">С вами свяжется наш менеджер для подтверждения заказа. После этого вам
+                        начнут поступать предложения от владельцев техники. Выберите подходящее предложение и оплатите
+                        заказ. В данный момент вы не совершаете оплату.</p>
+
+
+                </div>
+            </div>
+
+        </form>
+    </div>
+</div>
 <script src="js/libs.min.js"></script>
 <script src="js/main.min.js"></script>
 </body>

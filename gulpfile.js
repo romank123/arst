@@ -41,7 +41,7 @@ const css_plugins = [
 ];
 
 let settings_size = {
-		'gzip': true,
+		'gzip': false,
 		'pretty': true,
 		'showFiles': true,
 		'showTotal': true

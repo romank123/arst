@@ -6,41 +6,13 @@
         <span class="font-MontserratSemiBold text-dark-grey text-center block lg:text-32 my-5 py-8">Заказать технику</span>
 
 
-<!--        <div class="pt-5 grid auto-rows-fr md:grid-cols-3 lg:grid-cols-3 gap-5">-->
-<!--            &lt;!&ndash;Card 1&ndash;&gt;-->
-<!--            <div class="card flex justify-center items-center cursor-pointer rounded-xl bg-white overflow-hidden shadow-lg px-7 md:pt-12 lg:pb-10 pb-5 md:px-3">-->
-<!--                <div class="bg-eks h-full flex flex-col justify-between items-center">-->
-<!--                    <img class="" src="img/eks.png" alt="">-->
-<!--                    <p class="font-MontserratSemiBold text-dark-grey lg:text-22 md:text-17 text-22 text-center md:-mt-20 lg:-mt-0">-->
-<!--                        Гусеничный экскаватор</p>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--            &lt;!&ndash;Card 2&ndash;&gt;-->
-<!--&lt;!&ndash;            <div class="card flex justify-center items-center cursor-pointer rounded-xl bg-white overflow-hidden bg-not-active shadow-sm px-7 md:pt-12 lg:pb-10 pb-5 md:px-3">&ndash;&gt;-->
-<!--&lt;!&ndash;                <div class="bg-eks h-full flex flex-col justify-between items-center">&ndash;&gt;-->
-<!--&lt;!&ndash;                    <img class="" src="img/kolesniy-eks-2.png" alt="">&ndash;&gt;-->
-<!--&lt;!&ndash;                    <p class="font-MontserratSemiBold text-dark-grey lg:text-22 md:text-17 text-22 text-center  md:-mt-20 lg:-mt-0">&ndash;&gt;-->
-<!--&lt;!&ndash;                        Колесный <br> экскаватор/погрузчик</p>&ndash;&gt;-->
-<!--&lt;!&ndash;                </div>&ndash;&gt;-->
-<!--&lt;!&ndash;            </div>&ndash;&gt;-->
-<!--            &lt;!&ndash;Card 3&ndash;&gt;-->
-<!--            <div class="card flex justify-center items-center cursor-pointer rounded-xl bg-white overflow-hidden bg-not-active shadow-sm px-7 md:pt-12 lg:pb-10 pb-5 md:px-3">-->
-<!--                <div class="bg-eks h-full flex flex-col justify-between items-center">-->
-<!--                    <img class="" src="img/kolesniy-eks.png" alt="">-->
-<!--                    <p class="font-MontserratSemiBold text-dark-grey lg:text-22 md:text-17 text-22 text-center  md:-mt-20 lg:-mt-0">-->
-<!--                        Колесный экскаватор</p>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-
-
         <div class="grid grid-cols-1 md:grid-cols-3 md:gap-5 gap-x-0">
             <!--card-1-->
             <div class="col-span-2 flex flex-col justify-center items-center rounded-xl bg-white overflow-hidden shadow-lg lg:px-12 lg:py-10 lg:pb-10 pb-5 md:px-7 md:pt-5 md:mb-4">
 
                 <span class="font-MontserratSemiBold lg:text-32 text-dark-grey text-center self-center py-5 md:py-0 md:pb-10">Гусеничный экскаватор</span>
 
-                <img src="img/eks.png" alt="">
+                <img src="/img/eks.png" alt="">
 
                 <div class="w-full -mt-48">
                     <div class="mass flex flex-col p-7 md:p-0 w-full">
@@ -73,13 +45,12 @@
                     <div class="value flex flex-col p-7 md:p-0 w-full">
                         <span class="font-MontserratMedium text-base my-5 mt-10">V ковша</span>
                         <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-5">
-                            <input type="text" id="username"
-                                   class="col-span-2 rounded-xl px-4 py-3 focus:outline-none bg-grey w-full"
+                            <input type="text" class="col-span-2 rounded-xl px-4 py-3 focus:outline-none bg-grey w-full"
                                    placeholder="Введите параметр"/>
                             <div class="flex lg:flex-col flex-wrap  lg:justify-center items-center w-full font-MontserratRegular text-sm text-brownish-grey">
                                 <span>Легкие (от 0,15. до 0,6)</span>
                                 <span>Средние (от 0,3 до 1,6)</span>
-                                <spa>Тяжелые (от 1,2 до 4)</spa>
+                                <span>Тяжелые (от 1,2 до 4)</span>
                             </div>
                         </div>
                     </div>
@@ -91,6 +62,7 @@
                         <div class="flex justify-center items-center my-5">
                             <div x-data="range()" x-init="mintrigger(); maxtrigger()" class="relative w-full">
                                 <div>
+                                    <!--suppress XmlUnboundNsPrefix -->
                                     <input type="range"
                                            step="1"
                                            x-bind:min="min" x-bind:max="max"
@@ -98,6 +70,7 @@
                                            x-model="minprice"
                                            class="absolute pointer-events-none appearance-none z-20 h-2 w-full opacity-0 cursor-pointer">
 
+                                    <!--suppress XmlUnboundNsPrefix, XmlUnboundNsPrefix, XmlUnboundNsPrefix -->
                                     <input type="range"
                                            step="1"
                                            x-bind:min="min" x-bind:max="max"
@@ -109,16 +82,20 @@
 
                                         <div class="absolute z-10 left-0 right-0 bottom-0 top-0 rounded-md bg-grey"></div>
 
+                    <!--suppress XmlUnboundNsPrefix -->
                                         <div class="absolute z-20 top-0 bottom-0 rounded-md bg-light-gray-line"
                                              x-bind:style="'right:'+maxthumb+'%; left:'+minthumb+'%'"></div>
 
+                                        <!--suppress XmlUnboundNsPrefix -->
                                         <div class="absolute z-30 top-0 left-0 bg-light-gray -mt-2 -ml-1"
                                              x-bind:style="'left: '+minthumb+'%'"></div>
 
+                                        <!--suppress XmlUnboundNsPrefix -->
                                         <div class="absolute z-30 w-6 h-6 top-0 right-0 bg-light-gray rounded-full -mt-2 -mr-3"
                                              x-bind:style="'right: '+maxthumb+'%'">
                                             <div class="relative">
                                                 <div class="marker">
+                                                    <!--suppress XmlUnboundNsPrefix -->
                                                     <input type="text" maxlength="5" x-on:input="maxtrigger"
                                                            x-model="maxprice"
                                                            class="">
@@ -208,6 +185,7 @@
 
                         <span class="font-MontserratMedium text-base my-5 mt-10">Период работы</span>
                         <div class="grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 items-end">
+
                             <div x-data="app()" x-init="[initDate(), getNoOfDays()]" x-cloak>
 
                                 <div class="">
@@ -216,7 +194,7 @@
                                            class="font-MontserratMedium text-base my-5"></label>
                                     <div class="relative">
                                         <input type="hidden" name="date" x-ref="date">
-                                        <input
+                                        <input id="datepicker"
                                                 type="text"
                                                 readonly
                                                 x-model="datepickerValue"
@@ -321,11 +299,11 @@
                             <div x-data="app()" x-init="[initDate(), getNoOfDays()]" x-cloak>
 
                                 <div class="">
-                                    <label for="datepicker"
+                                    <label for="datepicker_2"
                                            class="font-MontserratMedium text-base my-5"></label>
                                     <div class="relative">
                                         <input type="hidden" name="date" x-ref="date">
-                                        <input
+                                        <input  id="datepicker_2"
                                                 type="text"
                                                 readonly
                                                 x-model="datepickerValue"
@@ -462,9 +440,9 @@
                                                 class=" bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-l cursor-pointer outline-none">
                                             <span class="m-auto text-2xl font-thin">−</span>
                                         </button>
-                                        <input type="number"
+                                        <input id="custom-input-number" type="number"
                                                class="outline-none focus:outline-none text-center w-full bg-grey font-semibold text-md hover:text-black focus:text-black  md:text-basecursor-default flex items-center text-gray-700  outline-none"
-                                               name="custom-input-number" value="0"></input>
+                                               name="custom-input-number" value="0">
                                         <button data-action="increment"
                                                 class="bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-r cursor-pointer">
                                             <span class="m-auto text-2xl font-thin">+</span>

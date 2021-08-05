@@ -26,10 +26,6 @@
     color: #333333;
   }
 
-  .line-h-5rem {
-    line-height: 5rem;
-  }
-
   .text-12 {
     font-size: 12px;
   }
@@ -86,9 +82,7 @@
     font-size: 52px;
   }
 
-  .text-56 {
-    font-size: 56px;
-  }
+
 
   .text-53 {
     font-size: 53px;
@@ -159,32 +153,8 @@
     width: 16%;
   }
 
-  .bg-bright-purp-600 {
-    --tw-bg-opacity: 1;
-    background-color: rgba(148, 51, 145, var(--tw-bg-opacity));
-  }
-
-  .bg-bright-purp-600 {
-    --tw-bg-opacity: 1;
-    background-color:  rgba(148, 51, 145, var(--tw-bg-opacity));
-  }
-
-  .bg-bright-blue-600 {
-    --tw-bg-opacity: 1;
-    background-color: rgba(85,146,217, var(--tw-bg-opacity));
-  }
-  .bg-blue-footer {
-    --tw-bg-opacity: 1;
-    background-color: rgba(23,49,82, var(--tw-bg-opacity));
-  }
-
   .lavand-color {
     background-color: rgba(212, 238, 251, 1);
-  }
-
-  .border-purple-cstm {
-    --tw-border-opacity: 1;
-    border-color: rgb(148, 51, 145);
   }
 
   .bgc-purple {
@@ -195,21 +165,8 @@
     background-color: rgb(246,222,236);
   }
 
-  .border-blue-cstm {
-    --tw-border-opacity: 1;
-    border-color: rgb(85, 146, 217);
-  }
-
   .bgc-blue {
     background-color: rgb(85, 146, 217);
-  }
-
-  .border-l-10 {
-    border-left-width: 10px;
-  }
-
-  .border-l-7 {
-    border-left-width: 7px;
   }
 
   .border-3 {
@@ -240,28 +197,8 @@
     width: 66px;
   }
 
-  .text-dark-blue {
-    color: #26276A;
-  }
-
-  .text-orange {
-    color: #F37121;
-  }
-
   .text-purp {
     color: #94268F;
-  }
-
-  .bg-orange {
-    background-color: #F37121;
-  }
-
-  .placeholder-blue::placeholder {
-    color: #5592D9;
-  }
-
-  .w-70 {
-    width: 70%;
   }
 
   .w-30 {

@@ -21,9 +21,6 @@
   .text-dark-grey {
     color: #333333;
   }
-  .line-h-5rem {
-    line-height: 5rem;
-  }
   .text-12 {
     font-size: 12px;
   }
@@ -65,9 +62,6 @@
   }
   .text-52 {
     font-size: 52px;
-  }
-  .text-56 {
-    font-size: 56px;
   }
   .text-53 {
     font-size: 53px;
@@ -120,28 +114,8 @@
   .w-16-1 {
     width: 16%;
   }
-  .bg-bright-purp-600 {
-    --tw-bg-opacity: 1;
-    background-color: rgba(148, 51, 145, var(--tw-bg-opacity));
-  }
-  .bg-bright-purp-600 {
-    --tw-bg-opacity: 1;
-    background-color: rgba(148, 51, 145, var(--tw-bg-opacity));
-  }
-  .bg-bright-blue-600 {
-    --tw-bg-opacity: 1;
-    background-color: rgba(85, 146, 217, var(--tw-bg-opacity));
-  }
-  .bg-blue-footer {
-    --tw-bg-opacity: 1;
-    background-color: rgba(23, 49, 82, var(--tw-bg-opacity));
-  }
   .lavand-color {
     background-color: #d4eefb;
-  }
-  .border-purple-cstm {
-    --tw-border-opacity: 1;
-    border-color: #943391;
   }
   .bgc-purple {
     background-color: #943391;
@@ -149,18 +123,8 @@
   .bgc-pink {
     background-color: #f6deec;
   }
-  .border-blue-cstm {
-    --tw-border-opacity: 1;
-    border-color: #5592d9;
-  }
   .bgc-blue {
     background-color: #5592d9;
-  }
-  .border-l-10 {
-    border-left-width: 10px;
-  }
-  .border-l-7 {
-    border-left-width: 7px;
   }
   .border-3 {
     border-width: 3px;
@@ -183,23 +147,8 @@
   .w-66 {
     width: 66px;
   }
-  .text-dark-blue {
-    color: #26276A;
-  }
-  .text-orange {
-    color: #F37121;
-  }
   .text-purp {
     color: #94268F;
-  }
-  .bg-orange {
-    background-color: #F37121;
-  }
-  .placeholder-blue::placeholder {
-    color: #5592D9;
-  }
-  .w-70 {
-    width: 70%;
   }
   .w-30 {
     width: 30%;
@@ -211,49 +160,45 @@
 
 @font-face {
   font-family: "MontserratBlack";
-  src: url("../fonts/MontserratBlack/MontserratBlack.eot");
-  src: url("../fonts/MontserratBlack/MontserratBlack.eot?#iefix") format("embedded-opentype"), url("../fonts/MontserratBlack/MontserratBlack.woff") format("woff"), url("../fonts/MontserratBlack/MontserratBlack.ttf") format("truetype");
+  src: url("/fonts/MontserratBlack/MontserratBlack.eot");
+  src: url("/fonts/MontserratBlack/MontserratBlack.eot?#iefix") format("embedded-opentype"), url("/fonts/MontserratBlack/MontserratBlack.woff") format("woff");
   font-style: normal;
   font-weight: 900;
 }
 
 @font-face {
   font-family: "MontserratMedium";
-  src: url("../fonts/MontserratMedium/MontserratMedium.eot");
-  src: url("../fonts/MontserratMedium/MontserratMedium.eot?#iefix") format("embedded-opentype"), url("../fonts/MontserratMedium/MontserratMedium.woff") format("woff"), url("../fonts/MontserratMedium/MontserratMedium.ttf") format("truetype");
+  src: url("/fonts/MontserratMedium/MontserratMedium.eot");
+  src: url("/fonts/MontserratMedium/MontserratMedium.eot?#iefix") format("embedded-opentype"), url("/fonts/MontserratMedium/MontserratMedium.woff") format("woff");
   font-style: normal;
   font-weight: 500;
 }
 
 @font-face {
   font-family: "MontserratBold";
-  src: url("../fonts/MontserratBold/MontserratBold.eot");
-  src: url("../fonts/MontserratBold/MontserratBold.eot?#iefix") format("embedded-opentype"), url("../fonts/MontserratBold/MontserratBold.woff") format("woff"), url("../fonts/MontserratBold/MontserratBold.ttf") format("truetype");
+  src: url("/fonts/MontserratBold/MontserratBold.eot");
+  src: url("/fonts/MontserratBold/MontserratBold.eot?#iefix") format("embedded-opentype"), url("/fonts/MontserratBold/MontserratBold.woff") format("woff");
   font-style: normal;
   font-weight: 700;
 }
 
 @font-face {
   font-family: "MontserratRegular";
-  src: url("../fonts/MontserratRegular/MontserratRegular.eot");
-  src: url("../fonts/MontserratRegular/MontserratRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/MontserratRegular/MontserratRegular.woff") format("woff"), url("../fonts/MontserratRegular/MontserratRegular.ttf") format("truetype");
+  src: url("/fonts/MontserratRegular/MontserratRegular.eot");
+  src: url("/fonts/MontserratRegular/MontserratRegular.eot?#iefix") format("embedded-opentype"), url("/fonts/MontserratRegular/MontserratRegular.woff") format("woff");
   font-style: normal;
   font-weight: 400;
 }
 
 @font-face {
   font-family: "MontserratSemiBold";
-  src: url("../fonts/MontserratSemiBold/MontserratSemiBold.eot");
-  src: url("../fonts/MontserratSemiBold/MontserratSemiBold.eot?#iefix") format("embedded-opentype"), url("../fonts/MontserratSemiBold/MontserratSemiBold.woff") format("woff"), url("../fonts/MontserratSemiBold/MontserratSemiBold.ttf") format("truetype");
+  src: url("/fonts/MontserratSemiBold/MontserratSemiBold.eot");
+  src: url("/fonts/MontserratSemiBold/MontserratSemiBold.eot?#iefix") format("embedded-opentype"), url("/fonts/MontserratSemiBold/MontserratSemiBold.woff") format("woff");
   font-style: normal;
   font-weight: 600;
 }
 
 /* colors */
-.text-dark-blue {
-  color: #26276A;
-}
-
 html,
 body {
   min-height: 100%;
@@ -271,12 +216,12 @@ body {
 }
 
 .btn-mob {
-  @apply cursor-pointer text-white bg-bright-purp-600 hover:bg-bright-purp-600 shadow-xl px-2 py-1 inline-block rounded;
+  @apply cursor-pointer text-white shadow-xl px-2 py-1 inline-block rounded;
   width: 160px;
 }
 
 .btn-3 {
-  @apply cursor-pointer text-white bg-bright-purp-600 hover:bg-bright-purp-600 shadow-xl px-10 py-1 pr-10 inline-block rounded;
+  @apply cursor-pointer text-white shadow-xl px-10 py-1 pr-10 inline-block rounded;
   min-width: 170px;
 }
 
@@ -285,33 +230,29 @@ body {
   width: 156px;
 }
 
-.fa-home {
-  color: #94268F;
-}
-
 .four-blocks .bg-image {
-  background: url("../img/users.png") no-repeat left center;
+  background: url("/img/users.png") no-repeat left center;
   height: 54px;
   display: inline-block;
   line-height: 54px;
 }
 
 .four-blocks .bg-image-2 {
-  background: url("../img/shield.png") no-repeat left center;
+  background: url("/img/shield.png") no-repeat left center;
   height: 54px;
   display: inline-block;
   line-height: 54px;
 }
 
 .four-blocks .bg-image-3 {
-  background: url("../img/auto.png") no-repeat left center;
+  background: url("/img/auto.png") no-repeat left center;
   height: 54px;
   display: inline-block;
   line-height: 54px;
 }
 
 .four-blocks .bg-image-4 {
-  background: url("../img/raketa.png") no-repeat left center;
+  background: url("/img/raketa.png") no-repeat left center;
   height: 54px;
   display: inline-block;
   line-height: 54px;
@@ -357,7 +298,7 @@ body {
 .accordion .tab input[type=checkbox] + label::after {
   content: "+";
   font-weight: bold;
-  border-width: 0px;
+  border-width: 0;
   border-radius: 9999px;
   border-color: #b8c2cc;
 }
@@ -386,7 +327,7 @@ body {
 }
 
 .advant .bg-check {
-  background: url("../img/check.png") no-repeat left 5%;
+  background: url("/img/check.png") no-repeat left 5%;
 }
 
 .block-about-our-service .round-digit {
@@ -421,7 +362,7 @@ body {
 }
 
 .block-about-our-service .bg-image {
-  background: url(../img/bg-image.jpg) no-repeat center 35%;
+  background: url(/img/bg-image.jpg) no-repeat center 35%;
   height: 700px;
 }
 
@@ -448,7 +389,7 @@ body {
 
 @media (min-width: 1290px) {
   .banner-vladelcam .img-card {
-    left: 0%;
+    left: 0;
     top: 80px;
     width: 120%;
   }
@@ -494,177 +435,6 @@ body {
   }
 }
 
-.catalog .bg-kran {
-  background: url("../img/autokran.png") no-repeat center top;
-  background-size: contain;
-  min-height: 257px;
-  height: 100%;
-}
-
-@media (min-width: 768px) {
-  .catalog .bg-kran {
-    background-size: contain;
-  }
-}
-
-@media (min-width: 1290px) {
-  .catalog .bg-kran {
-    background-size: 80%;
-  }
-}
-
-.catalog .bg-greyder {
-  background: url("../img/autogreyder.png") no-repeat center top;
-  background-size: contain;
-  min-height: 257px;
-  height: 100%;
-}
-
-@media (min-width: 768px) {
-  .catalog .bg-greyder {
-    background-size: contain;
-  }
-}
-
-@media (min-width: 1290px) {
-  .catalog .bg-greyder {
-    background-size: 80%;
-  }
-}
-
-.catalog .bg-front {
-  background: url("../img/front.png") no-repeat center top;
-  background-size: contain;
-  min-height: 257px;
-  height: 100%;
-}
-
-@media (min-width: 768px) {
-  .catalog .bg-front {
-    background-size: contain;
-  }
-}
-
-@media (min-width: 1290px) {
-  .catalog .bg-front {
-    background-size: 80%;
-  }
-}
-
-.catalog .bg-samosval {
-  background: url("../img/samosval.png") no-repeat center top;
-  background-size: contain;
-  min-height: 257px;
-  height: 100%;
-}
-
-@media (min-width: 768px) {
-  .catalog .bg-samosval {
-    background-size: contain;
-  }
-}
-
-@media (min-width: 1290px) {
-  .catalog .bg-samosval {
-    background-size: 80%;
-  }
-}
-
-.catalog .bg-katok {
-  background: url("../img/katok.png") no-repeat center top;
-  background-size: contain;
-  min-height: 257px;
-  height: 100%;
-}
-
-@media (min-width: 768px) {
-  .catalog .bg-katok {
-    background-size: contain;
-  }
-}
-
-@media (min-width: 1290px) {
-  .catalog .bg-katok {
-    background-size: 80%;
-  }
-}
-
-.catalog .bg-buldozer {
-  background: url("../img/buldozer.png") no-repeat center top;
-  background-size: contain;
-  min-height: 257px;
-  height: 100%;
-}
-
-@media (min-width: 768px) {
-  .catalog .bg-buldozer {
-    background-size: contain;
-  }
-}
-
-@media (min-width: 1290px) {
-  .catalog .bg-buldozer {
-    background-size: 80%;
-  }
-}
-
-.catalog .bg-eks {
-  background: url("../img/eks.png") no-repeat center top;
-  background-size: contain;
-  min-height: 257px;
-  height: 100%;
-}
-
-@media (min-width: 768px) {
-  .catalog .bg-eks {
-    background-size: contain;
-  }
-}
-
-@media (min-width: 1290px) {
-  .catalog .bg-eks {
-    background-size: 80%;
-  }
-}
-
-.catalog .bg-eks-2 {
-  background: url("../img/kolesniy-eks-2.png") no-repeat center top;
-  background-size: contain;
-  min-height: 257px;
-  height: 100%;
-}
-
-@media (min-width: 768px) {
-  .catalog .bg-eks-2 {
-    background-size: contain;
-  }
-}
-
-@media (min-width: 1290px) {
-  .catalog .bg-eks-2 {
-    background-size: 80%;
-  }
-}
-
-.catalog .bg-eks-3 {
-  background: url("../img/kolesniy-eks.png") no-repeat center top;
-  background-size: contain;
-  min-height: 257px;
-  height: 100%;
-}
-
-@media (min-width: 768px) {
-  .catalog .bg-eks-3 {
-    background-size: contain;
-  }
-}
-
-@media (min-width: 1290px) {
-  .catalog .bg-eks-3 {
-    background-size: 80%;
-  }
-}
-
 .catalog .card-box {
   margin: -.75rem;
 }
@@ -674,7 +444,7 @@ body {
 }
 
 .how-to-work .bg-check {
-  background: url("../img/check.png") no-repeat left 5%;
+  background: url("/img/check.png") no-repeat left 5%;
 }
 
 .map {
@@ -694,7 +464,7 @@ body {
 .map .mapTitle {
   position: absolute;
   z-index: 1000;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 5px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 0 5px;
   display: none;
   padding: 5px 20px;
   border-radius: 5px;
@@ -727,34 +497,34 @@ body {
 
 @media (min-width: 1290px) {
   .popular .bg-cards img {
-    top: 0px;
+    top: 0;
     max-width: 130%;
   }
 }
 
 .four-blocks-vladelcam .bg-image {
-  background: url("../img/users.png") no-repeat left center;
+  background: url("/img/users.png") no-repeat left center;
   height: 54px;
   display: inline-block;
   line-height: 54px;
 }
 
 .four-blocks-vladelcam .bg-image-2 {
-  background: url("../img/shield.png") no-repeat left center;
+  background: url("/img/shield.png") no-repeat left center;
   height: 54px;
   display: inline-block;
   line-height: 54px;
 }
 
 .four-blocks-vladelcam .bg-image-3 {
-  background: url("../img/auto.png") no-repeat left center;
+  background: url("/img/auto.png") no-repeat left center;
   height: 54px;
   display: inline-block;
   line-height: 54px;
 }
 
 .four-blocks-vladelcam .bg-image-4 {
-  background: url("../img/raketa.png") no-repeat left center;
+  background: url("/img/raketa.png") no-repeat left center;
   height: 54px;
   display: inline-block;
   line-height: 54px;
@@ -793,7 +563,7 @@ body {
 }
 
 .block-rents-zakaz .bg-image {
-  background: url(../img/bg-image.jpg) no-repeat center 35%;
+  background: url(/img/bg-image.jpg) no-repeat center 35%;
   height: 700px;
 }
 
@@ -824,7 +594,7 @@ body {
 }
 
 .block-rents .bg-image {
-  background: url(../img/bg-image.jpg) no-repeat center 35%;
+  background: url(/img/bg-image.jpg) no-repeat center 35%;
   height: 700px;
 }
 
@@ -863,14 +633,6 @@ body {
 .block-rents span {
   position: relative;
   z-index: 20;
-}
-
-.block-rents .ml-next {
-  padding-left: 10px;
-}
-
-.block-rents .pr-10px {
-  padding-right: 100px;
 }
 
 .block-service .line-title {
@@ -946,10 +708,6 @@ body {
   outline: none !important;
 }
 
-.sotrud .map {
-  height: 100%;
-}
-
 @media (max-width: 768px) {
   .tender .bg-cards {
     height: 300px;
@@ -972,7 +730,7 @@ body {
 
 @media (min-width: 1290px) {
   .tender .bg-cards img {
-    top: 0px;
+    top: 0;
     max-width: 130%;
   }
 }
@@ -1007,7 +765,7 @@ body {
 
 @media (min-width: 768px) {
   .footer .border-b-footer {
-    border-bottom: 0px;
+    border-bottom: 0;
   }
 }
 
@@ -1018,7 +776,7 @@ body {
 .header .burger {
   position: absolute;
   right: 10px;
-  top: 0px;
+  top: 0;
   width: 69px;
   height: 45px;
   cursor: pointer;
@@ -1053,7 +811,7 @@ body {
 .burger span.active:before {
   width: 90%;
   content: "";
-  top: 0px;
+  top: 0;
   transform: rotate(45deg);
   transition: top 300ms, transform 300ms 300ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
@@ -1106,7 +864,7 @@ body {
 }
 
 .main-banner-vladelcam .bg-main-banner-vladelcam {
-  background: url("../img/main-banner-vladelcam.jpg") no-repeat center center;
+  background: url("/img/main-banner-vladelcam.jpg") no-repeat center center;
   min-height: 600px;
 }
 
@@ -1238,18 +996,19 @@ body {
 @media (min-width: 0px) {
   .min-screen {
     min-height: 700px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .min-screen {
-    min-height: 840px;
+    max-height: 500px;
   }
 }
 
 @media (min-width: 768px) {
   .min-screen {
     min-height: 752px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .min-screen {
+    min-height: 840px;
   }
 }
 
@@ -1389,6 +1148,35 @@ body {
   }
 }
 
+.modal-block {
+  display: none;
+  position: fixed;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  z-index: 500;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-block .modal {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 300px;
+  max-width: 515px;
+  width: 40%;
+  z-index: 501;
+}
+
+.modal-block .modal .close-btn {
+  width: 20px;
+  height: 48px;
+}
+
 .zakaz .bg-not-active {
   background-color: #e0e0e0;
 }
@@ -1437,8 +1225,12 @@ body {
   height: 100%;
 }
 
+.zakaz .set-date .bg-white.mt-12.rounded-lg.shadow.p-4.absolute.top-0.left-0 {
+  z-index: 10;
+}
+
 .main-banner-zakaz .bg-main-banner-zakaz {
-  background: url("../img/bg-main-banner-zakaz.jpg") no-repeat center center;
+  background: url("/img/bg-main-banner-zakaz.jpg") no-repeat center center;
   min-height: 600px;
 }
 

@@ -1,12 +1,14 @@
 let myRadios = document.getElementsByName('tabs2');
+
 let setCheck;
-let x = 0;
-for(x = 0; x < myRadios.length; x++){
-    myRadios[x].onclick = function(){
-        if(setCheck != this){
-            setCheck = this;
+
+for(let x = 0; x < myRadios.length; x++){
+
+    myRadios[x].onclick = (el) => {
+        if(setCheck !== el.target){
+            setCheck = el.target;
         }else{
-            this.checked = false;
+            el.target.checked = false;
             setCheck = null;
         }
     };
