@@ -8,11 +8,11 @@ document.addEventListener("DOMContentLoaded", function(){
 
         if (screen.width < 414) {
 
-            view.setAttribute('content', 'width=320');
+            view.setAttribute('content', 'width=414, user-scalable=no');
 
         } else {
 
-            view.setAttribute('content', 'width=device-width, initial-scale=1.0');
+            view.setAttribute('content', 'width=device-width, initial-scale=1.0, user-scalable=no');
         }
 
     }
