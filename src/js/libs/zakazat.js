@@ -98,6 +98,10 @@ function decrement(e) {
     let value = Number(target.value);
     value--;
     target.value = value;
+
+    if (value < 0) {
+        target.value = 0;
+    }
 }
 
 function increment(e) {

@@ -803,6 +803,9 @@ video {
 .-mt-48 {
 	margin-top: -12rem;
 }
+.mr-2 {
+	margin-right: 0.5rem;
+}
 .mt-12 {
 	margin-top: 3rem;
 }
@@ -847,6 +850,9 @@ video {
 }
 .h-10 {
 	height: 2.5rem;
+}
+.h-14 {
+	height: 3.5rem;
 }
 .max-h-\[300px\] {
 	max-height: 300px;
@@ -1172,9 +1178,6 @@ video {
 }
 .pt-0 {
 	padding-top: 0px;
-}
-.pt-36 {
-	padding-top: 9rem;
 }
 .pt-1 {
 	padding-top: 0.25rem;
@@ -2278,28 +2281,33 @@ body {
   }
 }
 
-@media (min-width: 0px) {
+@media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
   .min-screen {
-    min-height: 700px;
-    max-height: 500px;
+    height: 750px;
+  }
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 767px) and (orientation: landscape) {
+  .min-screen {
+    height: 700px;
   }
 }
 
 @media (min-width: 768px) {
   .min-screen {
-    min-height: 752px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .min-screen {
-    min-height: 840px;
+    min-height: 700px;
   }
 }
 
 @media (min-width: 1290px) {
   .min-screen {
-    min-height: 855px;
+    min-height: 735px;
+  }
+}
+
+@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+  .min-screen {
+    min-height: 700px;
   }
 }
 

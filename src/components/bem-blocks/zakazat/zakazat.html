@@ -47,10 +47,10 @@
                         <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-5">
                             <input type="text" class="col-span-2 rounded-xl px-4 py-3 focus:outline-none bg-grey w-full"
                                    placeholder="Введите параметр"/>
-                            <div class="flex lg:flex-col flex-wrap  lg:justify-center items-center w-full font-MontserratRegular text-sm text-brownish-grey">
-                                <span>Легкие (от 0,15. до 0,6)</span>
-                                <span>Средние (от 0,3 до 1,6)</span>
-                                <span>Тяжелые (от 1,2 до 4)</span>
+                            <div class="flex lg:flex-col flex-wrap justify-start items-center w-full font-MontserratRegular text-sm text-brownish-grey">
+                                <span class="mr-2">Легкие (от 0,15. до 0,6)</span>
+                                <span class="mr-2">Средние (от 0,3 до 1,6)</span>
+                                <span class="mr-2">Тяжелые (от 1,2 до 4)</span>
                             </div>
                         </div>
                     </div>
@@ -399,12 +399,9 @@
                                                 </template>
                                             </div>
                                         </div>
-
                                     </div>
                                 </div>
-
                             </div>
-
 
                             <span class="md:col-span-2 lg:col-span-1 font-MontserratRegular text-sm">Стоимость от месяца дешевлен на 5%</span>
 
@@ -428,14 +425,12 @@
 
                     <div class="counter flex flex-col px-7 md:p-0 w-full">
                         <span class="font-MontserratMedium text-base my-5 mt-10">Колличество</span>
-
                         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-
                             <div class="lg:col-span-2 md:col-span-3">
                                 <div class="custom-number-input h-10 w-auto">
                                     <label for="custom-input-number"
                                            class="w-full text-gray-700 text-sm font-semibold"></label>
-                                    <div class="flex flex-row h-10 w-full rounded-lg relative bg-transparent mt-1">
+                                    <div class="flex flex-row h-14 w-full rounded-lg relative bg-transparent mt-1">
                                         <button data-action="decrement"
                                                 class=" bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-l cursor-pointer outline-none">
                                             <span class="m-auto text-2xl font-thin">−</span>
@@ -448,8 +443,6 @@
                                             <span class="m-auto text-2xl font-thin">+</span>
                                         </button>
                                     </div>
-
-
                                 </div>
                             </div>
 
@@ -469,23 +462,14 @@
                         <span class="font-MontserratMedium text-base my-5">Адрес подачи техники</span>
                         <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 lg:gap-5 gap-x-0">
                             <input type="text" id="adress"
-                                   class="py-3 my-3 lg:my-0 bg-grey col-span-3  rounded-xl px-4 focus:outline-none bg-grey w-full"
+                                   class="py-4 my-3 lg:my-0 bg-grey col-span-3  rounded-xl px-4 focus:outline-none bg-grey w-full"
                                    placeholder="Ваш адрес"/>
                         </div>
                     </div>
-
-<!--                    <div class="flex flex-col p-7 md:p-0 w-full">-->
-
-<!--                        <div id="wrapMap2" class="map my-5 mt-10 h-full">-->
-<!--                            <iframe style="pointer-events: none;"-->
-<!--                                    src="https://yandex.ru/map-widget/v1/?um=constructor%3Ae19d2749e949caf6bb863d8b594ba2e141943bee75dfc5ae31aaf9238883d3c4&amp;source=constructor"-->
-<!--                                    width="100%" height="350" frameborder="0" scroll="false"></iframe>-->
-<!--                        </div>-->
-<!--                    </div>-->
                 </div>
             </div>
             <div class="">
-                <div class="card flex justify-center items-center rounded-xl bg-white overflow-hidden shadow-lg pt-7 mt-5 md:mt-0 px-7 md:pt-5 lg:pt-10 lg:pb-10 pb-5 md:px-3">
+                <div class="card flex justify-center items-center rounded-xl bg-white overflow-hidden shadow-lg pt-7 my-5 md:mt-0 px-7 md:pt-5 lg:pt-10 lg:pb-10 pb-5 md:px-3">
                     <div class="flex flex-col h-full w-full justify-between">
                         <span class="block font-MontserratSemiBold lg:text-32 text-dark-grey text-center">Итоговая стоимость</span>
                         <div>
