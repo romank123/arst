@@ -2,9 +2,7 @@
 
     <div class="container px-0 mx-auto">
 
-
         <span class="font-MontserratSemiBold text-dark-grey text-center block lg:text-32 my-5 py-8">Заказать технику</span>
-
 
         <div class="grid grid-cols-1 md:grid-cols-3 md:gap-5 gap-x-0">
             <!--card-1-->
@@ -15,42 +13,28 @@
                 <img src="/img/eks.png" alt="">
 
                 <div class="w-full -mt-48">
-                    <div class="mass flex flex-col p-7 md:p-0 w-full">
+                    <div class="mass selected-1 flex flex-col p-7 md:p-0 w-full">
                         <span class="font-MontserratMedium text-base my-5 mt-10">Масса</span>
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
-                            <a class="cursor-pointer rounded-xl bg-white overflow-hidden shadow-mass-button py-2 hover:shadow-mass-button hover:bg-white"
-                               href="#">
-                                <div class="font-MontserratRegular flex flex-col justify-center items-center">
-<!--                                    <span class="text-brownish-grey md:text-15">Лёгкие</span>-->
-                                    <span class="text-light-grey md:text-12">(от 5т. до 9т.)</span>
-                                </div>
-                            </a>
-                            <a class="cursor-pointer rounded-xl bg-white overflow-hidden bg-not-active py-2 hover:shadow-mass-button hover:bg-white"
-                               href="#">
-                                <div class="font-MontserratRegular flex flex-col justify-center items-center">
-<!--                                    <span class="text-brownish-grey md:text-15">Лёгкие</span>-->
-                                    <span class="text-light-grey md:text-12">(от 10т. до 30т.)</span>
-                                </div>
-                            </a>
-                            <a class="cursor-pointer rounded-xl bg-white overflow-hidden bg-not-active py-2 hover:shadow-mass-button hover:bg-white"
-                               href="#">
-                                <div class="font-MontserratRegular flex flex-col justify-center items-center">
-<!--                                    <span class="text-brownish-grey md:text-15">Лёгкие</span>-->
-                                    <span class="text-light-grey md:text-12">(более 30т.)</span>
-                                </div>
-                            </a>
+                            <button class="push-button activated">(от 5т. до 9т.)</button>
+
+                            <button class="push-button">(от 10т. до 30т.)</button>
+
+                            <button class="push-button">(Более 30т.)</button>
+
                         </div>
                     </div>
 
                     <div class="value flex flex-col p-7 md:p-0 w-full">
                         <span class="font-MontserratMedium text-base my-5 mt-10">V ковша</span>
                         <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-5">
-                            <input type="text" class="col-span-2 rounded-xl px-4 py-3 focus:outline-none bg-grey w-full"
+                            <input type="text" id="username"
+                                   class="col-span-2 rounded-xl px-4 py-3 focus:outline-none bg-grey w-full"
                                    placeholder="Введите параметр"/>
-                            <div class="flex lg:flex-col flex-wrap justify-start items-center w-full font-MontserratRegular text-sm text-brownish-grey">
-                                <span class="mr-2">Легкие (от 0,15. до 0,6)</span>
-                                <span class="mr-2">Средние (от 0,3 до 1,6)</span>
-                                <span class="mr-2">Тяжелые (от 1,2 до 4)</span>
+                            <div class="flex lg:flex-col flex-wrap  lg:justify-center items-center w-full font-MontserratRegular text-sm text-brownish-grey">
+                                <span>Легкие (от 0,15. до 0,6)</span>
+                                <span>Средние (от 0,3 до 1,6)</span>
+                                <span>Тяжелые (от 1,2 до 4)</span>
                             </div>
                         </div>
                     </div>
@@ -117,65 +101,58 @@
                         </div>
                     </div>
 
-                    <div class="type-of-hod flex flex-col px-7 md:p-0 w-full">
-                        <span class="font-MontserratMedium text-base my-5 mt-10">Вид ходовой</span>
+                    <div class="vybor flex flex-col px-7 md:p-0 w-full">
 
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
 
-                            <a class="cursor-pointer rounded-xl bg-white overflow-hidden shadow-mass-button py-1 lg:py-4 hover:shadow-mass-button hover:bg-white"
-                               href="#">
-                                <div class="font-MontserratRegular flex flex-col justify-center items-center h-full">
-                                    <span class="text-brownish-grey md:text-15">обычная</span>
+                        <button class="font-MontserratRegular text-brownish-grey push-button">0000</button>
 
-                                </div>
-                            </a>
+                        </div>
+                    </div>
 
-                            <a class="cursor-pointer rounded-xl overflow-hidden bg-not-active py-1 hover:shadow-mass-button hover:bg-white lg:py-4 hover:shadow-mass-button hover:bg-white"
-                               href="#">
-                                <div class="font-MontserratRegular flex flex-col justify-center items-center h-full">
-                                    <span class="text-brownish-grey md:text-15 text-center">широкий башмак(болотник)</span>
 
-                                </div>
-                            </a>
+                    <div class="dop-oborud flex flex-col px-7 md:p-0 w-full">
+                        <span class="font-MontserratMedium text-base my-5 mt-10">Доп оборудование</span>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+
+
+                            <button class="font-MontserratRegular text-brownish-grey push-button">1111</button>
+
+                            <button class="font-MontserratRegular text-brownish-grey push-button">2222</button>
+
+                            <button class="font-MontserratRegular text-brownish-grey push-button">3333</button>
+
+                            <button class="font-MontserratRegular text-brownish-grey push-button">4444</button>
 
 
                         </div>
                     </div>
 
-                    <div class="dop-items flex flex-col px-7  md:p-0 w-full">
-
-                        <div class="grid grid-cols-1 mt-5">
-                            <label class="font-MontserratMedium text-base my-5 mt-10">Доп оборудование</label>
-                            <select class="py-4 px-3 rounded-lg mt-1 focus:outline-none focus:ring-2  bg-grey focus:border-transparent">
-                                <option>АГП монтажная корзина</option>
-                                <option>АГП монтажная корзина2</option>
-                                <option>АГП монтажная корзина3</option>
-                            </select>
-                        </div>
-
-
-                    </div>
-
-                    <div class="rezhim flex flex-col px-7 p-7 md:p-0 w-full">
+                    <div class="rezhim selected-1 flex flex-col px-7 p-7 md:p-0 w-full">
                         <span class="font-MontserratMedium text-base my-5 mt-10">Режим работы</span>
 
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                            <button class="push-button">одна сменный</button>
 
-                            <a class="cursor-pointer rounded-xl bg-white overflow-hidden shadow-mass-button py-4 hover:shadow-mass-button hover:bg-white"
-                               href="#">
-                                <div class="font-MontserratRegular flex flex-col justify-center items-center">
-                                    <span class="text-brownish-grey md:text-15">одна сменный</span>
+<!--                            <a class="cursor-pointer rounded-xl bg-white overflow-hidden shadow-mass-button py-4 hover:shadow-mass-button hover:bg-white"-->
+<!--                               href="#">-->
+<!--                                <div class="font-MontserratRegular flex flex-col justify-center items-center">-->
+<!--                               -->
+<!--                                    <span class="text-brownish-grey md:text-15">одна сменный</span>-->
 
-                                </div>
-                            </a>
+<!--                                </div>-->
+<!--                            </a>-->
+                            <button class="push-button">двух сменный</button>
 
-                            <a class="cursor-pointer rounded-xl overflow-hidden bg-not-active py-2 hover:shadow-mass-button hover:bg-white py-4 hover:shadow-mass-button hover:bg-white"
-                               href="#">
-                                <div class="font-MontserratRegular flex flex-col justify-center items-center">
-                                    <span class="text-brownish-grey md:text-15">двух сменный</span>
+<!--                            <a class="cursor-pointer rounded-xl overflow-hidden bg-not-active py-2 hover:shadow-mass-button hover:bg-white py-4 hover:shadow-mass-button hover:bg-white"-->
+<!--                               href="#">-->
+<!--                                <div class="font-MontserratRegular flex flex-col justify-center items-center">-->
+<!--                                    <button class="push-button">двух сменный</button>-->
+<!--                                    <span class="text-brownish-grey md:text-15">двух сменный</span>-->
 
-                                </div>
-                            </a>
+<!--                                </div>-->
+<!--                            </a>-->
 
 
                         </div>
@@ -430,7 +407,7 @@
                                 <div class="custom-number-input h-10 w-auto">
                                     <label for="custom-input-number"
                                            class="w-full text-gray-700 text-sm font-semibold"></label>
-                                    <div class="flex flex-row h-14 w-full rounded-lg relative bg-transparent mt-1">
+                                    <div class="flex flex-row h-12 w-full rounded-lg relative bg-transparent mt-1">
                                         <button data-action="decrement"
                                                 class=" bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-l cursor-pointer outline-none">
                                             <span class="m-auto text-2xl font-thin">−</span>
@@ -462,13 +439,13 @@
                         <span class="font-MontserratMedium text-base my-5">Адрес подачи техники</span>
                         <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 lg:gap-5 gap-x-0">
                             <input type="text" id="adress"
-                                   class="py-4 my-3 lg:my-0 bg-grey col-span-3  rounded-xl px-4 focus:outline-none bg-grey w-full"
+                                   class="py-3 my-3 lg:my-0 bg-grey col-span-3  rounded-xl px-4 focus:outline-none bg-grey w-full"
                                    placeholder="Ваш адрес"/>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="">
+            <div class="sticky-block">
                 <div class="card flex justify-center items-center rounded-xl bg-white overflow-hidden shadow-lg pt-7 my-5 md:mt-0 px-7 md:pt-5 lg:pt-10 lg:pb-10 pb-5 md:px-3">
                     <div class="flex flex-col h-full w-full justify-between">
                         <span class="block font-MontserratSemiBold lg:text-32 text-dark-grey text-center">Итоговая стоимость</span>

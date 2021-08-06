@@ -2,7 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+.activated {
+  @apply cursor-pointer rounded-xl overflow-hidden py-1 lg:py-4 bg-not-active;
+}
 
+.push-button {
+  @apply cursor-pointer rounded-xl bg-white overflow-hidden shadow-mass-button py-2 md:py-1 lg:py-4;
+}
 .btn-1 {
   @apply cursor-pointer bg-dark-yellow hover:bg-dark-yellow shadow-xl px-6 py-2.5 rounded-lg;
 }
@@ -21,6 +27,10 @@
 }
 
 @layer components {
+
+  .bg-not-active {
+    background-color: #e0e0e0;
+  }
 
   .text-dark-grey {
     color: #333333;
@@ -209,4 +219,9 @@
     box-shadow: -2px 1px 15px 0px rgba(0, 0, 0, 0.2);
   }
 
+}
+
+.not-shadow-mass-button {
+  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2);
+  background-color: #e0e0e0;
 }

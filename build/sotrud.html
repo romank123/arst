@@ -97,30 +97,47 @@
 
 
                 <div class="relative w-full">
-                    <div class="mass flex flex-col p-7 md:p-0 w-full">
+                    <div class="select-items flex flex-col px-7  md:p-0 w-full">
+
+                        <div class="grid grid-cols-1 mt-5">
+                            <label class="font-MontserratMedium text-base my-5 mt-10">Вид вашей техники</label>
+                            <select class="py-3 px-3 rounded-lg mt-1 focus:outline-none focus:ring-2  bg-grey focus:border-transparent">
+                                <option>Техника 1</option>
+                                <option>Техника 2</option>
+                                <option>Техника 3</option>
+                            </select>
+                        </div>
+
+
+                    </div>
+                    <div class="mass selected-1 flex flex-col p-7 md:p-0 w-full">
                         <span class="font-MontserratMedium text-base my-5 mt-10">Масса</span>
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
-                            <a class="cursor-pointer rounded-xl bg-white overflow-hidden shadow-mass-button py-2 hover:shadow-mass-button hover:bg-white"
-                               href="#">
-                                <div class="font-MontserratRegular flex flex-col justify-center items-center">
-                                    <!--                                    <span class="text-brownish-grey md:text-15">Лёгкие</span>-->
-                                    <span class="text-light-grey md:text-12">(от 5т. до 9т.)</span>
-                                </div>
-                            </a>
-                            <a class="cursor-pointer rounded-xl bg-white overflow-hidden bg-not-active py-2 hover:shadow-mass-button hover:bg-white"
-                               href="#">
-                                <div class="font-MontserratRegular flex flex-col justify-center items-center">
-                                    <!--                                    <span class="text-brownish-grey md:text-15">Лёгкие</span>-->
-                                    <span class="text-light-grey md:text-12">(от 10т. до 30т.)</span>
-                                </div>
-                            </a>
-                            <a class="cursor-pointer rounded-xl bg-white overflow-hidden bg-not-active py-2 hover:shadow-mass-button hover:bg-white"
-                               href="#">
-                                <div class="font-MontserratRegular flex flex-col justify-center items-center">
-                                    <!--                                    <span class="text-brownish-grey md:text-15">Лёгкие</span>-->
-                                    <span class="text-light-grey md:text-12">(более 30т.)</span>
-                                </div>
-                            </a>
+
+                            <button class="push-button">(от 5т. до 9т.)</button>
+<!--                            <a class="cursor-pointer rounded-xl bg-white overflow-hidden shadow-mass-button py-2 hover:shadow-mass-button hover:bg-white"-->
+<!--                               href="#">-->
+<!--                                <div class="font-MontserratRegular flex flex-col justify-center items-center">-->
+<!--                                    &lt;!&ndash;                                    <span class="text-brownish-grey md:text-15">Лёгкие</span>&ndash;&gt;-->
+<!--                                    <span class="text-light-grey md:text-12">(от 5т. до 9т.)</span>-->
+<!--                                </div>-->
+<!--                            </a>-->
+                            <button class="push-button">(от 10т. до 30т.)</button>
+<!--                            <a class="cursor-pointer rounded-xl bg-white overflow-hidden bg-not-active py-2 hover:shadow-mass-button hover:bg-white"-->
+<!--                               href="#">-->
+<!--                                <div class="font-MontserratRegular flex flex-col justify-center items-center">-->
+<!--                                    &lt;!&ndash;                                    <span class="text-brownish-grey md:text-15">Лёгкие</span>&ndash;&gt;-->
+<!--                                    <span class="text-light-grey md:text-12">(от 10т. до 30т.)</span>-->
+<!--                                </div>-->
+<!--                            </a>-->
+                            <button class="push-button">(более 30т.)</button>
+<!--                            <a class="cursor-pointer rounded-xl bg-white overflow-hidden bg-not-active py-2 hover:shadow-mass-button hover:bg-white"-->
+<!--                               href="#">-->
+<!--                                <div class="font-MontserratRegular flex flex-col justify-center items-center">-->
+<!--                                    &lt;!&ndash;                                    <span class="text-brownish-grey md:text-15">Лёгкие</span>&ndash;&gt;-->
+<!--                                    <span class="text-light-grey md:text-12">(более 30т.)</span>-->
+<!--                                </div>-->
+<!--                            </a>-->
                         </div>
                     </div>
 
@@ -154,7 +171,7 @@
                                            x-model="minprice"
                                            class="absolute pointer-events-none appearance-none z-20 h-2 w-full opacity-0 cursor-pointer">
 
-              <!--suppress HtmlUnknownAttribute, HtmlUnknownAttribute, HtmlUnknownAttribute, XmlUnboundNsPrefix -->
+                                    <!--suppress HtmlUnknownAttribute, HtmlUnknownAttribute, HtmlUnknownAttribute, XmlUnboundNsPrefix -->
                                     <input type="range"
                                            step="1"
                                            x-bind:min="min" x-bind:max="max"
@@ -166,7 +183,7 @@
 
                                         <div class="absolute z-10 left-0 right-0 bottom-0 top-0 rounded-md bg-grey"></div>
 
-                  <!--suppress HtmlUnknownAttribute, XmlUnboundNsPrefix -->
+                                        <!--suppress HtmlUnknownAttribute, XmlUnboundNsPrefix -->
                                         <div class="absolute z-20 top-0 bottom-0 rounded-md bg-light-gray-line"
                                              x-bind:style="'right:'+maxthumb+'%; left:'+minthumb+'%'"></div>
 
@@ -206,39 +223,28 @@
 
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
 
-                            <a class="cursor-pointer rounded-xl bg-white overflow-hidden shadow-mass-button py-1 lg:py-4 hover:shadow-mass-button hover:bg-white"
-                               href="#">
-                                <div class="font-MontserratRegular flex flex-col justify-center items-center h-full">
-                                    <span class="text-brownish-grey md:text-15">обычная</span>
-
-                                </div>
-                            </a>
-
-                            <a class="cursor-pointer rounded-xl overflow-hidden bg-not-active py-1 hover:shadow-mass-button hover:bg-white lg:py-4 hover:shadow-mass-button hover:bg-white"
-                               href="#">
-                                <div class="font-MontserratRegular flex flex-col justify-center items-center h-full">
-                                    <span class="text-brownish-grey md:text-15 text-center">широкий башмак(болотник)</span>
-
-                                </div>
-                            </a>
-
-
+                            <button class="push-button">широкий башмак(болотник)</button>
                         </div>
                     </div>
 
                     <div class="dop-items flex flex-col p-7 md:p-0 w-full">
+                        <span class="font-MontserratMedium text-base my-5 mt-10">Доп оборудование</span>
 
-                        <div class="grid grid-cols-1 mt-5">
-                            <label class="font-MontserratMedium text-base my-5 mt-10">Доп оборудование</label>
-                            <select class="py-4 px-3 rounded-lg mt-1 focus:outline-none focus:ring-2  bg-grey focus:border-transparent">
-                                <option>АГП монтажная корзина</option>
-                                <option>АГП монтажная корзина2</option>
-                                <option>АГП монтажная корзина3</option>
-                            </select>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+
+
+                            <button class="font-MontserratRegular text-brownish-grey push-button">1111</button>
+
+                            <button class="font-MontserratRegular text-brownish-grey push-button">2222</button>
+
+                            <button class="font-MontserratRegular text-brownish-grey push-button">3333</button>
+
+                            <button class="font-MontserratRegular text-brownish-grey push-button">4444</button>
+
+
                         </div>
-
-
                     </div>
+
                     <div class="flex flex-col p-7 md:p-0 w-full">
                         <span class="font-MontserratMedium text-base my-5 mt-10">Краткое описание работ</span>
                         <div class="flex-auto w-full mb-1 text-xs space-y-2">
@@ -261,8 +267,8 @@
 
                         </div>
                     </div>
-                    <div class="flex justify-end">
-                        <button class="btn-zakaz self-end lg:px-20 md:px-10 w-full md:w-auto mt-16 text-dark-grey font-MontserratBold text-base text-center">
+                    <div class="flex justify-end p-7 md:p-0 w-full">
+                        <button class="btn-zakaz self-start lg:px-20 md:px-5 w-full md:w-auto mt-5 text-dark-grey font-MontserratBold text-base text-center">
                             отправить
                         </button>
                     </div>
@@ -274,15 +280,13 @@
 
                     <div class="flex">
                         <img class="self-start px-3" src="/img/info.svg" alt="">
-                        <p class="text-light-grey">С вами свяжется наш менеджер для подтверждения заказа. После этого
-                            вам начнут поступать предложения от владельцев техники. Выберите подходящее предложение и
-                            оплатите заказ. В данный момент вы не совершаете оплату.</p>
-
-
+                        <p class="text-light-grey">С вами свяжется наш менеджер.</p>
                     </div>
 
-                    <button class="myBtn-open mx-auto btn-zakaz self-start lg:px-20 md:px-5 w-full md:w-auto mt-5 text-dark-grey font-MontserratBold text-base text-center">заказать
-                        звонок</button>
+                    <button class="myBtn-open mx-auto btn-zakaz self-start lg:px-20 md:px-5 w-full md:w-auto mt-5 text-dark-grey font-MontserratBold text-base text-center">
+                        заказать
+                        звонок
+                    </button>
                 </div>
             </div>
         </div>
@@ -380,11 +384,9 @@
                         type="submit">
                     заказать звонок
                 </button>
-                <div class="flex pt-5">
+                <div class="flex pt-5 items-center">
                     <img class="self-start" src="/img/info.svg" alt="">
-                    <p class="pl-1 font-MontserratRegular text-light-grey lg:text-base md:text-xxs text-12">С вами свяжется наш менеджер для подтверждения заказа. После этого вам
-                        начнут поступать предложения от владельцев техники. Выберите подходящее предложение и оплатите
-                        заказ. В данный момент вы не совершаете оплату.</p>
+                    <p class="pl-1 font-MontserratRegular text-light-grey lg:text-base md:text-xxs text-12">С вами свяжется наш менеджер.</p>
 
 
                 </div>

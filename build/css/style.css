@@ -1,6 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+.activated {
+  @apply cursor-pointer rounded-xl overflow-hidden py-1 lg:py-4 bg-not-active;
+}
+
+.push-button {
+  @apply cursor-pointer rounded-xl bg-white overflow-hidden shadow-mass-button py-2 md:py-1 lg:py-4;
+}
+
 .btn-1 {
   @apply cursor-pointer bg-dark-yellow hover:bg-dark-yellow shadow-xl px-6 py-2.5 rounded-lg;
 }
@@ -18,6 +26,9 @@
 }
 
 @layer components {
+  .bg-not-active {
+    background-color: #e0e0e0;
+  }
   .text-dark-grey {
     color: #333333;
   }
@@ -158,6 +169,11 @@
   }
 }
 
+.not-shadow-mass-button {
+  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2);
+  background-color: #e0e0e0;
+}
+
 @font-face {
   font-family: "MontserratBlack";
   src: url("/fonts/MontserratBlack/MontserratBlack.eot");
@@ -205,7 +221,6 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
   width: 100%;
 }
 
@@ -334,10 +349,10 @@ body {
   width: 141px;
   height: 141px;
   line-height: 141px;
-  background: #f2f2f2;
   color: #fff;
   border-radius: 50%;
   text-align: center;
+  background: #f0c42e;
 }
 
 .block-about-our-service .title {
@@ -346,19 +361,6 @@ body {
 
 .block-about-our-service .title-block {
   width: 1050px;
-}
-
-.block-about-our-service .card:hover {
-  --tw-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
-.block-about-our-service .card:hover > .round-digit {
-  background: #f0c42e;
-}
-
-.block-about-our-service .card:hover .title {
-  color: #333333;
 }
 
 .block-about-our-service .bg-image {
@@ -706,6 +708,11 @@ body {
 
 .sotrud .counter .custom-number-input button:focus {
   outline: none !important;
+}
+
+.sotrud .card {
+  position: sticky;
+  top: 0;
 }
 
 @media (max-width: 768px) {
@@ -1234,6 +1241,11 @@ body {
   z-index: 10;
 }
 
+.zakaz .sticky-block .card {
+  position: sticky;
+  top: 0;
+}
+
 .main-banner-zakaz .bg-main-banner-zakaz {
   background: url("/img/bg-main-banner-zakaz.jpg") no-repeat center center;
   min-height: 600px;
@@ -1242,6 +1254,7 @@ body {
 /* NOTE - import here your style modules */
 .container-fluid {
   max-width: 100%;
+  overflow-x: hidden;
 }
 
 .container {

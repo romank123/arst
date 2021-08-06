@@ -1,4 +1,3 @@
-
 //date picker
 // const MONTH_NAMES = ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'];
 // const DAYS = ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'];
@@ -131,8 +130,6 @@ incrementButtons.forEach(btn => {
 });
 
 
-
-
 const MONTH_NAMES = [
     'Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'
 ];
@@ -202,7 +199,7 @@ function app() {
         isSelectedDate(date) {
             const d = new Date(this.year, this.month, date);
             return this.datepickerValue ===
-            this.formatDateForDisplay(d);
+                this.formatDateForDisplay(d);
         },
         isToday(date) {
             const today = new Date();
@@ -268,5 +265,55 @@ function range() {
     }
 }
 
+//mass null
 
+function functionName(currentTargetElement) {
+
+    let btns = currentTargetElement.getElementsByClassName('push-button')
+
+    //console.log("111",btns)
+
+    for (let elem of btns) {
+
+        if (elem.classList.contains('activated')) {
+
+            elem.classList.remove('activated');
+            elem.classList.remove("not-shadow-mass-button");
+
+        } else {
+            console.log('не нашел')
+
+        }
+
+
+    }
+};
+
+function push_btn(e) {
+
+    if (e.currentTarget.parentNode.parentElement.classList.contains('selected-1')) {
+
+        functionName(e.currentTarget.parentNode.parentElement);
+
+    }
+
+    this.classList.toggle("activated");
+
+    this.classList.toggle('not-shadow-mass-button');
+
+}
+
+//push button
+
+// Выбираем все кнопки на странице и получаем массив
+let btns = document.querySelectorAll('.push-button')
+
+// Проходим по массиву
+btns.forEach(function (btn) {
+
+    str = 0;
+//
+//     // Вешаем событие клик
+    btn.addEventListener('click', push_btn)
+})
 

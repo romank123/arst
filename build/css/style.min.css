@@ -608,6 +608,9 @@ video {
 		max-width: 1290px;
 	}
 }
+.bg-not-active {
+    background-color: #e0e0e0;
+  }
 .text-dark-grey {
     color: #333333;
   }
@@ -785,6 +788,9 @@ video {
 .mt-16 {
 	margin-top: 4rem;
 }
+.mt-1 {
+	margin-top: 0.25rem;
+}
 .-mt-2 {
 	margin-top: -0.5rem;
 }
@@ -794,17 +800,11 @@ video {
 .-mr-3 {
 	margin-right: -0.75rem;
 }
-.mt-1 {
-	margin-top: 0.25rem;
-}
 .mb-4 {
 	margin-bottom: 1rem;
 }
 .-mt-48 {
 	margin-top: -12rem;
-}
-.mr-2 {
-	margin-right: 0.5rem;
 }
 .mt-12 {
 	margin-top: 3rem;
@@ -851,8 +851,8 @@ video {
 .h-10 {
 	height: 2.5rem;
 }
-.h-14 {
-	height: 3.5rem;
+.h-12 {
+	height: 3rem;
 }
 .max-h-\[300px\] {
 	max-height: 300px;
@@ -967,14 +967,14 @@ video {
 .rounded-sm {
 	border-radius: 0.125rem;
 }
+.rounded-lg {
+	border-radius: 0.5rem;
+}
 .rounded-md {
 	border-radius: 0.375rem;
 }
 .rounded-full {
 	border-radius: 9999px;
-}
-.rounded-lg {
-	border-radius: 0.5rem;
 }
 .rounded {
 	border-radius: 0.25rem;
@@ -1082,21 +1082,17 @@ video {
 	padding-left: 0px;
 	padding-right: 0px;
 }
+.px-3 {
+	padding-left: 0.75rem;
+	padding-right: 0.75rem;
+}
 .py-2 {
 	padding-top: 0.5rem;
 	padding-bottom: 0.5rem;
 }
-.py-1 {
-	padding-top: 0.25rem;
-	padding-bottom: 0.25rem;
-}
 .py-4 {
 	padding-top: 1rem;
 	padding-bottom: 1rem;
-}
-.px-3 {
-	padding-left: 0.75rem;
-	padding-right: 0.75rem;
 }
 .py-3\.5 {
 	padding-top: 0.875rem;
@@ -1109,6 +1105,10 @@ video {
 .px-10 {
 	padding-left: 2.5rem;
 	padding-right: 2.5rem;
+}
+.py-1 {
+	padding-top: 0.25rem;
+	padding-bottom: 0.25rem;
 }
 .pl-16 {
 	padding-left: 4rem;
@@ -1341,6 +1341,49 @@ video {
 .ease-in-out {
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+.activated {
+    background-color: #e0e0e0;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 0.75rem;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+  }
+@media (min-width: 1290px) {
+
+	.activated {
+		padding-top: 1rem;
+		padding-bottom: 1rem;
+	}
+}
+
+.push-button {
+    box-shadow: -2px 1px 15px 0px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 0.75rem;
+    --tw-bg-opacity: 1;
+    background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+
+@media (min-width: 768px) {
+
+	.push-button {
+		padding-top: 0.25rem;
+		padding-bottom: 0.25rem;
+	}
+}
+
+@media (min-width: 1290px) {
+
+	.push-button {
+		padding-top: 1rem;
+		padding-bottom: 1rem;
+	}
+}
+
 .btn-1 {
     background-color: #f0c42e;
     cursor: pointer;
@@ -1352,6 +1395,7 @@ video {
     --tw-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   }
+
 .btn-1:hover {
     background-color: #f0c42e;
   }
@@ -1415,6 +1459,11 @@ video {
 	}
 }
 
+.not-shadow-mass-button {
+  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2);
+  background-color: #e0e0e0;
+}
+
 @font-face {
   font-family: "MontserratBlack";
   src: url("/fonts/MontserratBlack/MontserratBlack.eot");
@@ -1462,7 +1511,6 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
   width: 100%;
 }
 
@@ -1620,10 +1668,10 @@ body {
   width: 141px;
   height: 141px;
   line-height: 141px;
-  background: #f2f2f2;
   color: #fff;
   border-radius: 50%;
   text-align: center;
+  background: #f0c42e;
 }
 
 .block-about-our-service .title {
@@ -1632,19 +1680,6 @@ body {
 
 .block-about-our-service .title-block {
   width: 1050px;
-}
-
-.block-about-our-service .card:hover {
-  --tw-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
-.block-about-our-service .card:hover > .round-digit {
-  background: #f0c42e;
-}
-
-.block-about-our-service .card:hover .title {
-  color: #333333;
 }
 
 .block-about-our-service .bg-image {
@@ -1994,6 +2029,11 @@ body {
 
 .sotrud .counter .custom-number-input button:focus {
   outline: none !important;
+}
+
+.sotrud .card {
+  position: sticky;
+  top: 0;
 }
 
 @media (max-width: 768px) {
@@ -2525,6 +2565,11 @@ body {
   z-index: 10;
 }
 
+.zakaz .sticky-block .card {
+  position: sticky;
+  top: 0;
+}
+
 .main-banner-zakaz .bg-main-banner-zakaz {
   background: url("/img/bg-main-banner-zakaz.jpg") no-repeat center center;
   min-height: 600px;
@@ -2533,6 +2578,7 @@ body {
 /* NOTE - import here your style modules */
 .container-fluid {
   max-width: 100%;
+  overflow-x: hidden;
 }
 
 .container {
@@ -2765,17 +2811,13 @@ body {
 		padding-top: 1.25rem;
 		padding-bottom: 1.25rem;
 	}
-  .md\:px-10 {
-		padding-left: 2.5rem;
-		padding-right: 2.5rem;
+  .md\:px-5 {
+		padding-left: 1.25rem;
+		padding-right: 1.25rem;
 	}
   .md\:px-3 {
 		padding-left: 0.75rem;
 		padding-right: 0.75rem;
-	}
-  .md\:px-5 {
-		padding-left: 1.25rem;
-		padding-right: 1.25rem;
 	}
   .md\:py-10 {
 		padding-top: 2.5rem;
@@ -2948,10 +2990,6 @@ body {
   .lg\:py-1 {
 		padding-top: 0.25rem;
 		padding-bottom: 0.25rem;
-	}
-  .lg\:py-4 {
-		padding-top: 1rem;
-		padding-bottom: 1rem;
 	}
   .lg\:px-20 {
 		padding-left: 5rem;

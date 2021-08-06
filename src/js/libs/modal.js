@@ -21,6 +21,18 @@ close.onclick = function() {
     modal.style.display = "none";
 }
 
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+
+        let modal = document.getElementById("myModal");
+        modal.style.display = "none";
+
+    }
+
+    });
+
+
+
 
 window.onclick = function(event) {
 
