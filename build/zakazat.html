@@ -101,11 +101,11 @@
                     <div id="massa" class="mass selected-1 flex flex-col px-7 md:p-0 w-full">
                         <span class="font-MontserratMedium text-base my-5 mt-10">Масса</span>
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
-                            <button  data-button='1' class="push-button activated">(от 5т. до 9т.)</button>
+                            <button  data-button='1500' class="push-button activated">(от 5т. до 9т.)</button>
 
-                            <button data-button='1.26667' class="push-button">(от 10т. до 30т.)</button>
+                            <button data-button='1900' class="push-button">(от 10т. до 30т.)</button>
 
-                            <button data-button='1.66667' class="push-button">(Более 30т.)</button>
+                            <button data-button='2500' class="push-button">(Более 30т.)</button>
 
                         </div>
                     </div>
@@ -190,7 +190,7 @@
 
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
 
-                        <button class="font-MontserratRegular text-brownish-grey push-button">0000</button>
+                        <button id="track"  data-button='100' class="font-MontserratRegular text-brownish-grey push-button">широкий трак</button>
 
                         </div>
                     </div>
@@ -198,17 +198,15 @@
                     <div class="dop-oborud flex flex-col px-7 md:p-0 w-full">
                         <span class="font-MontserratMedium text-base my-5 md:mt-10 mt-5">Доп оборудование</span>
 
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                        <div id="dopEquip" class="grid grid-cols-1 md:grid-cols-2 gap-5">
 
+                            <button data-button='150' class="font-MontserratRegular text-brownish-grey push-button">Грейфер</button>
 
-                            <button class="font-MontserratRegular text-brownish-grey push-button">1111</button>
+                            <button data-button='100' class="font-MontserratRegular text-brownish-grey push-button">Гидромолот</button>
 
-                            <button class="font-MontserratRegular text-brownish-grey push-button">2222</button>
+                            <button data-button='100' class="font-MontserratRegular text-brownish-grey push-button">Крашер</button>
 
-                            <button class="font-MontserratRegular text-brownish-grey push-button">3333</button>
-
-                            <button class="font-MontserratRegular text-brownish-grey push-button">4444</button>
-
+                            <button data-button='100' class="font-MontserratRegular text-brownish-grey push-button">Гидроножницы</button>
 
                         </div>
                     </div>
@@ -216,8 +214,8 @@
                     <div class="rezhim selected-1 flex flex-col px-7 md:p-0 w-full">
                         <span class="font-MontserratMedium text-base my-5 md:mt-10 mt-5">Режим работы</span>
 
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
-                            <button class="push-button">одна сменный</button>
+                        <div id="rezhim" class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                            <button data-button='8' class="push-button activated">одна сменный</button>
 
 <!--                            <a class="cursor-pointer rounded-xl bg-white overflow-hidden shadow-mass-button py-4 hover:shadow-mass-button hover:bg-white"-->
 <!--                               href="#">-->
@@ -227,7 +225,7 @@
 
 <!--                                </div>-->
 <!--                            </a>-->
-                            <button class="push-button">двух сменный</button>
+                            <button data-button='16' class="push-button">двух сменный</button>
 
 <!--                            <a class="cursor-pointer rounded-xl overflow-hidden bg-not-active py-2 hover:shadow-mass-button hover:bg-white py-4 hover:shadow-mass-button hover:bg-white"-->
 <!--                               href="#">-->
@@ -545,7 +543,7 @@
                             </div>
                             <div class="flex justify-between items-center my-2 lg:my-5">
                                 <span class="font-MontserratMedium lg:text-base text-dark-grey text-left leading-none self-end">Итог:</span>
-                                <span class="font-MontserratBold lg:text-32 text-dark-grey text-right leading-none self-end">14 400$</span>
+                                <span id="totalCost" class="font-MontserratBold lg:text-32 text-dark-grey text-right leading-none self-end"></span>
                             </div>
                         </div>
                         <a class="mx-auto btn-zakaz self-start lg:px-20 px-16 mt-5 text-dark-grey font-MontserratBold text-base text-center">заказать</a>

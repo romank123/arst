@@ -281,7 +281,7 @@ function functionName(currentTargetElement) {
             elem.classList.remove("not-shadow-mass-button");
 
         } else {
-            console.log('не нашел')
+            //console.log('не нашел')
 
         }
 
