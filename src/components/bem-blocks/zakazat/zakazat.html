@@ -13,14 +13,14 @@
                 <img src="/img/eks.png" alt="">
 
                 <div class="w-full -mt-48">
-                    <div class="mass selected-1 flex flex-col px-7 md:p-0 w-full">
+                    <div id="massa" class="mass selected-1 flex flex-col px-7 md:p-0 w-full">
                         <span class="font-MontserratMedium text-base my-5 mt-10">Масса</span>
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
-                            <button class="push-button activated">(от 5т. до 9т.)</button>
+                            <button  data-button='1' class="push-button activated">(от 5т. до 9т.)</button>
 
-                            <button class="push-button">(от 10т. до 30т.)</button>
+                            <button data-button='1.26667' class="push-button">(от 10т. до 30т.)</button>
 
-                            <button class="push-button">(Более 30т.)</button>
+                            <button data-button='1.66667' class="push-button">(Более 30т.)</button>
 
                         </div>
                     </div>
@@ -28,9 +28,9 @@
                     <div class="value flex flex-col px-7 md:p-0 w-full">
                         <span class="font-MontserratMedium text-base my-5 md:mt-10 mt-5">V ковша</span>
                         <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-5">
-                            <input type="text" id="username"
+                            <input type="text" id="value"
                                    class="col-span-2 rounded-xl px-4 py-3 focus:outline-none bg-grey w-full"
-                                   placeholder="Введите параметр"/>
+                                   placeholder="Введите параметр" value="0.15"/>
                             <div class="flex flex-col lg:flex-col flex-wrap  lg:justify-center items-start w-full font-MontserratRegular text-sm text-brownish-grey">
                                 <span>Легкие (от 0,15. до 0,6)</span>
                                 <span>Средние (от 0,3 до 1,6)</span>
@@ -109,7 +109,6 @@
 
                         </div>
                     </div>
-
 
                     <div class="dop-oborud flex flex-col px-7 md:p-0 w-full">
                         <span class="font-MontserratMedium text-base my-5 md:mt-10 mt-5">Доп оборудование</span>
@@ -391,9 +390,10 @@
                         <span class="font-MontserratMedium text-base my-5 mt-10">Краткое описание работ</span>
                         <div class="flex-auto w-full mb-1 text-xs space-y-2">
                             <label class=""></label>
-                            <textarea required="" name="message" id=""
+                            <textarea required="" name="message" id="textarea"
                                       class="text-base w-full min-h-[100px] max-h-[300px] h-28 appearance-none block w-full bg-grey text-grey-darker border border-grey-lighter rounded-lg  py-4 px-4"
-                                      placeholder="Введите сообщение..." spellcheck="false"></textarea>
+                                      placeholder="Введите сообщение..." spellcheck="false">
+                            </textarea>
 
                         </div>
 
@@ -452,7 +452,7 @@
                         <div>
                             <div class="flex justify-between my-2 lg:my-5">
                                 <span class="font-MontserratMedium lg:text-sm md:text-sm text-light-grey text-left">Тариф:</span>
-                                <span class="font-MontserratMedium lg:text-sm md:text-sm text-light-grey text-right">1800 р/час с НДС</span>
+                                <span class="font-MontserratMedium lg:text-sm md:text-sm text-light-grey text-right"><span id="tarif"></span> р/час с НДС</span>
                             </div>
                             <div class="flex justify-between my-2 lg:my-5">
                                 <span class="font-MontserratMedium lg:text-sm md:text-sm text-light-grey text-left">Срок аренды:</span>
