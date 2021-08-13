@@ -7,6 +7,9 @@ document.addEventListener('DOMContentLoaded', function () {
         wideTrack();
         getDopEq();
         getRezhim();
+        getDate_first();
+        getDate_second();
+        getCount();
         total.getTarif();
     },
     false);
@@ -15,6 +18,8 @@ document.addEventListener('DOMContentLoaded', function () {
 function massaActive() {
 
     document.querySelector('.push-button.activated').click();
+    getWidth.max = 5;
+    console.log("99999999999",getWidth.max);
 }
 
 //Функция активация режима
@@ -34,6 +39,7 @@ function getValue() {
     document.getElementById('value').addEventListener('input', function () {
 
         let value = this.value;
+        value = value.replace(',', '.');
         let koefVal = 0;
         let valueNum = 0;
         valueNum = Number.parseFloat(value);
@@ -75,6 +81,20 @@ function getMassa() {
                         //console.log("активный тег", child[i]);
                         let activeButtonAttr = child[i].getAttribute('data-button');
                         console.log("аттрибут selectValueMassa", activeButtonAttr);
+
+                        if (activeButtonAttr == 1500) {
+                            let maxDepth = document.getElementById('maxDepth');
+                            maxDepth.innerHTML = 'до 5м';
+                            getWidth.max = 8;
+
+                            console.log("getWidth.max",getWidth.max)
+                            //console.log(parM(max))
+                        } else {
+                            let maxDepth = document.getElementById('maxDepth');
+                            maxDepth.innerHTML = 'до 8м';
+                            getWidth.max = 8;
+
+                        }
                         total.massa = Number.parseFloat(activeButtonAttr);
                         total.getTarif();
                     }
@@ -117,7 +137,7 @@ function getDopEq() {
 
         function selectDopEquip() {
             sleep(100).then(() => {
-                let activeButtonAttr = {0:0};
+                let activeButtonAttr = {0: 0};
                 console.log(activeButtonAttr)
                 for (let i = 0; i < child.length; i++) {
                     if (child[i].classList.contains('activated')) {
@@ -154,8 +174,16 @@ function getRezhim() {
                     if (child[i].classList.contains('activated')) {
                         //console.log("активный тег", child[i]);
                         let activeButtonAttr = child[i].getAttribute('data-button');
-                        console.log("аттрибут selectValueRezhim", activeButtonAttr);
+                        //console.log("аттрибут selectValueRezhim", activeButtonAttr);
                         total.rezhim = Number.parseFloat(activeButtonAttr);
+
+                        console.log("total.rezhim",total.rezhim);
+
+                        if (total.rezhim == 16) {
+                            total.hours = 2;
+                        } else {
+                            total.hours = 1;
+                        }
                         total.getTarif();
                     }
                 }
@@ -164,7 +192,86 @@ function getRezhim() {
     }
 }
 
+//функция получения параметров даты
+function getDate_first() {
 
+    let input = document.getElementById("datepicker");
+    total.date_first = input.value;
+    console.log(input.value);
+
+    input.addEventListener('click', function () {
+
+        let first_date = document.getElementById("calendar_first");
+        total.date_first = first_date;
+        total.getTarif();
+        first_date.addEventListener('click', function () {
+            sleep(200).then(() => {
+                let input = document.getElementById("datepicker").value;
+                //let dateEntered = new Date(input);
+                //console.log(input);
+                total.date_first = input;
+
+                total.getTarif();
+                //console.log(dateEntered);
+            });
+        });
+    });
+}
+
+//функция получения параметров даты 2
+function getDate_second() {
+
+    let input_2 = document.getElementById("datepicker_2");
+    total.date_last = input_2.value;
+
+    input_2.addEventListener('click', function () {
+
+        let second_date = document.getElementById("calendar_second");
+        second_date.addEventListener('click', function () {
+            sleep(200).then(() => {
+                let input = document.getElementById("datepicker_2").value;
+                //let dateEntered = new Date(input);
+                //console.log("second", input);
+                total.date_last = input;
+                total.getTarif();
+                //console.log(dateEntered);
+            });
+        });
+    });
+}
+
+//функция получения параметров кол-во техники
+function getCount(){
+
+    let count =  document.getElementById('custom-input-number').value;
+    console.log("count-",count)
+
+    document.getElementById('increment').addEventListener('click', function () {
+
+        let count = document.getElementById('custom-input-number').value;
+        countNum = Number.parseFloat(count);
+        total.count = countNum;
+        total.getTarif();
+
+    })
+
+    document.getElementById('decrement').addEventListener('click', function () {
+
+        let count = document.getElementById('custom-input-number').value;
+        countNum = Number.parseFloat(count);
+        total.count = countNum;
+        total.getTarif();
+
+    })
+
+    console.log(count)
+
+
+}
+
+
+let getWidth = {max:8
+}
 
 let total = {
     massa: 0,
@@ -172,42 +279,50 @@ let total = {
     wide: 0,
     dopEquip: 0,
     rezhim: 8,
+    date_first: 0,
+    date_last: 0,
+    summ_day: 0,
+    days: 1,
+    hours: 1,
+    count: 1,
     getTarif: function () {
 
+        let a = moment(total.date_first,"DD.MM.YYYY");
+        let b = moment(total.date_last,"DD.MM.YYYY").add(1,"day");
+
+        let days = b.diff(a, 'days');
+
+       // if (days == 1) {
+
+
+       // }
+
+        //if (days > 2) {
+        //    days = days+1;
+        //}
+
+        if ((days==0) || (isNaN(days)) || (days<0)) {
+            days = 1;
+        }
+
         let getTarif = (total.massa + total.value + total.wide + total.dopEquip)
-        let totalCost = getTarif*total.rezhim;
+        let hours = 8 * total.hours;
+        let hoursDays = hours * days
+        let totalCost = getTarif * total.rezhim * days * total.count;
+
+        console.log("first date", total.date_first)
+        console.log("last date", total.date_last)
+
+
+
+        console.log("a", a)
+
+
+        console.log("days",days)
+        console.log("hours",total.hours)
 
         document.getElementById("tarif").innerHTML = getTarif;
-        document.getElementById("totalCost").innerHTML = totalCost+" р";
+        document.getElementById("hours").innerHTML = hoursDays;
+        document.getElementById("totalCost").innerHTML = totalCost + " р";
     }
 }
-
-
-// function a(){
-//     var result = 10;
-//     total.a = result;
-// }
-
-//
-// function b(){
-//     var result = 20;
-//     total.b = result;
-// }
-//
-//
-//
-// var total = {
-//     a: 0,
-//     b: 0,
-//     getTotal: function(){
-//         console.log(total.a + total.b);
-//     }
-// }
-//
-//
-//
-// a();
-// b();
-// total.getTotal();
-
-

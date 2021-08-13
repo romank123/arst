@@ -10,6 +10,7 @@
     <!-- Add icon library -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" ></script>
 
 </head>
 <body>
@@ -115,7 +116,7 @@
                         <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-5">
                             <input type="text" id="value"
                                    class="col-span-2 rounded-xl px-4 py-3 focus:outline-none bg-grey w-full"
-                                   placeholder="Введите параметр" value="0.15"/>
+                                   placeholder="Введите параметр"/>
                             <div class="flex flex-col lg:flex-col flex-wrap  lg:justify-center items-start w-full font-MontserratRegular text-sm text-brownish-grey">
                                 <span>Легкие (от 0,15. до 0,6)</span>
                                 <span>Средние (от 0,3 до 1,6)</span>
@@ -179,7 +180,7 @@
                                         <span class="py-2">от 3м</span>
                                     </div>
                                     <div>
-                                        <span class="py-2">до 8м</span>
+                                        <span id="maxDepth" class="py-2">до 8м</span>
                                     </div>
                                 </div>
                             </div>
@@ -276,7 +277,7 @@
                                         <div x-text="32 - new Date(year, month, 32).getDate()"></div>
                                         <div x-text="new Date(year, month).getDay()"></div> -->
 
-                                        <div
+                                        <div id="calendar_first"
                                                 class="bg-white mt-12 rounded-lg shadow p-4 absolute top-0 left-0"
                                                 style="width: 17rem"
                                                 x-show.transition="showDatepicker"
@@ -385,7 +386,7 @@
                                         <div x-text="32 - new Date(year, month, 32).getDate()"></div>
                                         <div x-text="new Date(year, month).getDay()"></div> -->
 
-                                        <div
+                                        <div id="calendar_second"
                                                 class="bg-white mt-12 rounded-lg shadow p-4 absolute top-0 left-0"
                                                 style="width: 17rem"
                                                 x-show.transition="showDatepicker"
@@ -491,14 +492,14 @@
                                     <label for="custom-input-number"
                                            class="w-full text-gray-700 text-sm font-semibold"></label>
                                     <div class="flex flex-row h-12 w-full rounded-lg relative bg-transparent mt-1">
-                                        <button data-action="decrement"
+                                        <button id="decrement" data-action="decrement"
                                                 class=" bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-l cursor-pointer outline-none">
                                             <span class="m-auto text-2xl font-thin">−</span>
                                         </button>
                                         <input id="custom-input-number" type="number"
                                                class="outline-none focus:outline-none text-center w-full bg-grey font-semibold text-md hover:text-black focus:text-black  md:text-basecursor-default flex items-center text-gray-700  outline-none"
-                                               name="custom-input-number" value="0">
-                                        <button data-action="increment"
+                                               name="custom-input-number" value="1">
+                                        <button id="increment" data-action="increment"
                                                 class="bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-r cursor-pointer">
                                             <span class="m-auto text-2xl font-thin">+</span>
                                         </button>
@@ -539,7 +540,7 @@
                             </div>
                             <div class="flex justify-between my-2 lg:my-5">
                                 <span class="font-MontserratMedium lg:text-sm md:text-sm text-light-grey text-left">Срок аренды:</span>
-                                <span class="font-MontserratMedium lg:text-sm md:text-sm text-light-grey text-right">8 часов</span>
+                                <span class="font-MontserratMedium lg:text-sm md:text-sm text-light-grey text-right"><span id="hours"></span> часов</span>
                             </div>
                             <div class="flex justify-between items-center my-2 lg:my-5">
                                 <span class="font-MontserratMedium lg:text-base text-dark-grey text-left leading-none self-end">Итог:</span>

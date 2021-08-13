@@ -249,20 +249,23 @@ function range() {
         minprice: 3,
         maxprice: 5,
         min: 3,
-        max: 8,
+        max: getWidth.max,
         minthumb: 3,
         maxthumb: 8,
-
-        mintrigger() {
-            this.minprice = 3;
-            this.minthumb = 0;
-        },
-
-        maxtrigger() {
-            this.maxprice = Math.max(this.maxprice, this.minprice);
-            this.maxthumb = 100 - (((this.maxprice - this.min) / (this.max - this.min)) * 100);
-        },
+        mintrigger()
+    {
+        this.minprice = 3;
+        this.minthumb = 0;
     }
+,
+
+    maxtrigger()
+    {
+        this.maxprice = Math.max(this.maxprice, this.minprice);
+        this.maxthumb = 100 - (((this.maxprice - this.min) / (this.max - this.min)) * 100);
+    },
+
+}
 }
 
 //mass null
