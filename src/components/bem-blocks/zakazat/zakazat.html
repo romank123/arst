@@ -25,105 +25,117 @@
                         </div>
                     </div>
 
-                    <div class="value flex flex-col px-7 md:p-0 w-full">
-                        <span class="font-MontserratMedium text-base my-5 md:mt-10 mt-5">V ковша</span>
-                        <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-5">
-                            <input type="text" id="value"
-                                   class="col-span-2 rounded-xl px-4 py-3 focus:outline-none bg-grey w-full"
-                                   placeholder="Введите параметр"/>
-                            <div class="flex flex-col lg:flex-col flex-wrap  lg:justify-center items-start w-full font-MontserratRegular text-sm text-brownish-grey">
-                                <span>Легкие (от 0,15. до 0,6)</span>
-                                <span>Средние (от 0,3 до 1,6)</span>
-                                <span>Тяжелые (от 1,2 до 4)</span>
-                            </div>
-                        </div>
-                    </div>
+                    <div class="load">
+<!--                        <div class="value flex flex-col px-7 md:p-0 w-full">-->
+<!--                            <span class="font-MontserratMedium text-base my-5 md:mt-10 mt-5">V ковша</span>-->
+<!--                            <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-5">-->
+<!--                                <input type="text" id="value"-->
+<!--                                       class="col-span-2 rounded-xl px-4 py-3 focus:outline-none bg-grey w-full"-->
+<!--                                       placeholder="Введите параметр"/>-->
+<!--                                <div class="flex flex-col lg:flex-col flex-wrap  lg:justify-center items-start w-full font-MontserratRegular text-sm text-brownish-grey">-->
+<!--                                    <span>Легкие (от 0,15. до 0,6)</span>-->
+<!--                                    <span>Средние (от 0,3 до 1,6)</span>-->
+<!--                                    <span>Тяжелые (от 1,2 до 4)</span>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
 
-                    <div class="max-dep flex flex-col px-7 md:p-0 w-full">
-                        <span class="font-MontserratMedium text-base my-5 md:mt-10 mt-5">MAX глубина копания</span>
+<!--                        <div class="max-dep flex flex-col px-7 md:p-0 w-full">-->
+<!--                            <span class="font-MontserratMedium text-base my-5 md:mt-10 mt-5">MAX глубина копания</span>-->
 
 
-                        <div class="flex justify-center items-center my-5">
-                            <div x-data="range()" x-init="mintrigger(); maxtrigger()" class="relative w-full">
-                                <div>
-                                    <!--suppress XmlUnboundNsPrefix -->
-                                    <input type="range"
-                                           step="1"
-                                           x-bind:min="min" x-bind:max="max"
-                                           x-on:input="mintrigger"
-                                           x-model="minprice"
-                                           class="absolute pointer-events-none appearance-none z-20 h-2 w-full opacity-0 cursor-pointer">
+<!--                            <div class="flex justify-center items-center my-5">-->
+<!--                                <div x-data="range()" x-init="mintrigger(); maxtrigger()" class="relative w-full">-->
+<!--                                    <div>-->
+<!--                                        &lt;!&ndash;suppress XmlUnboundNsPrefix &ndash;&gt;-->
+<!--                                        <input type="range"-->
+<!--                                               step="1"-->
+<!--                                               x-bind:min="min" x-bind:max="max"-->
+<!--                                               x-on:input="mintrigger"-->
+<!--                                               x-model="minprice"-->
+<!--                                               class="absolute pointer-events-none appearance-none z-20 h-2 w-full opacity-0 cursor-pointer">-->
 
-                                    <!--suppress XmlUnboundNsPrefix, XmlUnboundNsPrefix, XmlUnboundNsPrefix -->
-                                    <input type="range"
-                                           step="1"
-                                           x-bind:min="min" x-bind:max="max"
-                                           x-on:input="maxtrigger"
-                                           x-model="maxprice"
-                                           class="absolute pointer-events-none appearance-none z-20 h-2 w-full opacity-0 cursor-pointer">
+<!--                                        &lt;!&ndash;suppress XmlUnboundNsPrefix, XmlUnboundNsPrefix, XmlUnboundNsPrefix &ndash;&gt;-->
+<!--                                        <input type="range"-->
+<!--                                               step="1"-->
+<!--                                               x-bind:min="min" x-bind:max="max"-->
+<!--                                               x-on:input="maxtrigger"-->
+<!--                                               x-model="maxprice"-->
+<!--                                               class="absolute pointer-events-none appearance-none z-20 h-2 w-full opacity-0 cursor-pointer">-->
 
-                                    <div class="relative z-10 h-2">
+<!--                                        <div class="relative z-10 h-2">-->
 
-                                        <div class="absolute z-10 left-0 right-0 bottom-0 top-0 rounded-md bg-grey"></div>
+<!--                                            <div class="absolute z-10 left-0 right-0 bottom-0 top-0 rounded-md bg-grey"></div>-->
 
-                    <!--suppress XmlUnboundNsPrefix -->
-                                        <div class="absolute z-20 top-0 bottom-0 rounded-md bg-light-gray-line"
-                                             x-bind:style="'right:'+maxthumb+'%; left:'+minthumb+'%'"></div>
+<!--                                            &lt;!&ndash;suppress XmlUnboundNsPrefix &ndash;&gt;-->
+<!--                                            <div class="absolute z-20 top-0 bottom-0 rounded-md bg-light-gray-line"-->
+<!--                                                 x-bind:style="'right:'+maxthumb+'%; left:'+minthumb+'%'"></div>-->
 
-                                        <!--suppress XmlUnboundNsPrefix -->
-                                        <div class="absolute z-30 top-0 left-0 bg-light-gray -mt-2 -ml-1"
-                                             x-bind:style="'left: '+minthumb+'%'"></div>
+<!--                                            &lt;!&ndash;suppress XmlUnboundNsPrefix &ndash;&gt;-->
+<!--                                            <div class="absolute z-30 top-0 left-0 bg-light-gray -mt-2 -ml-1"-->
+<!--                                                 x-bind:style="'left: '+minthumb+'%'"></div>-->
 
-                                        <!--suppress XmlUnboundNsPrefix -->
-                                        <div class="absolute z-30 w-6 h-6 top-0 right-0 bg-light-gray rounded-full -mt-2 -mr-3"
-                                             x-bind:style="'right: '+maxthumb+'%'">
-                                            <div class="relative">
-                                                <div class="marker">
-                                                    <!--suppress XmlUnboundNsPrefix -->
-                                                    <input type="text" maxlength="5" x-on:input="maxtrigger"
-                                                           x-model="maxprice"
-                                                           class="">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+<!--                                            &lt;!&ndash;suppress XmlUnboundNsPrefix &ndash;&gt;-->
+<!--                                            <div class="absolute z-30 w-6 h-6 top-0 right-0 bg-light-gray rounded-full -mt-2 -mr-3"-->
+<!--                                                 x-bind:style="'right: '+maxthumb+'%'">-->
+<!--                                                <div class="relative">-->
+<!--                                                    <div class="marker">-->
+<!--                                                        &lt;!&ndash;suppress XmlUnboundNsPrefix &ndash;&gt;-->
+<!--                                                        <input type="text" maxlength="5" x-on:input="maxtrigger"-->
+<!--                                                               x-model="maxprice"-->
+<!--                                                               class="">-->
+<!--                                                    </div>-->
+<!--                                                </div>-->
+<!--                                            </div>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
 
-                                <div class="flex justify-between py-5">
-                                    <div>
-                                        <span class="py-2">от 3м</span>
-                                    </div>
-                                    <div>
-                                        <span id="maxDepth" class="py-2">до 8м</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+<!--                                    <div class="flex justify-between py-5">-->
+<!--                                        <div>-->
+<!--                                            <span class="py-2">от 3м</span>-->
+<!--                                        </div>-->
+<!--                                        <div>-->
+<!--                                            <span id="maxDepth" class="py-2">до 8м</span>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
 
-                    <div class="vybor flex flex-col px-7 md:p-0 w-full">
+<!--                        <div class="vybor flex flex-col px-7 md:p-0 w-full">-->
 
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+<!--                            <div class="grid grid-cols-1 md:grid-cols-2 gap-5">-->
 
-                        <button id="track"  data-button='100' class="font-MontserratRegular text-brownish-grey push-button">широкий трак</button>
+<!--                                <button id="track" data-button='100'-->
+<!--                                        class="font-MontserratRegular text-brownish-grey push-button">широкий трак-->
+<!--                                </button>-->
 
-                        </div>
-                    </div>
+<!--                            </div>-->
+<!--                        </div>-->
 
-                    <div class="dop-oborud flex flex-col px-7 md:p-0 w-full">
-                        <span class="font-MontserratMedium text-base my-5 md:mt-10 mt-5">Доп оборудование</span>
+<!--                        <div class="dop-oborud flex flex-col px-7 md:p-0 w-full">-->
+<!--                            <span class="font-MontserratMedium text-base my-5 md:mt-10 mt-5">Доп оборудование</span>-->
 
-                        <div id="dopEquip" class="grid grid-cols-1 md:grid-cols-2 gap-5">
+<!--                            <div id="dopEquip" class="grid grid-cols-1 md:grid-cols-2 gap-5">-->
 
-                            <button data-button='150' class="font-MontserratRegular text-brownish-grey push-button">Грейфер</button>
+<!--                                <button data-button='150' class="font-MontserratRegular text-brownish-grey push-button">-->
+<!--                                    Грейфер-->
+<!--                                </button>-->
 
-                            <button data-button='100' class="font-MontserratRegular text-brownish-grey push-button">Гидромолот</button>
+<!--                                <button data-button='100' class="font-MontserratRegular text-brownish-grey push-button">-->
+<!--                                    Гидромолот-->
+<!--                                </button>-->
 
-                            <button data-button='100' class="font-MontserratRegular text-brownish-grey push-button">Крашер</button>
+<!--                                <button data-button='100' class="font-MontserratRegular text-brownish-grey push-button">-->
+<!--                                    Крашер-->
+<!--                                </button>-->
 
-                            <button data-button='100' class="font-MontserratRegular text-brownish-grey push-button">Гидроножницы</button>
+<!--                                <button data-button='100' class="font-MontserratRegular text-brownish-grey push-button">-->
+<!--                                    Гидроножницы-->
+<!--                                </button>-->
 
-                        </div>
+<!--                            </div>-->
+<!--                        </div>-->
                     </div>
 
                     <div class="rezhim selected-1 flex flex-col px-7 md:p-0 w-full">
@@ -464,9 +476,15 @@
                         <a class="mx-auto btn-zakaz self-start lg:px-20 px-16 mt-5 text-dark-grey font-MontserratBold text-base text-center">заказать</a>
                     </div>
                 </div>
+                    <div style="position: sticky; background-color: #FFFFFF; height: 200px" class="top-96 rounded-xl bg-white shadow-lg p-5">
+                        <p>Параметры заявки</p>
+
+                        <div id="zakazSend" class="">
+
+                        </div>
+
+                    </div>
             </div>
         </div>
     </div>
-
-
 </section>

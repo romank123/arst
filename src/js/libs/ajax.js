@@ -18,8 +18,8 @@ let xhr = new XMLHttpRequest();//для формирования AJAX-запро
             if (xhr.status == 200) {
                 XMLHttpRequest.responseType;
                 let b = JSON.stringify(xhr.response);
-                   console.log("88888888",b);
-                   console.log("000000000",xhr.response);
+                   //console.log("88888888",b);
+                   //console.log("000000000",xhr.response);
             }
         }
     };
