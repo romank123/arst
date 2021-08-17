@@ -1,6 +1,7 @@
 @import 'tailwind';
 @import 'global/*.scss';
 @import '../components/bem-blocks/**/*.sass';
+@import 'range-slider';
 
 /* NOTE - import here your style modules */
 @import 'media';

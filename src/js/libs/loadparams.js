@@ -41,69 +41,20 @@ async function loadParams(id) {
 
             } else if (item.IBLOCK_CODE === 'params_range') {
 
-                let res = `<div class="max-dep flex flex-col px-7 md:p-0 w-full">
-                        <span class="font-MontserratMedium text-base my-5 md:mt-10 mt-5">${item.PROPERTIES.title.VALUE}</span>
-
-
-                        <div class="flex justify-center items-center my-5">
-                            <!--suppress HtmlUnknownAttribute -->
-                            <div x-data="range()" x-init="mintrigger(); maxtrigger()" class="relative w-full">
-                                <div>
-                                    <!--suppress HtmlUnknownAttribute, HtmlUnknownAttribute, HtmlUnknownAttribute, XmlUnboundNsPrefix -->
-                                    <input type="range"
-                                           step="${item.PROPERTIES.min.VALUE}"
-                                           x-bind:min="min" x-bind:max="max"
-                                           x-on:input="mintrigger"
-                                           x-model="minprice"
-                                           class="absolute pointer-events-none appearance-none z-20 h-2 w-full opacity-0 cursor-pointer">
-
-                                    <!--suppress HtmlUnknownAttribute, HtmlUnknownAttribute, HtmlUnknownAttribute, XmlUnboundNsPrefix -->
-                                    <input type="range"
-                                           step="${item.PROPERTIES.max.VALUE}"
-                                           x-bind:min="min" x-bind:max="max"
-                                           x-on:input="maxtrigger"
-                                           x-model="maxprice"
-                                           class="absolute pointer-events-none appearance-none z-20 h-2 w-full opacity-0 cursor-pointer">
-
-                                    <div class="relative z-10 h-2">
-
-                                        <div class="absolute z-10 left-0 right-0 bottom-0 top-0 rounded-md bg-grey"></div>
-
-                                        <!--suppress HtmlUnknownAttribute, XmlUnboundNsPrefix -->
-                                        <div class="absolute z-20 top-0 bottom-0 rounded-md bg-light-gray-line"
-                                             x-bind:style="'right:'+maxthumb+'%; left:'+minthumb+'%'"></div>
-
-                                        <!--suppress HtmlUnknownAttribute, XmlUnboundNsPrefix -->
-                                        <div class="absolute z-30 top-0 left-0 bg-light-gray -mt-2 -ml-1"
-                                             x-bind:style="'left: '+minthumb+'%'"></div>
-
-                                        <!--suppress XmlUnboundNsPrefix -->
-                                        <div class="absolute z-30 w-6 h-6 top-0 right-0 bg-light-gray rounded-full -mt-2 -mr-3"
-                                             x-bind:style="'right: '+maxthumb+'%'">
-                                            <div class="relative">
-                                                <div class="marker">
-                                                    <!--suppress HtmlUnknownAttribute, XmlUnboundNsPrefix -->
-                                                    <input type="text" maxlength="${item.PROPERTIES.min.VALUE}" x-on:input="maxtrigger"
-                                                           x-model="maxprice"
-                                                           class="">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="flex justify-between py-5">
-                                    <div>
-                                        <span class="py-2">от ${item.PROPERTIES.min.VALUE}м</span>
-                                    </div>
-                                    <div>
-                                        <span class="py-2">до ${item.PROPERTIES.max.VALUE}м</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>`;
-
+                let res = `<div class="relative my-10">     
+            <input type="range" value="5" min="3" max="8" step="1" id="r1" class="absolute" oninput="fun1()"    onchange="showValue(value,1,false)">
+            <div id="test" class="absolute">
+            <div class="flex justify-end value_obj w-full relative"></div>             
+            </div>           
+        </div>        
+        <div class="flex justify-between py-5">
+            <div>
+                <span class="py-2">от 3м</span>
+            </div>
+            <div>
+                <span class="py-2">до 8м</span>
+            </div>
+        </div>`;
                 document.getElementsByClassName('load')[0].insertAdjacentHTML('beforeend', res);
             }
             //getLoad();
