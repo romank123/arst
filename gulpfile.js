@@ -35,7 +35,7 @@ const {
 	strict
 } = require('assert');
 
-const js_plugins = ['src/js/libs/*.js'];
+const js_plugins = ['src/js/libs/*.js','!src/js/libs/**/_*.js'];
 const css_plugins = [
 
 ];
@@ -191,7 +191,7 @@ gulp.task('libs_js', () => {
 
 gulp.task('dev_js', () => {
 	return gulp
-		.src(['src/js/01__main.js', 'src/components/bem-blocks/**/*.js'])
+		.src(['src/js/01__main.js', 'src/components/bem-blocks/**/*.js', '!src/js/**/_*.js'])
 		.pipe(map.init())
 		.pipe(uglify())
 		.pipe(concat('main.min.js'))
@@ -203,7 +203,7 @@ gulp.task('dev_js', () => {
 
 gulp.task('build_js', () => {
 	return gulp
-		.src(['src/js/01__main.js', 'src/components/bem-blocks/**/*.js'])
+		.src(['src/js/01__main.js', 'src/components/bem-blocks/**/*.js','!src/js/**/_*.js'])
 		.pipe(map.init())
 		.pipe(uglify())
 		.pipe(babel({

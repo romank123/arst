@@ -60,5 +60,6 @@ async function loadParams(id) {
             //getLoad();
         }
     }
-    getLoad();
+    //getLoad();
+    getClassBtn();
 }
