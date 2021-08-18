@@ -57,9 +57,9 @@ async function loadParams(id) {
         </div>`;
                 document.getElementsByClassName('load')[0].insertAdjacentHTML('beforeend', res);
             }
-            //getLoad();
+
         }
     }
-    //getLoad();
+
     getClassBtn();
 }

@@ -245,6 +245,35 @@ body {
   width: 156px;
 }
 
+#datepicker,
+#datepicker_2,
+#ranged {
+  border: 1px solid grey;
+  position: relative;
+}
+
+.datepicker:after {
+  font-family: "FontAwesome";
+  content: "\f133";
+  position: absolute;
+  display: inline-block;
+  right: 35px;
+  padding-right: 3px;
+  vertical-align: middle;
+  font-weight: 900;
+}
+
+.datepicker_2:after {
+  font-family: "FontAwesome";
+  content: "\f133";
+  position: absolute;
+  display: inline-block;
+  right: 35px;
+  padding-right: 3px;
+  vertical-align: middle;
+  font-weight: 900;
+}
+
 .four-blocks .bg-image {
   background: url("/img/users.png") no-repeat left center;
   height: 54px;
