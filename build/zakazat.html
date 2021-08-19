@@ -11,11 +11,6 @@
     <title>@@title</title>
     <!-- Add icon library -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-<!--    <link rel="stylesheet" href="css/datepicker.minimal.css">-->
-
-<!--    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>-->
-<!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/datepicker/1.0.10/datepicker.min.js"></script>-->
     <script src="js/datepicker.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" ></script>
 
@@ -109,7 +104,7 @@
                     <div id="massa" class="mass selected-1 flex flex-col px-7 md:p-0 w-full">
                         <span class="font-MontserratMedium text-base my-5 mt-10">Масса</span>
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-5 selected-1">
-                            <button  data-button='1500' class="push-button activated">(от 5т. до 9т.)</button>
+                            <button data-button='1500' class="push-button activated" data-id="26">(от 5т. до 9т.)</button>
 
                             <button data-button='1900' class="push-button">(от 10т. до 30т.)</button>
 
@@ -119,114 +114,114 @@
                     </div>
 
                     <div class="load">
-<!--                        <div class="value flex flex-col px-7 md:p-0 w-full">-->
-<!--                            <span class="font-MontserratMedium text-base my-5 md:mt-10 mt-5">V ковша</span>-->
-<!--                            <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-5">-->
-<!--                                <input type="text" id="value"-->
-<!--                                       class="col-span-2 rounded-xl px-4 py-3 focus:outline-none bg-grey w-full"-->
-<!--                                       placeholder="Введите параметр"/>-->
-<!--                                <div class="flex flex-col lg:flex-col flex-wrap  lg:justify-center items-start w-full font-MontserratRegular text-sm text-brownish-grey">-->
-<!--                                    <span>Легкие (от 0,15. до 0,6)</span>-->
-<!--                                    <span>Средние (от 0,3 до 1,6)</span>-->
-<!--                                    <span>Тяжелые (от 1,2 до 4)</span>-->
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                        </div>-->
+                        <!--                        <div class="value flex flex-col px-7 md:p-0 w-full">-->
+                        <!--                            <span class="font-MontserratMedium text-base my-5 md:mt-10 mt-5">V ковша</span>-->
+                        <!--                            <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-5">-->
+                        <!--                                <input type="text" id="value"-->
+                        <!--                                       class="col-span-2 rounded-xl px-4 py-3 focus:outline-none bg-grey w-full"-->
+                        <!--                                       placeholder="Введите параметр"/>-->
+                        <!--                                <div class="flex flex-col lg:flex-col flex-wrap  lg:justify-center items-start w-full font-MontserratRegular text-sm text-brownish-grey">-->
+                        <!--                                    <span>Легкие (от 0,15. до 0,6)</span>-->
+                        <!--                                    <span>Средние (от 0,3 до 1,6)</span>-->
+                        <!--                                    <span>Тяжелые (от 1,2 до 4)</span>-->
+                        <!--                                </div>-->
+                        <!--                            </div>-->
+                        <!--                        </div>-->
 
-<!--                        <div class="max-dep flex flex-col px-7 md:p-0 w-full">-->
-<!--                            <span class="font-MontserratMedium text-base my-5 md:mt-10 mt-5">MAX глубина копания</span>-->
-<!--                            <div class="flex justify-center items-center my-5">-->
-<!--                                <div x-data="range()" x-init="mintrigger(); maxtrigger()" class="relative w-full">-->
-<!--                                    <div>-->
-<!--                                        &lt;!&ndash;suppress XmlUnboundNsPrefix &ndash;&gt;-->
-<!--                                        <input type="range"-->
-<!--                                               step="1"-->
-<!--                                               x-bind:min="min" x-bind:max="max"-->
-<!--                                               x-on:input="mintrigger"-->
-<!--                                               x-model="minprice"-->
-<!--                                               class="absolute pointer-events-none appearance-none z-20 h-2 w-full opacity-0 cursor-pointer">-->
+                        <!--                        <div class="max-dep flex flex-col px-7 md:p-0 w-full">-->
+                        <!--                            <span class="font-MontserratMedium text-base my-5 md:mt-10 mt-5">MAX глубина копания</span>-->
+                        <!--                            <div class="flex justify-center items-center my-5">-->
+                        <!--                                <div x-data="range()" x-init="mintrigger(); maxtrigger()" class="relative w-full">-->
+                        <!--                                    <div>-->
+                        <!--                                        &lt;!&ndash;suppress XmlUnboundNsPrefix &ndash;&gt;-->
+                        <!--                                        <input type="range"-->
+                        <!--                                               step="1"-->
+                        <!--                                               x-bind:min="min" x-bind:max="max"-->
+                        <!--                                               x-on:input="mintrigger"-->
+                        <!--                                               x-model="minprice"-->
+                        <!--                                               class="absolute pointer-events-none appearance-none z-20 h-2 w-full opacity-0 cursor-pointer">-->
 
-<!--                                        &lt;!&ndash;suppress XmlUnboundNsPrefix, XmlUnboundNsPrefix, XmlUnboundNsPrefix &ndash;&gt;-->
-<!--                                        <input type="range"-->
-<!--                                               step="1"-->
-<!--                                               x-bind:min="min" x-bind:max="max"-->
-<!--                                               x-on:input="maxtrigger"-->
-<!--                                               x-model="maxprice"-->
-<!--                                               class="absolute pointer-events-none appearance-none z-20 h-2 w-full opacity-0 cursor-pointer">-->
+                        <!--                                        &lt;!&ndash;suppress XmlUnboundNsPrefix, XmlUnboundNsPrefix, XmlUnboundNsPrefix &ndash;&gt;-->
+                        <!--                                        <input type="range"-->
+                        <!--                                               step="1"-->
+                        <!--                                               x-bind:min="min" x-bind:max="max"-->
+                        <!--                                               x-on:input="maxtrigger"-->
+                        <!--                                               x-model="maxprice"-->
+                        <!--                                               class="absolute pointer-events-none appearance-none z-20 h-2 w-full opacity-0 cursor-pointer">-->
 
-<!--                                        <div class="relative z-10 h-2">-->
+                        <!--                                        <div class="relative z-10 h-2">-->
 
-<!--                                            <div class="absolute z-10 left-0 right-0 bottom-0 top-0 rounded-md bg-grey"></div>-->
+                        <!--                                            <div class="absolute z-10 left-0 right-0 bottom-0 top-0 rounded-md bg-grey"></div>-->
 
-<!--                                            &lt;!&ndash;suppress XmlUnboundNsPrefix &ndash;&gt;-->
-<!--                                            <div class="absolute z-20 top-0 bottom-0 rounded-md bg-light-gray-line"-->
-<!--                                                 x-bind:style="'right:'+maxthumb+'%; left:'+minthumb+'%'"></div>-->
+                        <!--                                            &lt;!&ndash;suppress XmlUnboundNsPrefix &ndash;&gt;-->
+                        <!--                                            <div class="absolute z-20 top-0 bottom-0 rounded-md bg-light-gray-line"-->
+                        <!--                                                 x-bind:style="'right:'+maxthumb+'%; left:'+minthumb+'%'"></div>-->
 
-<!--                                            &lt;!&ndash;suppress XmlUnboundNsPrefix &ndash;&gt;-->
-<!--                                            <div class="absolute z-30 top-0 left-0 bg-light-gray -mt-2 -ml-1"-->
-<!--                                                 x-bind:style="'left: '+minthumb+'%'"></div>-->
+                        <!--                                            &lt;!&ndash;suppress XmlUnboundNsPrefix &ndash;&gt;-->
+                        <!--                                            <div class="absolute z-30 top-0 left-0 bg-light-gray -mt-2 -ml-1"-->
+                        <!--                                                 x-bind:style="'left: '+minthumb+'%'"></div>-->
 
-<!--                                            &lt;!&ndash;suppress XmlUnboundNsPrefix &ndash;&gt;-->
-<!--                                            <div class="absolute z-30 w-6 h-6 top-0 right-0 bg-light-gray rounded-full -mt-2 -mr-3"-->
-<!--                                                 x-bind:style="'right: '+maxthumb+'%'">-->
-<!--                                                <div class="relative">-->
-<!--                                                    <div class="marker">-->
-<!--                                                        &lt;!&ndash;suppress XmlUnboundNsPrefix &ndash;&gt;-->
-<!--                                                        <input type="text" maxlength="5" x-on:input="maxtrigger"-->
-<!--                                                               x-model="maxprice"-->
-<!--                                                               class="">-->
-<!--                                                    </div>-->
-<!--                                                </div>-->
-<!--                                            </div>-->
-<!--                                        </div>-->
-<!--                                    </div>-->
+                        <!--                                            &lt;!&ndash;suppress XmlUnboundNsPrefix &ndash;&gt;-->
+                        <!--                                            <div class="absolute z-30 w-6 h-6 top-0 right-0 bg-light-gray rounded-full -mt-2 -mr-3"-->
+                        <!--                                                 x-bind:style="'right: '+maxthumb+'%'">-->
+                        <!--                                                <div class="relative">-->
+                        <!--                                                    <div class="marker">-->
+                        <!--                                                        &lt;!&ndash;suppress XmlUnboundNsPrefix &ndash;&gt;-->
+                        <!--                                                        <input type="text" maxlength="5" x-on:input="maxtrigger"-->
+                        <!--                                                               x-model="maxprice"-->
+                        <!--                                                               class="">-->
+                        <!--                                                    </div>-->
+                        <!--                                                </div>-->
+                        <!--                                            </div>-->
+                        <!--                                        </div>-->
+                        <!--                                    </div>-->
 
-<!--                                    <div class="flex justify-between py-5">-->
-<!--                                        <div>-->
-<!--                                            <span class="py-2">от 3м</span>-->
-<!--                                        </div>-->
-<!--                                        <div>-->
-<!--                                            <span id="maxDepth" class="py-2">до 8м</span>-->
-<!--                                        </div>-->
-<!--                                    </div>-->
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                        </div>-->
+                        <!--                                    <div class="flex justify-between py-5">-->
+                        <!--                                        <div>-->
+                        <!--                                            <span class="py-2">от 3м</span>-->
+                        <!--                                        </div>-->
+                        <!--                                        <div>-->
+                        <!--                                            <span id="maxDepth" class="py-2">до 8м</span>-->
+                        <!--                                        </div>-->
+                        <!--                                    </div>-->
+                        <!--                                </div>-->
+                        <!--                            </div>-->
+                        <!--                        </div>-->
 
-<!--                        <div class="vybor flex flex-col px-7 md:p-0 w-full">-->
+                        <!--                        <div class="vybor flex flex-col px-7 md:p-0 w-full">-->
 
-<!--                            <div class="grid grid-cols-1 md:grid-cols-2 gap-5">-->
+                        <!--                            <div class="grid grid-cols-1 md:grid-cols-2 gap-5">-->
 
-<!--                                <button id="track" data-button='100'-->
-<!--                                        class="font-MontserratRegular text-brownish-grey push-button">широкий трак-->
-<!--                                </button>-->
+                        <!--                                <button id="track" data-button='100'-->
+                        <!--                                        class="font-MontserratRegular text-brownish-grey push-button">широкий трак-->
+                        <!--                                </button>-->
 
-<!--                            </div>-->
-<!--                        </div>-->
+                        <!--                            </div>-->
+                        <!--                        </div>-->
 
-<!--                        <div class="dop-oborud flex flex-col px-7 md:p-0 w-full">-->
-<!--                            <span class="font-MontserratMedium text-base my-5 md:mt-10 mt-5">Доп оборудование</span>-->
+                        <!--                        <div class="dop-oborud flex flex-col px-7 md:p-0 w-full">-->
+                        <!--                            <span class="font-MontserratMedium text-base my-5 md:mt-10 mt-5">Доп оборудование</span>-->
 
-<!--                            <div id="dopEquip" class="grid grid-cols-1 md:grid-cols-2 gap-5">-->
+                        <!--                            <div id="dopEquip" class="grid grid-cols-1 md:grid-cols-2 gap-5">-->
 
-<!--                                <button data-button='150' class="font-MontserratRegular text-brownish-grey push-button">-->
-<!--                                    Грейфер-->
-<!--                                </button>-->
+                        <!--                                <button data-button='150' class="font-MontserratRegular text-brownish-grey push-button">-->
+                        <!--                                    Грейфер-->
+                        <!--                                </button>-->
 
-<!--                                <button data-button='100' class="font-MontserratRegular text-brownish-grey push-button">-->
-<!--                                    Гидромолот-->
-<!--                                </button>-->
+                        <!--                                <button data-button='100' class="font-MontserratRegular text-brownish-grey push-button">-->
+                        <!--                                    Гидромолот-->
+                        <!--                                </button>-->
 
-<!--                                <button data-button='100' class="font-MontserratRegular text-brownish-grey push-button">-->
-<!--                                    Крашер-->
-<!--                                </button>-->
+                        <!--                                <button data-button='100' class="font-MontserratRegular text-brownish-grey push-button">-->
+                        <!--                                    Крашер-->
+                        <!--                                </button>-->
 
-<!--                                <button data-button='100' class="font-MontserratRegular text-brownish-grey push-button">-->
-<!--                                    Гидроножницы-->
-<!--                                </button>-->
+                        <!--                                <button data-button='100' class="font-MontserratRegular text-brownish-grey push-button">-->
+                        <!--                                    Гидроножницы-->
+                        <!--                                </button>-->
 
-<!--                            </div>-->
-<!--                        </div>-->
+                        <!--                            </div>-->
+                        <!--                        </div>-->
                     </div>
 
                     <div class="rezhim selected-1 flex flex-col px-7 md:p-0 w-full">
@@ -235,24 +230,24 @@
                         <div id="rezhim" class="grid grid-cols-1 md:grid-cols-2 gap-5 selected-1">
                             <button data-button='10' class="push-button activated">одна сменный</button>
 
-<!--                            <a class="cursor-pointer rounded-xl bg-white overflow-hidden shadow-mass-button py-4 hover:shadow-mass-button hover:bg-white"-->
-<!--                               href="#">-->
-<!--                                <div class="font-MontserratRegular flex flex-col justify-center items-center">-->
-<!--                               -->
-<!--                                    <span class="text-brownish-grey md:text-15">одна сменный</span>-->
+                            <!--                            <a class="cursor-pointer rounded-xl bg-white overflow-hidden shadow-mass-button py-4 hover:shadow-mass-button hover:bg-white"-->
+                            <!--                               href="#">-->
+                            <!--                                <div class="font-MontserratRegular flex flex-col justify-center items-center">-->
+                            <!--                               -->
+                            <!--                                    <span class="text-brownish-grey md:text-15">одна сменный</span>-->
 
-<!--                                </div>-->
-<!--                            </a>-->
+                            <!--                                </div>-->
+                            <!--                            </a>-->
                             <button data-button='20' class="push-button">двух сменный</button>
 
-<!--                            <a class="cursor-pointer rounded-xl overflow-hidden bg-not-active py-2 hover:shadow-mass-button hover:bg-white py-4 hover:shadow-mass-button hover:bg-white"-->
-<!--                               href="#">-->
-<!--                                <div class="font-MontserratRegular flex flex-col justify-center items-center">-->
-<!--                                    <button class="push-button">двух сменный</button>-->
-<!--                                    <span class="text-brownish-grey md:text-15">двух сменный</span>-->
+                            <!--                            <a class="cursor-pointer rounded-xl overflow-hidden bg-not-active py-2 hover:shadow-mass-button hover:bg-white py-4 hover:shadow-mass-button hover:bg-white"-->
+                            <!--                               href="#">-->
+                            <!--                                <div class="font-MontserratRegular flex flex-col justify-center items-center">-->
+                            <!--                                    <button class="push-button">двух сменный</button>-->
+                            <!--                                    <span class="text-brownish-grey md:text-15">двух сменный</span>-->
 
-<!--                                </div>-->
-<!--                            </a>-->
+                            <!--                                </div>-->
+                            <!--                            </a>-->
 
 
                         </div>
@@ -263,248 +258,241 @@
                         <span class="font-MontserratMedium text-base my-5 md:mt-10 mt-5">Период работы</span>
                         <div class="grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 items-end">
 
-                            <input type="text" id="datepicker">
-                            <input type="text" id="datepicker_2" class="datepicker_2">
+                            <input type="text" id="datepicker" class="py-3 my-3 lg:my-0 bg-grey col-span-3  rounded-xl px-4 focus:outline-none bg-grey w-full">
+                            <input type="text" id="datepicker_2" class="py-3 my-3 lg:my-0 bg-grey col-span-3  rounded-xl px-4 focus:outline-none bg-grey w-full datepicker_2">
 
-<!--                            <input type="date" id="firstDay" name="" />-->
-<!--                            <input type="date" id="lastDay" name="" />-->
+                            <!--                            <input type="date" id="firstDay" name="" />-->
+                            <!--                            <input type="date" id="lastDay" name="" />-->
 
-<!--                            <div x-data="app()" x-init="[initDate(), getNoOfDays()]" x-cloak>-->
+                            <!--                            <div x-data="app()" x-init="[initDate(), getNoOfDays()]" x-cloak>-->
 
-<!--                                <div class="">-->
+                            <!--                                <div class="">-->
 
-<!--                                    <label for="datepicker"-->
-<!--                                           class="font-MontserratMedium text-base my-5"></label>-->
-<!--                                    <div class="relative">-->
-<!--                                        <input type="hidden" name="date" x-ref="date">-->
-<!--                                        <input id="datepicker"-->
-<!--                                                type="text"-->
-<!--                                                readonly-->
-<!--                                                x-model="datepickerValue"-->
-<!--                                                @click="showDatepicker = !showDatepicker"-->
-<!--                                                @keydown.escape="showDatepicker = false"-->
-<!--                                                class="w-full pl-4 pr-10 py-3 leading-none rounded-lg shadow-sm focus:outline-none focus:shadow-outline text-gray-600 font-medium"-->
-<!--                                                placeholder="Select date">-->
+                            <!--                                    <label for="datepicker"-->
+                            <!--                                           class="font-MontserratMedium text-base my-5"></label>-->
+                            <!--                                    <div class="relative">-->
+                            <!--                                        <input type="hidden" name="date" x-ref="date">-->
+                            <!--                                        <input id="datepicker"-->
+                            <!--                                                type="text"-->
+                            <!--                                                readonly-->
+                            <!--                                                x-model="datepickerValue"-->
+                            <!--                                                @click="showDatepicker = !showDatepicker"-->
+                            <!--                                                @keydown.escape="showDatepicker = false"-->
+                            <!--                                                class="w-full pl-4 pr-10 py-3 leading-none rounded-lg shadow-sm focus:outline-none focus:shadow-outline text-gray-600 font-medium"-->
+                            <!--                                                placeholder="Select date">-->
 
-<!--                                        <div class="absolute top-0 right-0 px-3 py-2">-->
-<!--                                            <svg class="h-6 w-6 text-gray-400" fill="none" viewBox="0 0 24 24"-->
-<!--                                                 stroke="currentColor">-->
-<!--                                                <path stroke-linecap="round" stroke-linejoin="round"-->
-<!--                                                      stroke-width="2"-->
-<!--                                                      d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>-->
-<!--                                            </svg>-->
-<!--                                        </div>-->
-
-
-<!--                                        &lt;!&ndash; <div x-text="no_of_days.length"></div>-->
-<!--                                        <div x-text="32 - new Date(year, month, 32).getDate()"></div>-->
-<!--                                        <div x-text="new Date(year, month).getDay()"></div> &ndash;&gt;-->
-
-<!--                                        <div id="calendar_first"-->
-<!--                                                class="bg-white mt-12 rounded-lg shadow p-4 absolute top-0 left-0"-->
-<!--                                                style="width: 17rem"-->
-<!--                                                x-show.transition="showDatepicker"-->
-<!--                                                @click.away="showDatepicker = false">-->
-
-<!--                                            <div class="flex justify-between items-center mb-2">-->
-<!--                                                <div>-->
-<!--                                                            <span x-text="MONTH_NAMES[month]"-->
-<!--                                                                  class="text-lg font-bold text-gray-800"></span>-->
-<!--                                                    <span x-text="year"-->
-<!--                                                          class="ml-1 text-lg text-gray-600 font-normal"></span>-->
-<!--                                                </div>-->
-<!--                                                <div>-->
-<!--                                                    <button-->
-<!--                                                            type="button"-->
-<!--                                                            class="transition ease-in-out duration-100 inline-flex cursor-pointer hover:bg-gray-200 p-1 rounded-full"-->
-<!--                                                            :class="{'cursor-not-allowed opacity-25': month == 0 }"-->
-<!--                                                            :disabled="month == 0 ? true : false"-->
-<!--                                                            @click="month&#45;&#45;; getNoOfDays()">-->
-<!--                                                        <svg class="h-6 w-6 text-gray-500 inline-flex"-->
-<!--                                                             fill="none" viewBox="0 0 24 24"-->
-<!--                                                             stroke="currentColor">-->
-<!--                                                            <path stroke-linecap="round" stroke-linejoin="round"-->
-<!--                                                                  stroke-width="2" d="M15 19l-7-7 7-7"/>-->
-<!--                                                        </svg>-->
-<!--                                                    </button>-->
-<!--                                                    <button-->
-<!--                                                            type="button"-->
-<!--                                                            class="transition ease-in-out duration-100 inline-flex cursor-pointer hover:bg-gray-200 p-1 rounded-full"-->
-<!--                                                            :class="{'cursor-not-allowed opacity-25': month == 11 }"-->
-<!--                                                            :disabled="month == 11 ? true : false"-->
-<!--                                                            @click="month++; getNoOfDays()">-->
-<!--                                                        <svg class="h-6 w-6 text-gray-500 inline-flex"-->
-<!--                                                             fill="none" viewBox="0 0 24 24"-->
-<!--                                                             stroke="currentColor">-->
-<!--                                                            <path stroke-linecap="round" stroke-linejoin="round"-->
-<!--                                                                  stroke-width="2" d="M9 5l7 7-7 7"/>-->
-<!--                                                        </svg>-->
-<!--                                                    </button>-->
-<!--                                                </div>-->
-<!--                                            </div>-->
-
-<!--                                            <div class="flex flex-wrap mb-3 -mx-1">-->
-<!--                                                <template x-for="(day, index) in DAYS" :key="index">-->
-<!--                                                    <div style="width: 14.26%" class="px-1">-->
-<!--                                                        <div-->
-<!--                                                                x-text="day"-->
-<!--                                                                class="text-gray-800 font-medium text-center text-xs"></div>-->
-<!--                                                    </div>-->
-<!--                                                </template>-->
-<!--                                            </div>-->
-
-<!--                                            <div class="flex flex-wrap -mx-1">-->
-<!--                                                <template x-for="blankday in blankdays">-->
-<!--                                                    <div-->
-<!--                                                            style="width: 14.28%"-->
-<!--                                                            class="text-center border p-1 border-transparent text-sm"-->
-<!--                                                    ></div>-->
-<!--                                                </template>-->
-<!--                                                <template x-for="(date, dateIndex) in no_of_days"-->
-<!--                                                          :key="dateIndex">-->
-<!--                                                    <div style="width: 14.28%" class="px-1 mb-1">-->
-<!--                                                        <div-->
-<!--                                                                @click="getDateValue(date)"-->
-<!--                                                                x-text="date"-->
-<!--                                                                class="cursor-pointer text-center text-sm leading-none rounded-full leading-loose transition ease-in-out duration-100"-->
-<!--                                                                :class="{'bg-blue-500 text-white': isToday(date) == true, 'text-gray-700 hover:bg-blue-200': isToday(date) == false }"-->
-<!--                                                        ></div>-->
-<!--                                                    </div>-->
-<!--                                                </template>-->
-<!--                                            </div>-->
-<!--                                        </div>-->
-
-<!--                                    </div>-->
-<!--                                </div>-->
-<!--                            </div>-->
+                            <!--                                        <div class="absolute top-0 right-0 px-3 py-2">-->
+                            <!--                                            <svg class="h-6 w-6 text-gray-400" fill="none" viewBox="0 0 24 24"-->
+                            <!--                                                 stroke="currentColor">-->
+                            <!--                                                <path stroke-linecap="round" stroke-linejoin="round"-->
+                            <!--                                                      stroke-width="2"-->
+                            <!--                                                      d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>-->
+                            <!--                                            </svg>-->
+                            <!--                                        </div>-->
 
 
-<!--                            <div x-data="app()" x-init="[initDate(), getNoOfDays()]" x-cloak>-->
+                            <!--                                        &lt;!&ndash; <div x-text="no_of_days.length"></div>-->
+                            <!--                                        <div x-text="32 - new Date(year, month, 32).getDate()"></div>-->
+                            <!--                                        <div x-text="new Date(year, month).getDay()"></div> &ndash;&gt;-->
 
-<!--                                <div class="">-->
-<!--                                    <label for="datepicker_2"-->
-<!--                                           class="font-MontserratMedium text-base my-5"></label>-->
-<!--                                    <div class="relative">-->
-<!--                                        <input type="hidden" name="date" x-ref="date">-->
-<!--                                        <input  id="datepicker_2"-->
-<!--                                                type="text"-->
-<!--                                                readonly-->
-<!--                                                x-model="datepickerValue"-->
-<!--                                                @click="showDatepicker = !showDatepicker"-->
-<!--                                                @keydown.escape="showDatepicker = false"-->
-<!--                                                class="w-full pl-4 pr-10 py-3 leading-none rounded-lg shadow-sm focus:outline-none focus:shadow-outline text-gray-600 font-medium"-->
-<!--                                                placeholder="Select date">-->
+                            <!--                                        <div id="calendar_first"-->
+                            <!--                                                class="bg-white mt-12 rounded-lg shadow p-4 absolute top-0 left-0"-->
+                            <!--                                                style="width: 17rem"-->
+                            <!--                                                x-show.transition="showDatepicker"-->
+                            <!--                                                @click.away="showDatepicker = false">-->
 
-<!--                                        <div class="absolute top-0 right-0 px-3 py-2">-->
-<!--                                            <svg class="h-6 w-6 text-gray-400" fill="none" viewBox="0 0 24 24"-->
-<!--                                                 stroke="currentColor">-->
-<!--                                                <path stroke-linecap="round" stroke-linejoin="round"-->
-<!--                                                      stroke-width="2"-->
-<!--                                                      d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>-->
-<!--                                            </svg>-->
-<!--                                        </div>-->
+                            <!--                                            <div class="flex justify-between items-center mb-2">-->
+                            <!--                                                <div>-->
+                            <!--                                                            <span x-text="MONTH_NAMES[month]"-->
+                            <!--                                                                  class="text-lg font-bold text-gray-800"></span>-->
+                            <!--                                                    <span x-text="year"-->
+                            <!--                                                          class="ml-1 text-lg text-gray-600 font-normal"></span>-->
+                            <!--                                                </div>-->
+                            <!--                                                <div>-->
+                            <!--                                                    <button-->
+                            <!--                                                            type="button"-->
+                            <!--                                                            class="transition ease-in-out duration-100 inline-flex cursor-pointer hover:bg-gray-200 p-1 rounded-full"-->
+                            <!--                                                            :class="{'cursor-not-allowed opacity-25': month == 0 }"-->
+                            <!--                                                            :disabled="month == 0 ? true : false"-->
+                            <!--                                                            @click="month&#45;&#45;; getNoOfDays()">-->
+                            <!--                                                        <svg class="h-6 w-6 text-gray-500 inline-flex"-->
+                            <!--                                                             fill="none" viewBox="0 0 24 24"-->
+                            <!--                                                             stroke="currentColor">-->
+                            <!--                                                            <path stroke-linecap="round" stroke-linejoin="round"-->
+                            <!--                                                                  stroke-width="2" d="M15 19l-7-7 7-7"/>-->
+                            <!--                                                        </svg>-->
+                            <!--                                                    </button>-->
+                            <!--                                                    <button-->
+                            <!--                                                            type="button"-->
+                            <!--                                                            class="transition ease-in-out duration-100 inline-flex cursor-pointer hover:bg-gray-200 p-1 rounded-full"-->
+                            <!--                                                            :class="{'cursor-not-allowed opacity-25': month == 11 }"-->
+                            <!--                                                            :disabled="month == 11 ? true : false"-->
+                            <!--                                                            @click="month++; getNoOfDays()">-->
+                            <!--                                                        <svg class="h-6 w-6 text-gray-500 inline-flex"-->
+                            <!--                                                             fill="none" viewBox="0 0 24 24"-->
+                            <!--                                                             stroke="currentColor">-->
+                            <!--                                                            <path stroke-linecap="round" stroke-linejoin="round"-->
+                            <!--                                                                  stroke-width="2" d="M9 5l7 7-7 7"/>-->
+                            <!--                                                        </svg>-->
+                            <!--                                                    </button>-->
+                            <!--                                                </div>-->
+                            <!--                                            </div>-->
+
+                            <!--                                            <div class="flex flex-wrap mb-3 -mx-1">-->
+                            <!--                                                <template x-for="(day, index) in DAYS" :key="index">-->
+                            <!--                                                    <div style="width: 14.26%" class="px-1">-->
+                            <!--                                                        <div-->
+                            <!--                                                                x-text="day"-->
+                            <!--                                                                class="text-gray-800 font-medium text-center text-xs"></div>-->
+                            <!--                                                    </div>-->
+                            <!--                                                </template>-->
+                            <!--                                            </div>-->
+
+                            <!--                                            <div class="flex flex-wrap -mx-1">-->
+                            <!--                                                <template x-for="blankday in blankdays">-->
+                            <!--                                                    <div-->
+                            <!--                                                            style="width: 14.28%"-->
+                            <!--                                                            class="text-center border p-1 border-transparent text-sm"-->
+                            <!--                                                    ></div>-->
+                            <!--                                                </template>-->
+                            <!--                                                <template x-for="(date, dateIndex) in no_of_days"-->
+                            <!--                                                          :key="dateIndex">-->
+                            <!--                                                    <div style="width: 14.28%" class="px-1 mb-1">-->
+                            <!--                                                        <div-->
+                            <!--                                                                @click="getDateValue(date)"-->
+                            <!--                                                                x-text="date"-->
+                            <!--                                                                class="cursor-pointer text-center text-sm leading-none rounded-full leading-loose transition ease-in-out duration-100"-->
+                            <!--                                                                :class="{'bg-blue-500 text-white': isToday(date) == true, 'text-gray-700 hover:bg-blue-200': isToday(date) == false }"-->
+                            <!--                                                        ></div>-->
+                            <!--                                                    </div>-->
+                            <!--                                                </template>-->
+                            <!--                                            </div>-->
+                            <!--                                        </div>-->
+
+                            <!--                                    </div>-->
+                            <!--                                </div>-->
+                            <!--                            </div>-->
 
 
-<!--                                        &lt;!&ndash; <div x-text="no_of_days.length"></div>-->
-<!--                                        <div x-text="32 - new Date(year, month, 32).getDate()"></div>-->
-<!--                                        <div x-text="new Date(year, month).getDay()"></div> &ndash;&gt;-->
+                            <!--                            <div x-data="app()" x-init="[initDate(), getNoOfDays()]" x-cloak>-->
 
-<!--                                        <div id="calendar_second"-->
-<!--                                                class="bg-white mt-12 rounded-lg shadow p-4 absolute top-0 left-0"-->
-<!--                                                style="width: 17rem"-->
-<!--                                                x-show.transition="showDatepicker"-->
-<!--                                                @click.away="showDatepicker = false">-->
+                            <!--                                <div class="">-->
+                            <!--                                    <label for="datepicker_2"-->
+                            <!--                                           class="font-MontserratMedium text-base my-5"></label>-->
+                            <!--                                    <div class="relative">-->
+                            <!--                                        <input type="hidden" name="date" x-ref="date">-->
+                            <!--                                        <input  id="datepicker_2"-->
+                            <!--                                                type="text"-->
+                            <!--                                                readonly-->
+                            <!--                                                x-model="datepickerValue"-->
+                            <!--                                                @click="showDatepicker = !showDatepicker"-->
+                            <!--                                                @keydown.escape="showDatepicker = false"-->
+                            <!--                                                class="w-full pl-4 pr-10 py-3 leading-none rounded-lg shadow-sm focus:outline-none focus:shadow-outline text-gray-600 font-medium"-->
+                            <!--                                                placeholder="Select date">-->
 
-<!--                                            <div class="flex justify-between items-center mb-2">-->
-<!--                                                <div>-->
-<!--                                                            <span x-text="MONTH_NAMES[month]"-->
-<!--                                                                  class="text-lg font-bold text-gray-800"></span>-->
-<!--                                                    <span x-text="year"-->
-<!--                                                          class="ml-1 text-lg text-gray-600 font-normal"></span>-->
-<!--                                                </div>-->
-<!--                                                <div>-->
-<!--                                                    <button-->
-<!--                                                            type="button"-->
-<!--                                                            class="transition ease-in-out duration-100 inline-flex cursor-pointer hover:bg-gray-200 p-1 rounded-full"-->
-<!--                                                            :class="{'cursor-not-allowed opacity-25': month == 0 }"-->
-<!--                                                            :disabled="month == 0 ? true : false"-->
-<!--                                                            @click="month&#45;&#45;; getNoOfDays()">-->
-<!--                                                        <svg class="h-6 w-6 text-gray-500 inline-flex"-->
-<!--                                                             fill="none" viewBox="0 0 24 24"-->
-<!--                                                             stroke="currentColor">-->
-<!--                                                            <path stroke-linecap="round" stroke-linejoin="round"-->
-<!--                                                                  stroke-width="2" d="M15 19l-7-7 7-7"/>-->
-<!--                                                        </svg>-->
-<!--                                                    </button>-->
-<!--                                                    <button-->
-<!--                                                            type="button"-->
-<!--                                                            class="transition ease-in-out duration-100 inline-flex cursor-pointer hover:bg-gray-200 p-1 rounded-full"-->
-<!--                                                            :class="{'cursor-not-allowed opacity-25': month == 11 }"-->
-<!--                                                            :disabled="month == 11 ? true : false"-->
-<!--                                                            @click="month++; getNoOfDays()">-->
-<!--                                                        <svg class="h-6 w-6 text-gray-500 inline-flex"-->
-<!--                                                             fill="none" viewBox="0 0 24 24"-->
-<!--                                                             stroke="currentColor">-->
-<!--                                                            <path stroke-linecap="round" stroke-linejoin="round"-->
-<!--                                                                  stroke-width="2" d="M9 5l7 7-7 7"/>-->
-<!--                                                        </svg>-->
-<!--                                                    </button>-->
-<!--                                                </div>-->
-<!--                                            </div>-->
+                            <!--                                        <div class="absolute top-0 right-0 px-3 py-2">-->
+                            <!--                                            <svg class="h-6 w-6 text-gray-400" fill="none" viewBox="0 0 24 24"-->
+                            <!--                                                 stroke="currentColor">-->
+                            <!--                                                <path stroke-linecap="round" stroke-linejoin="round"-->
+                            <!--                                                      stroke-width="2"-->
+                            <!--                                                      d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>-->
+                            <!--                                            </svg>-->
+                            <!--                                        </div>-->
 
-<!--                                            <div class="flex flex-wrap mb-3 -mx-1">-->
-<!--                                                <template x-for="(day, index) in DAYS" :key="index">-->
-<!--                                                    <div style="width: 14.26%" class="px-1">-->
-<!--                                                        <div-->
-<!--                                                                x-text="day"-->
-<!--                                                                class="text-gray-800 font-medium text-center text-xs"></div>-->
-<!--                                                    </div>-->
-<!--                                                </template>-->
-<!--                                            </div>-->
 
-<!--                                            <div class="flex flex-wrap -mx-1">-->
-<!--                                                <template x-for="blankday in blankdays">-->
-<!--                                                    <div-->
-<!--                                                            style="width: 14.28%"-->
-<!--                                                            class="text-center border p-1 border-transparent text-sm"-->
-<!--                                                    ></div>-->
-<!--                                                </template>-->
-<!--                                                <template x-for="(date, dateIndex) in no_of_days"-->
-<!--                                                          :key="dateIndex">-->
-<!--                                                    <div style="width: 14.28%" class="px-1 mb-1">-->
-<!--                                                        <div-->
-<!--                                                                @click="getDateValue(date)"-->
-<!--                                                                x-text="date"-->
-<!--                                                                class="cursor-pointer text-center text-sm leading-none rounded-full leading-loose transition ease-in-out duration-100"-->
-<!--                                                                :class="{'bg-blue-500 text-white': isToday(date) == true, 'text-gray-700 hover:bg-blue-200': isToday(date) == false }"-->
-<!--                                                        ></div>-->
-<!--                                                    </div>-->
-<!--                                                </template>-->
-<!--                                            </div>-->
-<!--                                        </div>-->
-<!--                                    </div>-->
-<!--                                </div>-->
-<!--                            </div>-->
+                            <!--                                        &lt;!&ndash; <div x-text="no_of_days.length"></div>-->
+                            <!--                                        <div x-text="32 - new Date(year, month, 32).getDate()"></div>-->
+                            <!--                                        <div x-text="new Date(year, month).getDay()"></div> &ndash;&gt;-->
+
+                            <!--                                        <div id="calendar_second"-->
+                            <!--                                                class="bg-white mt-12 rounded-lg shadow p-4 absolute top-0 left-0"-->
+                            <!--                                                style="width: 17rem"-->
+                            <!--                                                x-show.transition="showDatepicker"-->
+                            <!--                                                @click.away="showDatepicker = false">-->
+
+                            <!--                                            <div class="flex justify-between items-center mb-2">-->
+                            <!--                                                <div>-->
+                            <!--                                                            <span x-text="MONTH_NAMES[month]"-->
+                            <!--                                                                  class="text-lg font-bold text-gray-800"></span>-->
+                            <!--                                                    <span x-text="year"-->
+                            <!--                                                          class="ml-1 text-lg text-gray-600 font-normal"></span>-->
+                            <!--                                                </div>-->
+                            <!--                                                <div>-->
+                            <!--                                                    <button-->
+                            <!--                                                            type="button"-->
+                            <!--                                                            class="transition ease-in-out duration-100 inline-flex cursor-pointer hover:bg-gray-200 p-1 rounded-full"-->
+                            <!--                                                            :class="{'cursor-not-allowed opacity-25': month == 0 }"-->
+                            <!--                                                            :disabled="month == 0 ? true : false"-->
+                            <!--                                                            @click="month&#45;&#45;; getNoOfDays()">-->
+                            <!--                                                        <svg class="h-6 w-6 text-gray-500 inline-flex"-->
+                            <!--                                                             fill="none" viewBox="0 0 24 24"-->
+                            <!--                                                             stroke="currentColor">-->
+                            <!--                                                            <path stroke-linecap="round" stroke-linejoin="round"-->
+                            <!--                                                                  stroke-width="2" d="M15 19l-7-7 7-7"/>-->
+                            <!--                                                        </svg>-->
+                            <!--                                                    </button>-->
+                            <!--                                                    <button-->
+                            <!--                                                            type="button"-->
+                            <!--                                                            class="transition ease-in-out duration-100 inline-flex cursor-pointer hover:bg-gray-200 p-1 rounded-full"-->
+                            <!--                                                            :class="{'cursor-not-allowed opacity-25': month == 11 }"-->
+                            <!--                                                            :disabled="month == 11 ? true : false"-->
+                            <!--                                                            @click="month++; getNoOfDays()">-->
+                            <!--                                                        <svg class="h-6 w-6 text-gray-500 inline-flex"-->
+                            <!--                                                             fill="none" viewBox="0 0 24 24"-->
+                            <!--                                                             stroke="currentColor">-->
+                            <!--                                                            <path stroke-linecap="round" stroke-linejoin="round"-->
+                            <!--                                                                  stroke-width="2" d="M9 5l7 7-7 7"/>-->
+                            <!--                                                        </svg>-->
+                            <!--                                                    </button>-->
+                            <!--                                                </div>-->
+                            <!--                                            </div>-->
+
+                            <!--                                            <div class="flex flex-wrap mb-3 -mx-1">-->
+                            <!--                                                <template x-for="(day, index) in DAYS" :key="index">-->
+                            <!--                                                    <div style="width: 14.26%" class="px-1">-->
+                            <!--                                                        <div-->
+                            <!--                                                                x-text="day"-->
+                            <!--                                                                class="text-gray-800 font-medium text-center text-xs"></div>-->
+                            <!--                                                    </div>-->
+                            <!--                                                </template>-->
+                            <!--                                            </div>-->
+
+                            <!--                                            <div class="flex flex-wrap -mx-1">-->
+                            <!--                                                <template x-for="blankday in blankdays">-->
+                            <!--                                                    <div-->
+                            <!--                                                            style="width: 14.28%"-->
+                            <!--                                                            class="text-center border p-1 border-transparent text-sm"-->
+                            <!--                                                    ></div>-->
+                            <!--                                                </template>-->
+                            <!--                                                <template x-for="(date, dateIndex) in no_of_days"-->
+                            <!--                                                          :key="dateIndex">-->
+                            <!--                                                    <div style="width: 14.28%" class="px-1 mb-1">-->
+                            <!--                                                        <div-->
+                            <!--                                                                @click="getDateValue(date)"-->
+                            <!--                                                                x-text="date"-->
+                            <!--                                                                class="cursor-pointer text-center text-sm leading-none rounded-full leading-loose transition ease-in-out duration-100"-->
+                            <!--                                                                :class="{'bg-blue-500 text-white': isToday(date) == true, 'text-gray-700 hover:bg-blue-200': isToday(date) == false }"-->
+                            <!--                                                        ></div>-->
+                            <!--                                                    </div>-->
+                            <!--                                                </template>-->
+                            <!--                                            </div>-->
+                            <!--                                        </div>-->
+                            <!--                                    </div>-->
+                            <!--                                </div>-->
+                            <!--                            </div>-->
 
                             <span class="md:col-span-2 lg:col-span-1 font-MontserratRegular text-sm">Стоимость от месяца дешевлен на 5%</span>
 
                         </div>
-
-
                     </div>
-
                     <div class="flex flex-col px-7 md:p-0 w-full">
                         <span class="font-MontserratMedium text-base my-5 mt-10">Краткое описание работ</span>
                         <div class="flex-auto w-full mb-1 text-xs space-y-2">
                             <label class=""></label>
-                            <textarea required="" name="message" id="textarea"
-                                      class="text-base w-full min-h-[100px] max-h-[300px] h-28 appearance-none block w-full bg-grey text-grey-darker border border-grey-lighter rounded-lg  py-4 px-4"
-                                      placeholder="Введите сообщение..." spellcheck="false">
-                            </textarea>
-
+                            <textarea rows="5" name="textarea" id="textarea"
+                                      class="text-base w-full bg-grey text-grey-darker border border-grey-lighter rounded-lg py-4 px-4"
+                                      placeholder="Введите сообщение..."></textarea>
                         </div>
-
-
                     </div>
 
                     <div class="counter flex flex-col px-7 md:p-0 w-full">
@@ -519,9 +507,8 @@
                                                 class=" bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-l cursor-pointer outline-none">
                                             <span class="m-auto text-2xl font-thin">−</span>
                                         </button>
-                                        <input id="custom-input-number" type="number"
-                                               class="outline-none focus:outline-none text-center w-full bg-grey font-semibold text-md hover:text-black focus:text-black  md:text-basecursor-default flex items-center text-gray-700  outline-none"
-                                               name="custom-input-number" value="1">
+                                        <input id="custom-input-number" type="number" class="outline-none focus:outline-none text-center w-full bg-grey font-semibold text-md hover:text-black focus:text-black  md:text-basecursor-default flex items-center text-gray-700  outline-none"
+                                               name="custom-input-number" min="1" value="1">
                                         <button id="increment" data-action="increment"
                                                 class="bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-r cursor-pointer">
                                             <span class="m-auto text-2xl font-thin">+</span>
@@ -553,44 +540,93 @@
                 </div>
             </div>
             <div class="sticky-block">
-                <div class="card flex justify-center items-center rounded-xl bg-white overflow-hidden shadow-lg pt-7 my-5 md:mt-0 px-7 md:pt-5 lg:pt-10 lg:pb-10 pb-5 md:px-3">
-                    <div class="flex flex-col h-full w-full justify-between">
-                        <span class="block font-MontserratSemiBold lg:text-32 text-dark-grey text-center">Итоговая стоимость</span>
-                        <div>
-                            <div class="flex justify-between my-2 lg:my-5">
-                                <span class="font-MontserratMedium lg:text-sm md:text-sm text-light-grey text-left">Тариф:</span>
-                                <span class="font-MontserratMedium lg:text-sm md:text-sm text-light-grey text-right"><span id="tarif"></span> р/час с НДС</span>
+
+                <div class="card">
+                    <!--1 блок-->
+                    <div class="justify-center items-center rounded-xl bg-white overflow-hidden shadow-lg pt-7 my-5 md:mt-0 px-7 md:pt-5 lg:pt-10 lg:pb-10 pb-5 md:px-3">
+                        <div class="flex flex-col h-full w-full justify-between">
+                            <span class="block font-MontserratSemiBold lg:text-32 text-dark-grey text-center">Итоговая стоимость</span>
+                            <div>
+                                <div class="flex justify-between my-2 lg:my-5">
+                                    <span class="font-MontserratMedium lg:text-sm md:text-sm text-light-grey text-left">Тариф:</span>
+                                    <span class="font-MontserratMedium lg:text-sm md:text-sm text-light-grey text-right"><span
+                                            id="tarif"></span> р/час с НДС</span>
+                                </div>
+                                <div class="flex justify-between my-2 lg:my-5">
+                                    <span class="font-MontserratMedium lg:text-sm md:text-sm text-light-grey text-left">Время смены:</span>
+                                    <span class="font-MontserratMedium lg:text-sm md:text-sm text-light-grey text-right"><span
+                                            id="hours"></span> часов</span>
+                                </div>
+                                <div class="flex justify-between my-2 lg:my-5">
+                                    <span class="font-MontserratMedium lg:text-sm md:text-sm text-light-grey text-left">Срок аренды:</span>
+                                    <span class="font-MontserratMedium lg:text-sm md:text-sm text-light-grey text-right"><span
+                                            id="days"></span> <span id="daysOf"></span></span>
+                                </div>
+                                <div class="flex justify-between items-center my-2 lg:my-5">
+                                    <span class="font-MontserratMedium lg:text-base text-dark-grey text-left leading-none self-end">Итог:</span>
+                                    <span id="totalCost"
+                                          class="font-MontserratBold lg:text-32 text-dark-grey text-right leading-none self-end"></span>
+                                </div>
                             </div>
-                            <div class="flex justify-between my-2 lg:my-5">
-                                <span class="font-MontserratMedium lg:text-sm md:text-sm text-light-grey text-left">Время смены:</span>
-                                <span class="font-MontserratMedium lg:text-sm md:text-sm text-light-grey text-right"><span id="hours"></span> часов</span>
-                            </div>
-                            <div class="flex justify-between my-2 lg:my-5">
-                                <span class="font-MontserratMedium lg:text-sm md:text-sm text-light-grey text-left">Срок аренды:</span>
-                                <span class="font-MontserratMedium lg:text-sm md:text-sm text-light-grey text-right"><span id="days"></span> дней</span>
-                            </div>
-                            <div class="flex justify-between items-center my-2 lg:my-5">
-                                <span class="font-MontserratMedium lg:text-base text-dark-grey text-left leading-none self-end">Итог:</span>
-                                <span id="totalCost" class="font-MontserratBold lg:text-32 text-dark-grey text-right leading-none self-end"></span>
-                            </div>
+                            <button class="mx-auto btn-zakaz self-start lg:px-20 px-16 mt-5 text-dark-grey font-MontserratBold text-base text-center">
+                                заказать
+                            </button>
+                            
+                            <div class="w-full mt-5"><span class="font-MontserratBold text-sm text-brownish-grey">Минимальный срок предоставления спецтехники в аренду 30 календарных дней</span></div>
                         </div>
-                        <a class="mx-auto btn-zakaz self-start lg:px-20 px-16 mt-5 text-dark-grey font-MontserratBold text-base text-center">заказать</a>
+                    </div>
+
+                    <!--2-блок-->
+                    <div class="rounded-xl bg-white overflow-hidden shadow-lg pt-7 md:mt-0 px-7 md:pt-5 lg:pt-10 lg:pb-10 pb-5 md:px-3">
+
+                        <div class="flex justify-center items-center">
+                            <button id="woNds" class="pt-5 md:text-12 lg:text-base mx-auto btn-zakaz self-start px-4 md:px-8 text-dark-grey font-MontserratBold text-center">
+                                Рассчитать без НДС
+                            </button>
+                        </div>
+
+
+                        <div id="block" style="display: none" class="flex flex-col h-full w-full justify-between">
+                            <span class="block font-MontserratSemiBold lg:text-32 text-dark-grey text-center">Итоговая стоимость без НДС</span>
+                            <div>
+                                <!--тариф без ндс-->
+                                <div class="flex justify-between my-2 lg:my-5">
+                                    <span class="font-MontserratMedium lg:text-sm md:text-sm text-light-grey text-left">Тариф</span>
+                                    <span class="font-MontserratMedium lg:text-sm md:text-sm text-light-grey text-right"><span
+                                            id="tarifWo"></span> р/час без НДС</span>
+                                </div>
+                                <div class="flex justify-between my-2 lg:my-5">
+                                    <span class="font-MontserratMedium lg:text-sm md:text-sm text-light-grey text-left">Время смены:</span>
+                                    <span class="font-MontserratMedium lg:text-sm md:text-sm text-light-grey text-right"><span
+                                            id="hours1"></span> часов</span>
+                                </div>
+                                <div class="flex justify-between my-2 lg:my-5">
+                                    <span class="font-MontserratMedium lg:text-sm md:text-sm text-light-grey text-left">Срок аренды:</span>
+                                    <span class="font-MontserratMedium lg:text-sm md:text-sm text-light-grey text-right"><span
+                                            id="days1"></span> <span id="daysOf1"></span></span>
+                                </div>
+                                <div class="flex justify-between hidden my-2 lg:my-5">
+                                    <span class="font-MontserratMedium lg:text-sm md:text-sm text-light-grey text-left">НДС</span>
+                                    <span class="font-MontserratMedium lg:text-sm md:text-sm text-light-grey text-right"><span
+                                            id="nds"></span>руб.</span>
+                                </div>
+                                <!--/тариф без ндс-->
+                                <div class="flex justify-between items-center my-2 lg:my-5">
+                                    <span class="font-MontserratMedium lg:text-base text-dark-grey text-left leading-none self-end">Итог:</span>
+                                    <span id="totalCostWo"
+                                          class="font-MontserratBold lg:text-32 text-dark-grey text-right leading-none self-end"></span>
+                                </div>
+                            </div>
+                            <button class="mx-auto btn-zakaz self-start lg:px-20 px-16 mt-5 text-dark-grey font-MontserratBold text-base text-center">
+                                заказать
+                            </button>
+                        </div>
                     </div>
                 </div>
-                    <div style="position: sticky; background-color: #FFFFFF; height: 200px" class="top-96 rounded-xl bg-white shadow-lg p-5">
-                        <p>Параметры заявки</p>
-
-                        <div id="zakazSend" class="">
-
-                        </div>
-
-                    </div>
             </div>
         </div>
     </div>
 </section>
-
-<!--222-->
 <!--footer-->
 <footer class="footer">
     <div class="container mx-auto">

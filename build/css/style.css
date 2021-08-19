@@ -32,6 +32,9 @@
   .text-dark-grey {
     color: #333333;
   }
+  .text-10 {
+    font-size: 10px;
+  }
   .text-12 {
     font-size: 12px;
   }
@@ -248,7 +251,6 @@ body {
 #datepicker,
 #datepicker_2,
 #ranged {
-  border: 1px solid grey;
   position: relative;
 }
 
@@ -257,10 +259,11 @@ body {
   content: "\f133";
   position: absolute;
   display: inline-block;
-  right: 35px;
-  padding-right: 3px;
+  top: 50%;
+  right: 15px;
   vertical-align: middle;
   font-weight: 900;
+  transform: translate(0, -50%);
 }
 
 .datepicker_2:after {

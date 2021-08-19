@@ -1,7 +1,5 @@
-loadParams(26);
-
-async function loadParams(id) {
-    let response = await fetch(`json.json`, {
+async function loadparams(id) {
+    let response = await fetch(`/catalog/detail/get.php?ID=${id}`, {
         method: 'GET',
     });
 
@@ -9,6 +7,8 @@ async function loadParams(id) {
         let result = await response.json();
 
         console.log("result", result);
+
+        document.getElementsByClassName('load')[0].innerHTML = '';
 
         for (let item of result) {
             if (item.IBLOCK_CODE === 'params_select') {
@@ -61,5 +61,5 @@ async function loadParams(id) {
         }
     }
 
-    getClassBtn();
+    getClassBtn(true);
 }

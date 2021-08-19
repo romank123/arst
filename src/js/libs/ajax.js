@@ -8,26 +8,26 @@
 // let loadImg = new Image();// для загрузки картинки-прелоадера
 // loadImg.src = 'images/loader.webp';
 
-let xhr = new XMLHttpRequest();//для формирования AJAX-запроса
-    xhr.open('GET','json.json', true);
-    //loadingBlock.append(loadImg);
-    xhr.responseType = 'text';
-    xhr.onreadystatechange = function () {
-
-        if (xhr.readyState == 4) {
-            if (xhr.status == 200) {
-                XMLHttpRequest.responseType;
-                let b = JSON.stringify(xhr.response);
-                   //console.log("88888888",b);
-                   //console.log("000000000",xhr.response);
-            }
-        }
-    };
-
-    xhr.send(null);
-    xhr.onerror = function () {
-        alert(`Ошибка соединения`);
-}
+// let xhr = new XMLHttpRequest();//для формирования AJAX-запроса
+//     xhr.open('GET','json.json', true);
+//     //loadingBlock.append(loadImg);
+//     xhr.responseType = 'text';
+//     xhr.onreadystatechange = function () {
+//
+//         if (xhr.readyState == 4) {
+//             if (xhr.status == 200) {
+//                 XMLHttpRequest.responseType;
+//                 let b = JSON.stringify(xhr.response);
+//                    //console.log("88888888",b);
+//                    //console.log("000000000",xhr.response);
+//             }
+//         }
+//     };
+//
+//     xhr.send(null);
+//     xhr.onerror = function () {
+//         alert(`Ошибка соединения`);
+// }
 //
 // requestJSON('js/products.json');
 //
