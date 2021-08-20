@@ -41,20 +41,42 @@ async function loadparams(id) {
 
             } else if (item.IBLOCK_CODE === 'params_range') {
 
-                let res = `<div class="relative my-10">     
-            <input type="range" value="5" min="3" max="8" step="1" id="r1" class="absolute" oninput="fun1()"    onchange="showValue(value,1,false)">
-            <div id="test" class="absolute">
-            <div class="flex justify-end value_obj w-full relative"></div>             
-            </div>           
-        </div>        
-        <div class="flex justify-between py-5">
-            <div>
-                <span class="py-2">от 3м</span>
-            </div>
-            <div>
-                <span class="py-2">до 8м</span>
-            </div>
-        </div>`;
+                let res = `
+<div class="flex flex-col px-7 md:px-0 lg:px-0">
+                        <span class="font-MontserratMedium text-base my-5 mt-10">${item.PROPERTIES.title.VALUE}</span>
+                        <div class="relative my-5">
+                            <input type="range" value="${parseInt(item.PROPERTIES.min.VALUE) + parseInt(item.PROPERTIES.step.VALUE)}" min="${item.PROPERTIES.min.VALUE}" max="${item.PROPERTIES.max.VALUE}" step="${item.PROPERTIES.step.VALUE}" id="r1" class="absolute"
+                                   oninput="fun1()" onchange="showValue(value,1,false)">
+                            <div id="test" class="absolute" style="width: 39%;">
+                                <div class="flex justify-end value_obj w-full relative">5м</div>
+                            </div>
+                        </div>
+                        
+                       <div class="flex justify-between my-5">
+                            <div>
+                                <span id="rangeValueMin" class="py-2">от ${item.PROPERTIES.min.VALUE}м</span>
+                            </div>
+                            <div>
+                                <span id="rangeValueMax" class="py-2">до ${item.PROPERTIES.max.VALUE}м</span>
+                            </div>
+                        </div>
+                    </div>
+
+<!--<div class="relative my-10">     -->
+<!--            <input type="range" value="5" min="3" max="8" step="1" id="r1" class="absolute" oninput="fun1()"    onchange="showValue(value,1,false)">-->
+<!--            <div id="test" class="absolute">-->
+<!--            <div class="flex justify-end value_obj w-full relative"></div>             -->
+<!--            </div>           -->
+<!--        </div>        -->
+<!--        <div class="flex justify-between py-5">-->
+<!--            <div>-->
+<!--                <span class="py-2">от 3м</span>-->
+<!--            </div>-->
+<!--            <div>-->
+<!--                <span class="py-2">до 8м</span>-->
+<!--            </div>-->
+<!--        </div>-->
+`;
                 document.getElementsByClassName('load')[0].insertAdjacentHTML('beforeend', res);
             }
 
@@ -62,4 +84,6 @@ async function loadparams(id) {
     }
 
     getClassBtn(true);
+    setTimeout(fun1(),200)
 }
+

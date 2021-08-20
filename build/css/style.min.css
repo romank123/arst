@@ -1658,6 +1658,18 @@ body {
   transition: all .35s;
 }
 
+@media (min-width: 320px) {
+  .accordion .tab label::after {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .accordion .tab label::after {
+    display: block;
+  }
+}
+
 .accordion .tab input[type=checkbox] + label::after {
   content: "+";
   font-weight: bold;
@@ -2225,8 +2237,41 @@ body {
   min-height: 600px;
 }
 
+.main-banner-vladelcam .title__vl::after {
+  content: "";
+  left: 0;
+  bottom: 12px;
+  display: block;
+  position: absolute;
+  width: 100%;
+  border-bottom: 15px solid #f0c42e;
+  z-index: -1;
+}
+
+.title__vl::after {
+  content: "";
+  left: 0;
+  bottom: 12px;
+  display: block;
+  position: absolute;
+  width: 100%;
+  border-bottom: 15px solid #f0c42e;
+  z-index: 1;
+}
+
+.block-rents .title__vl::after {
+  content: "";
+  left: 0;
+  bottom: 0px;
+  display: block;
+  position: absolute;
+  width: 100%;
+  border-bottom: 15px solid #f0c42e;
+  z-index: -1;
+}
+
 @media (min-width: 0px) {
-  .main-banner-vladelcam .abs-text {
+  .block-rents .title__vl::after .abs-text {
     width: 100%;
     top: 21%;
     left: 52%;
@@ -2236,7 +2281,7 @@ body {
 }
 
 @media (min-width: 768px) {
-  .main-banner-vladelcam .abs-text {
+  .block-rents .title__vl::after .abs-text {
     top: 24%;
     left: 67%;
     z-index: 10;
@@ -2245,7 +2290,7 @@ body {
 }
 
 @media (min-width: 1290px) {
-  .main-banner-vladelcam .abs-text {
+  .block-rents .title__vl::after .abs-text {
     top: 25%;
     left: 79%;
     z-index: 10;
@@ -2253,12 +2298,12 @@ body {
   }
 }
 
-.main-banner-vladelcam .line-title {
+.block-rents .title__vl::after .line-title {
   position: absolute;
 }
 
 @media (min-width: 0px) {
-  .main-banner-vladelcam .line-title {
+  .block-rents .title__vl::after .line-title {
     height: 15px;
     width: 360px;
     top: 30%;
@@ -2268,7 +2313,7 @@ body {
 }
 
 @media (min-width: 768px) {
-  .main-banner-vladelcam .line-title {
+  .block-rents .title__vl::after .line-title {
     height: 15px;
     width: 490px;
     top: 37%;
@@ -2278,7 +2323,7 @@ body {
 }
 
 @media (min-width: 1290px) {
-  .main-banner-vladelcam .line-title {
+  .block-rents .title__vl::after .line-title {
     height: 15px;
     width: 550px;
     top: 39%;
@@ -2814,6 +2859,9 @@ input[type='range']::-webkit-slider-thumb {
   .md\:mt-0 {
 		margin-top: 0px;
 	}
+  .md\:mt-5 {
+		margin-top: 1.25rem;
+	}
   .md\:block {
 		display: block;
 	}
@@ -2911,6 +2959,10 @@ input[type='range']::-webkit-slider-thumb {
   .md\:py-1 {
 		padding-top: 0.25rem;
 		padding-bottom: 0.25rem;
+	}
+  .md\:px-0 {
+		padding-left: 0px;
+		padding-right: 0px;
 	}
   .md\:pl-8 {
 		padding-left: 2rem;

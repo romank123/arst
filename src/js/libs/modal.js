@@ -1,12 +1,9 @@
 
 let modal = document.getElementById("myModal");
 
-
 let btn = document.getElementsByClassName("myBtn-open");
 
-
 let close = document.getElementsByClassName("close-btn")[0];
-
 
 for (let item of btn){
 
@@ -14,8 +11,6 @@ for (let item of btn){
         modal.style.display = "block";
     }
 }
-
-
 
 close.onclick = function() {
     modal.style.display = "none";
@@ -30,9 +25,6 @@ document.addEventListener('keydown', function(e) {
     }
 
     });
-
-
-
 
 window.onclick = function(event) {
 

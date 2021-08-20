@@ -1,7 +1,4 @@
  function toggleW(){
-
-
-
     let btnNds = document.getElementById('woNds');
 if (btnNds) {
     btnNds.addEventListener('click', function toggle() {

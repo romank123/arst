@@ -224,32 +224,32 @@
                         <!--                        </div>-->
                     </div>
 
+
+                    <div class="flex flex-col px-7 md:px-0">
+                        <span class="font-MontserratMedium text-base my-5 mt-10">Глубина копания</span>
+                        <div class="relative my-5">
+                            <input type="range" value="5" min="3" max="8" step="1" id="r1" class="absolute"
+                                   oninput="fun1()" onchange="showValue(value,1,false)">
+                            <div id="test" class="absolute" style="width: 39%;">
+                                <div class="flex justify-end value_obj w-full relative">5м</div>
+                            </div>
+                        </div>
+                        <div class="flex justify-between my-5">
+                            <div>
+                                <span id="rangeValueMin" class="py-2">от 3м</span>
+                            </div>
+                            <div>
+                                <span id="rangeValueMax" class="py-2">до 8м</span>
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="rezhim selected-1 flex flex-col px-7 md:p-0 w-full">
-                        <span class="font-MontserratMedium text-base my-5 md:mt-10 mt-5">Режим работы</span>
+                        <span class="font-MontserratMedium text-base my-5 md:mt-5 mt-5">Режим работы</span>
 
                         <div id="rezhim" class="grid grid-cols-1 md:grid-cols-2 gap-5 selected-1">
-                            <button data-button='10' class="push-button activated">одна сменный</button>
-
-                            <!--                            <a class="cursor-pointer rounded-xl bg-white overflow-hidden shadow-mass-button py-4 hover:shadow-mass-button hover:bg-white"-->
-                            <!--                               href="#">-->
-                            <!--                                <div class="font-MontserratRegular flex flex-col justify-center items-center">-->
-                            <!--                               -->
-                            <!--                                    <span class="text-brownish-grey md:text-15">одна сменный</span>-->
-
-                            <!--                                </div>-->
-                            <!--                            </a>-->
-                            <button data-button='20' class="push-button">двух сменный</button>
-
-                            <!--                            <a class="cursor-pointer rounded-xl overflow-hidden bg-not-active py-2 hover:shadow-mass-button hover:bg-white py-4 hover:shadow-mass-button hover:bg-white"-->
-                            <!--                               href="#">-->
-                            <!--                                <div class="font-MontserratRegular flex flex-col justify-center items-center">-->
-                            <!--                                    <button class="push-button">двух сменный</button>-->
-                            <!--                                    <span class="text-brownish-grey md:text-15">двух сменный</span>-->
-
-                            <!--                                </div>-->
-                            <!--                            </a>-->
-
-
+                            <button data-button='10' class="push-button activated">односменный</button>
+                            <button data-button='20' class="push-button">двухсменный</button>
                         </div>
                     </div>
 
@@ -572,7 +572,8 @@
                                 заказать
                             </button>
                             
-                            <div class="w-full mt-5"><span class="font-MontserratBold text-sm text-brownish-grey">Минимальный срок предоставления спецтехники в аренду 30 календарных дней</span></div>
+                            <div class="w-full mt-5 text-center"><span class="font-MontserratRegular text-base text-brownish-grey"><em>Минимальный срок аренды 30 дней</em></span></div>
+
                         </div>
                     </div>
 

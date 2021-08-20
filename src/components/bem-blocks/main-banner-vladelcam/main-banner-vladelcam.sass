@@ -2,6 +2,37 @@
   .bg-main-banner-vladelcam
     background: url("/img/main-banner-vladelcam.jpg") no-repeat center center
     min-height: 600px
+
+  .title__vl::after
+    content: ""
+    left: 0
+    bottom: 12px
+    display: block
+    position: absolute
+    width: 100%
+    border-bottom: 15px solid #f0c42e
+    z-index: -1
+
+.title__vl::after
+  content: ""
+  left: 0
+  bottom: 12px
+  display: block
+  position: absolute
+  width: 100%
+  border-bottom: 15px solid #f0c42e
+  z-index: 1
+
+.block-rents .title__vl::after
+  content: ""
+  left: 0
+  bottom: 0px
+  display: block
+  position: absolute
+  width: 100%
+  border-bottom: 15px solid #f0c42e
+  z-index: -1
+
   .abs-text
     @media (min-width: 0px)
       width: 100%
@@ -44,4 +75,5 @@
       left: 50%
       transform: translate(-50%, -50%)
       z-index: 0
+
 

@@ -124,7 +124,6 @@ if (activeBtn) {
     })
 }
 
-
 //обработка кнопок из запроса ajax
 function getClassBtn(isLoad = false){
 
@@ -262,55 +261,92 @@ if (document.getElementById('datepicker')) {
     })
 }
 
-//range slider
-// function fun1() {
-//     let rng = document.getElementById('r1'); //rng - это Input
-//     let div = document.getElementById('test'); // div - блок test
-//     let max_rng = rng.getAttribute('max');
-//     let min_rng = rng.getAttribute('min');
-//     let step_rng = rng.getAttribute('step');
-//     let valueObj = document.getElementsByClassName('value_obj');
+//проверка нажатой кнопки массы от 5т до 9т для range slider
+// let btnMassa = document.querySelectorAll('#massa .push-button')
+// let rng = document.getElementById('r1');
 //
-//     valueObj[0].innerHTML = rng.value+'м';
+// if ((btnMassa) && (rng)) {
 //
-//     console.log("rng.value++",rng.value)
+//     btnMassa.forEach((elem) => {
 //
-//     let divide = 100/(max_rng-min_rng);
+//         elem.addEventListener('click', () => {
 //
-//     if (rng.value !== undefined) {
+//             if (elem.hasAttribute('data-id')) {
 //
-//         if (rng.value == min_rng) {
-//             console.log("start value min")
-//             div.style.width = 0+'%';
-//         }
+//                 let rangeSlider = document.getElementById('r1');
+//                 rangeSlider.setAttribute('max', 5);
 //
-//         if (rng.value == max_rng) {
-//             console.log("start value max")
-//             div.style.width = 98+'%';
-//         }
+//                 let rangeValueMax = document.getElementById('rangeValueMax');
+//                 rangeValueMax.innerText = 'до 5м'
+//                 fun1()
 //
-//         if ((rng.value !== max_rng) && (rng.value !== min_rng)) {
 //
-//             let minRng = min_rng;
-//             let dividePlus = 0;
+//             } else {
+//                 let rangeSlider = document.getElementById('r1');
+//                 rangeSlider.setAttribute('max', 8);
 //
-//             for (i = 0; i <= (max_rng-min_rng); i++, dividePlus = dividePlus + 19.5) {
-//
-//                 let range = minRng++
-//
-//                 let obj = {i, dividePlus, range}
-//
-//                 if (obj.range == rng.value) {
-//
-//                     div.style.width = obj.dividePlus+'%';
-//
-//                     console.log("obj.dividePlus",obj.dividePlus)
-//                 }
-//
-//                 console.log(obj)
+//                 let rangeValueMax = document.getElementById('rangeValueMax');
+//                 rangeValueMax.innerText = 'до 8м'
+//                 fun1()
 //             }
-//         }
-//     }
+//
+//
+//         })
+//     })
 // }
-// setTimeout(fun1,2000)
+
+//range slider
+function fun1() {
+    let rng = document.getElementById('r1'); //rng - это Input
+    if (rng) {
+        let div = document.getElementById('test'); // div - блок test
+        let max_rng = rng.getAttribute('max');
+        let min_rng = rng.getAttribute('min');
+        let step_rng = rng.getAttribute('step');
+        let valueObj = document.getElementsByClassName('value_obj');
+
+        valueObj[0].innerHTML = rng.value + 'м';
+
+        console.log("rng.value++", rng.value)
+
+        let divide = 100 / (max_rng - min_rng);
+
+        if (rng.value !== undefined) {
+
+            if (rng.value == min_rng) {
+                console.log("start value min")
+                div.style.width = 0 + '%';
+            }
+
+            if (rng.value == max_rng) {
+                console.log("start value max")
+                div.style.width = 97 + '%';
+            }
+
+            if ((rng.value !== max_rng) && (rng.value !== min_rng)) {
+
+                let minRng = min_rng;
+                let dividePlus = 0;
+
+                for (i = 0; i <= (max_rng - min_rng); i++, dividePlus = dividePlus + (divide-0.5)) {
+
+                    let range = minRng++
+
+                    let obj = {i, dividePlus, range}
+
+                    if (obj.range == rng.value) {
+
+                        div.style.width = obj.dividePlus + '%';
+
+                        console.log("obj.dividePlus", obj.dividePlus)
+                    }
+
+                    console.log(obj)
+                }
+            }
+        }
+    }
+}
+//fun1();
+
 

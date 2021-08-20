@@ -27,6 +27,10 @@
    -webkit-transition: all .35s
    -o-transition: all .35s
    transition: all .35s
+   @media (min-width: 320px)
+     display: none
+   @media (min-width: 768px)
+     display: block
 
  .tab input[type=checkbox] + label::after
    content: "+"
