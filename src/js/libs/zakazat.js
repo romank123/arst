@@ -294,7 +294,7 @@ function functionName(currentTargetElement) {
 
 function push_btn(e) {
 
-    if (e.currentTarget.parentNode.parentElement.classList.contains('selected-1')) {
+    if (e.currentTarget.parentNode.parentElement.classList.contains('selected-1'))  {
 
         functionName(e.currentTarget.parentNode.parentElement);
 
