@@ -34,6 +34,7 @@ let total = {
         let a = moment(total.date_first, "DD.MM.YYYY");
         //console.log("a",a);
         let b = moment(total.date_last, "DD.MM.YYYY").add(1, "days");
+        // .add(1, "days");
         //кол-во дней
         let days = b.diff(a, 'days');
         //console.log("кол-во дней",days)
@@ -99,10 +100,12 @@ let total = {
         }
 
         document.getElementById("tarif").innerHTML = getTarif + getDopItems;
-        document.getElementById("tarifWo").innerHTML = parseFloat((getTarif + getDopItems) / 1.2).toFixed(2);
+        document.getElementById("tarifWo").innerHTML = parseFloat((getTarif + getDopItems) / 1.2).toFixed(0);
         document.getElementById("nds").innerHTML = ndsCost;
-        document.getElementById("hours").innerHTML = ColHours;
-        document.getElementById("hours1").innerHTML = ColHours;
+        document.getElementById("hours").innerHTML = ColHours/10*days*count;
+        document.getElementById("hoursS").innerHTML = ColHours*days;
+        document.getElementById("hours_1").innerHTML = ColHours*days;
+        document.getElementById("hours1").innerHTML = ColHours/10*days*count;
         document.getElementById("days").innerHTML = days;
         document.getElementById("days1").innerHTML = days;
         document.getElementById("totalCost").innerHTML = totalCost + " руб";
@@ -117,7 +120,7 @@ let activeBtn = document.querySelectorAll('#massa .activated')[0];
 if (activeBtn) {
     activeBtn.classList.add('not-shadow-mass-button');
 
-loadparams(activeBtn.getAttribute('data-id')).then( start);
+loadparams(activeBtn.getAttribute('data-id')).then(start);
 }
 function start() {
     let activeBtn = document.querySelectorAll('#massa .activated')[0];
@@ -130,8 +133,8 @@ function start() {
 let activeBtn1 = document.querySelectorAll('#massa button');
 
 activeBtn1.forEach((elem) => {
-    elem.addEventListener('click', () => {
 
+    elem.addEventListener('click', () => {
 
         loadparams(elem.getAttribute('data-id'));
         console.log("getAttribute",elem.getAttribute('data-id'));
@@ -140,12 +143,11 @@ activeBtn1.forEach((elem) => {
     });
 });
 
-
-
 //обработка кнопок из запроса ajax
 function getClassBtn(isLoad = false) {
 
     let allBtnClass = document.querySelectorAll('.-mt-48 button');
+
 
     allBtnClass.forEach((elem) => {
         elem.addEventListener('click', () => {
@@ -162,8 +164,6 @@ function getClassBtn(isLoad = false) {
                         if (btnActiveMassa[i].classList.contains('activated')) {
 
                             //console.log(btnActiveMassa[i])
-
-
 
                                 //loadparams(btnActiveMassa[i].getAttribute('data-id'));
 
@@ -196,6 +196,7 @@ function getClassBtn(isLoad = false) {
                             ////console.log("total-222",total)
                         }
                     }
+
                     total.getTarif();
                 }
 
@@ -204,20 +205,39 @@ function getClassBtn(isLoad = false) {
                 if (elem.hasAttribute('data-action')) {
 
                 } else {
-                    elem.classList.toggle('activated')
-                    elem.classList.toggle('not-shadow-mass-button')
-                    if (elem.classList.contains('activated')) {
-                        if (elem.hasAttribute('data-value')) {
-                            let elemName = elem.innerHTML;
-                            total.dopItems[elemName] = elem.getAttribute('data-value');
-                        } else {
-                        }
-                    } else {
-                        let elemName = elem.innerHTML;
-                        delete total.dopItems[elemName];
-                    }
-                }
 
+                    let elemSel2 = elem.parentNode.parentNode.parentNode.querySelectorAll('.selected-2 button');
+
+                    elemSel2.forEach((elem) => {
+
+                        elem.addEventListener('click', () => {
+
+                            let elemB = elem.parentNode.querySelectorAll('button');
+
+                            for (let i=0; i < elemB.length; i++) {
+
+                               elemB[i].classList.remove('activated','not-shadow-mass-button')
+                            }
+
+                            elem.classList.add('activated','not-shadow-mass-button');
+
+                        })
+
+                    });
+
+                        elem.classList.toggle('activated')
+                        elem.classList.toggle('not-shadow-mass-button')
+                        if (elem.classList.contains('activated')) {
+                            if (elem.hasAttribute('data-value')) {
+                                let elemName = elem.innerHTML;
+                                total.dopItems[elemName] = elem.getAttribute('data-value');
+                            } else {
+                            }
+                        } else {
+                            let elemName = elem.innerHTML;
+                            delete total.dopItems[elemName];
+                        }
+                }
                 total.getTarif();
                 //console.log("total",total)
             }
@@ -241,7 +261,7 @@ if (document.getElementById('datepicker')) {
         onChange: function (date) {
             let NowMoment = moment(date);
             total.date_first = NowMoment.format('DD.MM.YYYY');
-            total.date_last = moment(total.date_first, "DD.MM.YYYY").add(1, "month").format('DD.MM.YYYY');
+            total.date_last = moment(total.date_first, "DD.MM.YYYY").add(29, "days").format('DD.MM.YYYY');
 
             setTimeout(function (date) {
                 eDisplayMoment = document.getElementById('datepicker_2');
@@ -264,23 +284,31 @@ if (document.getElementById('datepicker')) {
 //Объявить пикер2
     let datepicker_2 = new Datepicker('#datepicker_2', {
         // min +30d
-        min: (function () {
-            var date = new Date();
-            date.setDate(date.getDate());
-            let today = date.setDate(date.getDate() + 30);
-            //console.log(Date(today));
-            return date;
-        })(),
+        // min: (function () {
+        //     let date = new Date();
+        //     date.setDate(date.getDate());
+        //     let today = date.setDate(date.getDate() + 28);
+        //     return today;
+        // })(),
         onInit: function () {
             let today = total.date_first;
             eDisplayMoment = document.getElementById('datepicker_2');
-            eDisplayMoment.value = moment(today, "DD.MM.YYYY").add(1, "month").format('DD.MM.YYYY');
+            eDisplayMoment.value = moment(today, "DD.MM.YYYY").add(29, "days").format('DD.MM.YYYY');
             total.date_last = eDisplayMoment.value;
+            return total.date_last
         },
+
         onChange: function (date) {
             total.date_last = date;
             total.getTarif()
         },
+
+        openOn: (function () {
+                 let today = total.date_first;
+                 let last = moment(today, "DD.MM.YYYY").add(29, "days").format('DD.MM.YYYY');
+                 //console.log("today",today)
+                 return total.date_last
+             })(),
 
     })
 }
@@ -290,6 +318,7 @@ if (document.getElementById('datepicker')) {
 function fun1() {
 
     let slider = document.getElementById('myinput')
+    if(slider) {
     let bubble = document.querySelector('.bubble')
     //let valMin = document.getElementById('valueMin')
     //let valMax = document.getElementById('valueMax')
@@ -377,6 +406,7 @@ function fun1() {
     //         }
     //     }
     // }
+}
 }
 
 //fun1();

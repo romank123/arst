@@ -1,0 +1,86 @@
+<!--1111111-->
+<div class="card justify-center items-center rounded-xl bg-white overflow-hidden shadow-lg pt-7 my-5 md:mt-0 px-7 md:pt-5 lg:pt-10 lg:pb-10 pb-5 md:px-3">
+    <!--1 блок-->
+    <ul class="tabs">
+        <li class="mx-auto btn-zakaz self-start lg:px-20 px-16 mt-5 text-dark-grey font-MontserratBold text-base text-center tab active" data-id="1">с НДС</li>
+        <li class="mx-auto btn-zakaz self-start lg:px-20 px-16 mt-5 text-dark-grey font-MontserratBold text-base text-center tab" data-id="2">без НДС</li>
+    </ul>
+    <div class="output pt-5">
+        <div class="section-tabs active">
+            <div class="">
+                <div class="flex flex-col h-full w-full justify-between">
+                    <span class="block font-MontserratSemiBold lg:text-32 text-dark-grey text-center">Итоговая стоимость</span>
+                    <div>
+                        <div class="flex justify-between my-2 lg:my-5">
+                            <span class="font-MontserratMedium lg:text-sm md:text-sm text-light-grey text-left">Тариф:</span>
+                            <span class="font-MontserratMedium lg:text-sm md:text-sm text-light-grey text-right"><span
+                                    id="tarif"></span> р/час с НДС</span>
+                        </div>
+                        <div class="flex justify-between my-2 lg:my-5">
+                            <span class="font-MontserratMedium lg:text-sm md:text-sm text-light-grey text-left">Время смены:</span>
+                            <span class="font-MontserratMedium lg:text-sm md:text-sm text-light-grey text-right"><span
+                                    id="hours"></span> часов</span>
+                        </div>
+                        <div class="flex justify-between my-2 lg:my-5">
+                            <span class="font-MontserratMedium lg:text-sm md:text-sm text-light-grey text-left">Срок аренды:</span>
+                            <span class="font-MontserratMedium lg:text-sm md:text-sm text-light-grey text-right"><span
+                                    id="days"></span> <span id="daysOf"></span></span>
+                        </div>
+                        <div class="flex justify-between items-center my-2 lg:my-5">
+                            <span class="font-MontserratMedium lg:text-base text-dark-grey text-left leading-none self-end">Итог:</span>
+                            <span id="totalCost"
+                                  class="font-MontserratBold lg:text-32 text-dark-grey text-right leading-none self-end"></span>
+                        </div>
+                    </div>
+                    <button class="mx-auto btn-zakaz self-start lg:px-20 px-16 mt-5 text-dark-grey font-MontserratBold text-base text-center">
+                        заказать
+                    </button>
+
+                    <div class="w-full mt-5 text-center"><span class="font-MontserratRegular text-12 text-brownish-grey"><em>**Минимальный срок аренды 30 дней</em></span></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-tabs">
+            <div class="flex flex-col h-full w-full justify-between">
+                <span class="block font-MontserratSemiBold lg:text-32 text-dark-grey text-center">Итоговая стоимость без НДС</span>
+                <div>
+                    <!--тариф без ндс-->
+                    <div class="flex justify-between my-2 lg:my-5">
+                        <span class="font-MontserratMedium lg:text-sm md:text-sm text-light-grey text-left">Тариф</span>
+                        <span class="font-MontserratMedium lg:text-sm md:text-sm text-light-grey text-right"><span
+                                id="tarifWo"></span> р/час без НДС</span>
+                    </div>
+                    <div class="flex justify-between my-2 lg:my-5">
+                        <span class="font-MontserratMedium lg:text-sm md:text-sm text-light-grey text-left">Время смены:</span>
+                        <span class="font-MontserratMedium lg:text-sm md:text-sm text-light-grey text-right"><span
+                                id="hours1"></span> часов</span>
+                    </div>
+                    <div class="flex justify-between my-2 lg:my-5">
+                        <span class="font-MontserratMedium lg:text-sm md:text-sm text-light-grey text-left">Срок аренды:</span>
+                        <span class="font-MontserratMedium lg:text-sm md:text-sm text-light-grey text-right"><span
+                                id="days1"></span> <span id="daysOf1"></span></span>
+                    </div>
+                    <div class="flex justify-between hidden my-2 lg:my-5">
+                        <span class="font-MontserratMedium lg:text-sm md:text-sm text-light-grey text-left">НДС</span>
+                        <span class="font-MontserratMedium lg:text-sm md:text-sm text-light-grey text-right"><span
+                                id="nds"></span>руб.</span>
+                    </div>
+                    <!--/тариф без ндс-->
+                    <div class="flex justify-between items-center my-2 lg:my-5">
+                        <span class="font-MontserratMedium lg:text-base text-dark-grey text-left leading-none self-end">Итог:</span>
+                        <span id="totalCostWo"
+                              class="font-MontserratBold lg:text-32 text-dark-grey text-right leading-none self-end"></span>
+                    </div>
+                </div>
+                <button class="mx-auto btn-zakaz self-start lg:px-20 px-16 mt-5 text-dark-grey font-MontserratBold text-base text-center">
+                    заказать
+                </button>
+                <div class="w-full mt-5 text-center"><span class="font-MontserratRegular text-12 text-brownish-grey"><em>**Минимальный срок аренды 30 дней</em></span></div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+<!--2222222-->

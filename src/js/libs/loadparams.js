@@ -13,7 +13,21 @@ async function loadparams(id) {
         for (let item of result) {
             if (item.IBLOCK_CODE === 'params_select') {
 
-                let res = `<div class="dop-items flex flex-col p-7 md:p-0 w-full">` +
+
+                if (item.PROPERTIES.mass.VALUE_XML_ID == 'no'){
+
+                    console.log("contain no");
+                    console.log(item.PROPERTIES.mass);
+
+
+                } else {
+                    console.log(item.PROPERTIES.mass);
+                    console.log("contain yes value");
+
+                }
+
+
+                let res = `<div class="dop-items ${(item.PROPERTIES.mass.VALUE_XML_ID == 'no')?'selected-2':''} flex flex-col p-7 md:p-0 w-full">` +
                     `<span class="font-MontserratMedium text-base my-5 md:mt-10 mt-5">${item.PROPERTIES.title.VALUE}</span>` +
                     `<div class="grid grid-cols-1 md:grid-cols-2 gap-5">`;
                 for (let i = 0; i < item.PROPERTIES.params.VALUE.length; i++) {

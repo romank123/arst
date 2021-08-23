@@ -141,12 +141,7 @@ async function loadparams1(id) {
                     getAllParam();
 
                 })
-
-
-
                 console.log("btnZakaz", btnZakaz);
-
-
             })
         });
 
