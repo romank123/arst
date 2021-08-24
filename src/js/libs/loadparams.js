@@ -29,7 +29,7 @@ async function loadparams(id) {
 
                 let res = `<div class="dop-items ${(item.PROPERTIES.mass.VALUE_XML_ID == 'no')?'selected-2':''} flex flex-col p-7 md:p-0 w-full">` +
                     `<span class="font-MontserratMedium text-base my-5 md:mt-10 mt-5">${item.PROPERTIES.title.VALUE}</span>` +
-                    `<div class="grid grid-cols-1 md:grid-cols-2 gap-5">`;
+                    `<div class="grid grid-cols-1 md:grid-cols-2 gap-5 ${(item.PROPERTIES.mass.VALUE_XML_ID == 'no')?'selected-2':''}">`;
                 for (let i = 0; i < item.PROPERTIES.params.VALUE.length; i++) {
                     res += `<button class="font-MontserratRegular text-brownish-grey push-button" data-value="${item.PROPERTIES.price.VALUE[i]}">${item.PROPERTIES.params.VALUE[i]}</button>`;
                 }

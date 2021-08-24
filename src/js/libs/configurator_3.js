@@ -77,13 +77,17 @@ let total = {
 
         totalCost = ((getTarif + getDopItems) * getRezhim * count) * days;
 
+
+
         //Проверка округления итого без НДС до целого
         totalCostWo = parseFloat(totalCost / 1.2).toFixed(0);
         let totalCostWo1 = totalCostWo
         totalCostWo1 = totalCostWo1 % 10;
         if (totalCostWo1 !== 0) {
 
-            totalCostWo = (parseFloat((parseFloat(totalCost / 1.2).toFixed(0)) / 10).toFixed(0)) * 10;
+            //totalCostWo = (parseFloat((parseFloat(totalCost / 1.2).toFixed(0)) / 10).toFixed(0)) * 10;
+
+
 
             // totalCostWo = parseFloat(totalCost/1.2).toFixed(0);
         }
@@ -99,17 +103,25 @@ let total = {
             ndsCost = parseFloat((getTarif + getDopItems) - (parseFloat((getTarif + getDopItems) / 1.2).toFixed(2))).toFixed(0);
         }
 
-        document.getElementById("tarif").innerHTML = getTarif + getDopItems;
-        document.getElementById("tarifWo").innerHTML = parseFloat((getTarif + getDopItems) / 1.2).toFixed(0);
+        //let tarifWo = Intl.NumberFormat('ru-RU').format(parseFloat((getTarif + getDopItems) / 1.2).toFixed(0));
+
+        let tarifWo =  Math.ceil((parseFloat((getTarif + getDopItems) / 1.2).toFixed(0))/10)*10;
+
+        //totalCostWo = Intl.NumberFormat('ru-RU').format((tarifWo * getRezhim * count) * days);
+
+        totalCostWo = (tarifWo * getRezhim * count) * days;
+
+        document.getElementById("tarif").innerHTML = Intl.NumberFormat('ru-RU').format(getTarif + getDopItems);
+        document.getElementById("tarifWo").innerHTML = Intl.NumberFormat('ru-RU').format(tarifWo);
         document.getElementById("nds").innerHTML = ndsCost;
-        document.getElementById("hours").innerHTML = ColHours/10*days*count;
+        document.getElementById("hours").innerHTML = ColHours/10*days;
         document.getElementById("hoursS").innerHTML = ColHours*days;
         document.getElementById("hours_1").innerHTML = ColHours*days;
-        document.getElementById("hours1").innerHTML = ColHours/10*days*count;
+        document.getElementById("hours1").innerHTML = ColHours/10*days;
         document.getElementById("days").innerHTML = days;
         document.getElementById("days1").innerHTML = days;
-        document.getElementById("totalCost").innerHTML = totalCost + " руб";
-        document.getElementById("totalCostWo").innerHTML = totalCostWo + " руб";
+        document.getElementById("totalCost").innerHTML = Intl.NumberFormat('ru-RU').format(totalCost) + " руб";
+        document.getElementById("totalCostWo").innerHTML = Intl.NumberFormat('ru-RU').format(totalCostWo) + " руб";
     }
 }
 
@@ -123,11 +135,16 @@ if (activeBtn) {
 loadparams(activeBtn.getAttribute('data-id')).then(start);
 }
 function start() {
+
     let activeBtn = document.querySelectorAll('#massa .activated')[0];
-    activeBtn.click();
+    if (activeBtn) {
+        activeBtn.click();
+    }
 
     let activeRezhim = document.querySelectorAll('#rezhim .activated')[0];
-    activeRezhim.click();
+    if (activeRezhim) {
+        activeRezhim.click();
+    }
 }
 
 let activeBtn1 = document.querySelectorAll('#massa button');
@@ -263,12 +280,25 @@ if (document.getElementById('datepicker')) {
             total.date_first = NowMoment.format('DD.MM.YYYY');
             total.date_last = moment(total.date_first, "DD.MM.YYYY").add(29, "days").format('DD.MM.YYYY');
 
-            setTimeout(function (date) {
-                eDisplayMoment = document.getElementById('datepicker_2');
-                eDisplayMoment.value = total.date_last;
-            },)
+
+            // setTimeout(function (date) {
+            //     eDisplayMoment = document.getElementById('datepicker_2');
+            //     eDisplayMoment.value = total.date_last;
+            //
+            //     let datepicker_2 = new Datepicker('#datepicker_2', {
+            //
+            //         fromValue: function () {
+            //             let a = Date(date);
+            //             let today = new Date(a);
+            //             let newDate = today.setDate(today.getDate() + 29);
+            //             console.log("total.date_last",total.date_last)
+            //             return newDate;
+            //         }
+            //     })
+            // },100);
 
             total.getTarif()
+            console.log("total.date_first", total.date_first)
 
         },
         onInit: function () {
@@ -277,37 +307,113 @@ if (document.getElementById('datepicker')) {
             let today = NowMoment.format('DD.MM.YYYY');
             eDisplayMoment = document.getElementById('datepicker');
             eDisplayMoment.value = today;
-            //console.log("init")
+
         },
     });
 
+    picker2();
+}
+
+let btnC = document.querySelectorAll('#rezhim button')[0];
+
+console.log("btnC",btnC)
+
+btnC.addEventListener('click', function () {
+
+    picker2();
+    console.log("run picker")
+
+})
+
 //Объявить пикер2
-    let datepicker_2 = new Datepicker('#datepicker_2', {
+    function picker2() {
+
+        let dp = new Datepicker('#datepicker_2', {
+
+            //min +30d
+            min: (function () {
+                let a = Date('total.date_first');
+                let today = new Date(a);
+                let todayd = today.setDate(today.getDate(a) + 28);
+                console.log("todayd",todayd);
+                return todayd;
+
+            })(),
+
+            // onInit: function () {
+            //     let today = total.date_first;
+            //     eDisplayMoment = document.getElementById('datepicker_2');
+            //     eDisplayMoment.value = moment(today, "DD.MM.YYYY").add(29, "days").format('DD.MM.YYYY');
+            //     total.date_last = eDisplayMoment.value;
+            //     let a = Date('total.date_first');
+            //     let today1 = new Date(a);
+            //     let todayd = today1.setDate(today1.getDate(a) + 28);
+            //     return todayd;
+            //     total.getTarif()
+            // },
+
+
+            // fromValue: function () {
+            //     let a = Date('total.date_first');
+            //     let today = new Date(a);
+            //     let newDate = today.setDate(today.getDate(a) + 29);
+            //     console.log("total.date_first+++",total.date_first)
+            //     console.log("total.date_last+++",total.date_last)
+            //     return newDate;
+            // },
+
+            // onRender: function () {
+            //
+            //     console.log("render start")
+            // }
+
+        });
         //min +30d
-        min: (function () {
-            let date = new Date();
-            date.setDate(date.getDate());
-            let today = date.setDate(date.getDate() + 28);
-            return today;
-        })(),
+        // min: (function () {
+        //     let a = Date('total.date_first');
+        //     let today = new Date(a);
+        //     let todayd = today.setDate(today.getDate() + 28);
+        //     return todayd;
+        // })(),
 
-         fromValue: function () {
-           let date = new Date()
-          let newDate = date.setDate(date.getDate() + 29);
-           return newDate
-         },
-        onInit: function () {
-            let today = total.date_first;
-            eDisplayMoment = document.getElementById('datepicker_2');
-            eDisplayMoment.value = moment(today, "DD.MM.YYYY").add(29, "days").format('DD.MM.YYYY');
-            total.date_last = eDisplayMoment.value;
-            return total.date_last
-        },
+        // fromValue: function () {
+        //      let a = Date('total.date_first');
+        //      let today = new Date(a);
+        //      let newDate = today.setDate(today.getDate() + 29);
+        //      console.log("total.date_last",total.date_last)
+        //      return newDate;
+            // let date = new Date()
+            // let newDate = date.setDate(date.getDate() + 29);
+            // return newDate
+        // },
+        // onInit: function () {
+        //     let a = Date('total.date_first');
+        //     let today = new Date(a);
+        //     let newDate = today.setDate(today.getDate() + 29);
+        //     console.log("total.date_last",total.date_last)
+        //     return newDate;
+        // },
 
-        onChange: function (date) {
-            total.date_last = date;
-            total.getTarif()
-        },
+        // onInit: function () {
+        //     let today = total.date_first;
+        //     eDisplayMoment = document.getElementById('datepicker_2');
+        //     eDisplayMoment.value = moment(today, "DD.MM.YYYY").add(29, "days").format('DD.MM.YYYY');
+        //     total.date_last = eDisplayMoment.value;
+        //     return total.date_last
+        //     total.getTarif()
+        // },
+
+        // openOn: function () {
+        //     let a = Date('total.date_first');
+        //     let today = new Date(a);
+        //     let newDate = today.setDate(today.getDate() + 29);
+        //     return newDate;
+        //     },
+
+        // onChange: function (date) {
+        //     total.date_last = date;
+        //     total.getTarif()
+        // },
 
         // openOn: (function () {
         //          let today = total.date_first;
@@ -316,7 +422,7 @@ if (document.getElementById('datepicker')) {
         //          return total.date_last
         //      })(),
 
-    })
+
 }
 
 

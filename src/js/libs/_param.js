@@ -3,14 +3,47 @@ let getName = {name: 0, aboutWork:'не указано', adres: 'адрес не
 let select = document.getElementsByTagName('select')[0];
 
 if (select) {
-    loadparams1(select.value);
+    loadparams1(select.value).then(r => {
+
+        //проверка кол-ва кнопок (если 1 кнопка - скрыть)
+        let activeBtn1 = document.querySelectorAll('.load-mass button');
+        console.log("activeBtn1",activeBtn1)
+        if (activeBtn1.length == 1) {
+            activeBtn1[0].style.visibility = ('hidden');
+            activeBtn1[0].style.marginTop = '-67px';
+        }
+        //! проверка кол-ва кнопок (если 1 кнопка - скрыть)
+
+        let activeBtn = document.querySelectorAll('.load-mass button')[0];
+        console.log("activeBtn")
+        console.log(activeBtn)
+        if (activeBtn) {
+            activeBtn.click();
+        }
+    });
     select.addEventListener('change', getSelect);
 }
 
 function getSelect() {
+
+
+
     let selectVal = document.querySelectorAll('select')[0].value;
     loadparams1(selectVal).then(r => {
 
+        //проверка кол-ва кнопок (если 1 кнопка - скрыть)
+        let activeBtn1 = document.querySelectorAll('.load-mass button');
+        console.log("activeBtn1",activeBtn1)
+        if (activeBtn1.length == 1) {
+            activeBtn1[0].style.visibility = ('hidden');
+            activeBtn1[0].style.marginTop = '-67px';
+        }
+        //! проверка кол-ва кнопок (если 1 кнопка - скрыть)
+
+        let activeBtn = document.querySelectorAll('.load-mass button')[0];
+        if (activeBtn) {
+            activeBtn.click();
+        }
     });
 }
 
@@ -60,17 +93,57 @@ async function loadparams1(id) {
 
                         elem.addEventListener('click', () => {
 
-                            if (elem.classList.contains('activated')) {
+                            let el = elem.parentNode.parentNode.querySelectorAll('*');
 
-                                elem.classList.remove('activated', 'not-shadow-mass-button')
+                            console.log("el+++++",el[1]);
+
+                            if (el[1].classList.contains('selected-2')) {
+                                elem.classList.add('activated','not-shadow-mass-button');
+
+                                let elemSel2 = elem.parentNode.parentNode.parentNode.querySelectorAll('.selected-2 button');
+
+                                console.log("elemSel2",elemSel2)
+
+
+                                elemSel2.forEach((elem) => {
+
+                                    elem.addEventListener('click', () => {
+
+                                        let elemB = elem.parentNode.querySelectorAll('button');
+
+                                        for (let i=0; i < elemB.length; i++) {
+
+                                            elemB[i].classList.remove('activated','not-shadow-mass-button')
+                                        }
+
+                                        elem.classList.add('activated','not-shadow-mass-button');
+
+                                    })
+
+                                });
+
+                                console.log("contains sel-2")
+
 
                             } else {
 
-                                elem.classList.add('activated', 'not-shadow-mass-button')
 
+                                if (elem.parentNode.parentNode.parentNode.querySelectorAll('.selected-2')) {
+
+                                    if (elem.classList.contains('activated')) {
+
+                                        elem.classList.remove('activated', 'not-shadow-mass-button')
+
+                                    } else {
+
+                                        elem.classList.add('activated', 'not-shadow-mass-button')
+
+                                    }
+
+                                    //getAllParam();
+
+                                }
                             }
-
-                            //getAllParam();
 
 
                         })
@@ -141,6 +214,7 @@ async function loadparams1(id) {
                     getAllParam();
 
                 })
+
                 console.log("btnZakaz", btnZakaz);
             })
         });
