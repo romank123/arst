@@ -283,13 +283,19 @@ if (document.getElementById('datepicker')) {
 
 //Объявить пикер2
     let datepicker_2 = new Datepicker('#datepicker_2', {
-        // min +30d
-        // min: (function () {
-        //     let date = new Date();
-        //     date.setDate(date.getDate());
-        //     let today = date.setDate(date.getDate() + 28);
-        //     return today;
-        // })(),
+        //min +30d
+        min: (function () {
+            let date = new Date();
+            date.setDate(date.getDate());
+            let today = date.setDate(date.getDate() + 28);
+            return today;
+        })(),
+
+         fromValue: function () {
+           let date = new Date()
+          let newDate = date.setDate(date.getDate() + 29);
+           return newDate
+         },
         onInit: function () {
             let today = total.date_first;
             eDisplayMoment = document.getElementById('datepicker_2');
@@ -303,12 +309,12 @@ if (document.getElementById('datepicker')) {
             total.getTarif()
         },
 
-        openOn: (function () {
-                 let today = total.date_first;
-                 let last = moment(today, "DD.MM.YYYY").add(29, "days").format('DD.MM.YYYY');
-                 //console.log("today",today)
-                 return total.date_last
-             })(),
+        // openOn: (function () {
+        //          let today = total.date_first;
+        //          let last = moment(today, "DD.MM.YYYY").add(29, "days").format('DD.MM.YYYY');
+        //          //console.log("today",today)
+        //          return total.date_last
+        //      })(),
 
     })
 }
