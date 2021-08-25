@@ -14,8 +14,11 @@ let total = {
         }
 //Колличество техники
         //значение колличества техники
-        let countTech = document.getElementById('custom-input-number').value;
-        total.count = countTech;
+
+        let countTech = document.getElementById('custom-input-number');
+        if (countTech) {
+            total.count = countTech.value;
+
 
         //Проверка кол-ва техники на < 1
         let countTech2 = document.getElementById('custom-input-number').value;
@@ -27,6 +30,7 @@ let total = {
             btnIncr.removeAttribute('disabled');
         }
 
+        }
         let count = total.count;
 
         //расчет даты
@@ -40,6 +44,9 @@ let total = {
         //console.log("кол-во дней",days)
 
         //определить последнюю цифру в кол-ве дней
+
+        if (document.getElementById("daysOf")){
+
         let daysOf = days;
         daysOf = daysOf % 10;
         if (daysOf == 1) {
@@ -52,6 +59,7 @@ let total = {
             }
 
         }
+
         let daysOf1 = days;
         daysOf1 = daysOf1 % 10;
         if (daysOf1 == 1) {
@@ -64,6 +72,7 @@ let total = {
             }
 
         }
+
         //console.log("daysOf",daysOf)
         //Получаем значение режима (одна смена, две смены)
         let getRezhim = 0;
@@ -123,6 +132,7 @@ let total = {
         document.getElementById("totalCost").innerHTML = Intl.NumberFormat('ru-RU').format(totalCost) + " руб";
         document.getElementById("totalCostWo").innerHTML = Intl.NumberFormat('ru-RU').format(totalCostWo) + " руб";
     }
+}
 }
 
 
@@ -265,166 +275,88 @@ function getClassBtn(isLoad = false) {
 
 //функция получения параметров даты
 //Объявить пикер1
-if (document.getElementById('datepicker')) {
-    let datepicker = new Datepicker('#datepicker', {
-        // min today
+
+    let m = { dateFirst: 0, dateLast: 0 }
+
+    let dp1;
+    let dp2;
+    let date_1;
+
+
+    //пикер2
+
+    dp2 = new Datepicker('#datepicker_2', {
+
         min: (function () {
-            let date = new Date();
-            let today = date.setDate(date.getDate() - 1);
-            return today;
+            var date = new Date()
+            date.setDate(date.getDate() + 28)
+            //console.log('date-min', date)
+            return date
         })(),
-        openOn: "today",
-        weekStart: 0,
+
+        fromValue: function () {
+            var date = new Date()
+            let newDate = date.setDate(date.getDate() + 29)
+            return newDate
+        },
+
+        onRender: function () {
+            this.min = date_1;
+            this.minDate = date_1;
+            this._opts.min = date_1;
+            this._opts.minDate = date_1;
+            //console.log('render ', this.min);
+        },
+
         onChange: function (date) {
-            let NowMoment = moment(date);
-            total.date_first = NowMoment.format('DD.MM.YYYY');
-            total.date_last = moment(total.date_first, "DD.MM.YYYY").add(29, "days").format('DD.MM.YYYY');
+            //date_1 = date;
 
-
-            // setTimeout(function (date) {
-            //     eDisplayMoment = document.getElementById('datepicker_2');
-            //     eDisplayMoment.value = total.date_last;
-            //
-            //     let datepicker_2 = new Datepicker('#datepicker_2', {
-            //
-            //         fromValue: function () {
-            //             let a = Date(date);
-            //             let today = new Date(a);
-            //             let newDate = today.setDate(today.getDate() + 29);
-            //             console.log("total.date_last",total.date_last)
-            //             return newDate;
-            //         }
-            //     })
-            // },100);
-
-            total.getTarif()
-            console.log("total.date_first", total.date_first)
+            total.date_last = date;
+            total.getTarif();
 
         },
-        onInit: function () {
-            let date = new Date();
-            let NowMoment = moment(date);
-            let today = NowMoment.format('DD.MM.YYYY');
-            eDisplayMoment = document.getElementById('datepicker');
-            eDisplayMoment.value = today;
 
-        },
-    });
+    })
 
-    picker2();
-}
+//пикер 1
 
-let btnC = document.querySelectorAll('#rezhim button')[0];
+dp1 = new Datepicker('#datepicker', {
 
-console.log("btnC",btnC)
+    min: (function () {
+        var date = new Date()
+        date.setDate(date.getDate() - 1)
+        return date
+    })(),
 
-btnC.addEventListener('click', function () {
+    fromValue: function () {
+        var date = new Date()
+        var today = date.setDate(date.getDate())
+        return today
+    },
 
-    picker2();
-    console.log("run picker")
+    onInit: function () {
+        m.dateFirst = new Date()
+        let date1 = new Date(m.dateFirst)
+        date1.setDate(date1.getDate() + 29)
+        return m.dateFirst
+    },
 
-})
+    onChange: function (date) {
+        m.dateFirst = date
+        let date1 = new Date(m.dateFirst)
+        date1.setDate(date1.getDate() + 29)
+        date_1 = date1;
+        dp2.render();
+        if (dp2.getDate() <= date1) {
+            dp2.setDate(date1)
+            total.date_last = date_1;
+        }
 
-//Объявить пикер2
-    function picker2() {
+        total.date_first = m.dateFirst;
+        total.getTarif();
+    },
 
-        let dp = new Datepicker('#datepicker_2', {
-
-            //min +30d
-            min: (function () {
-                let a = Date('total.date_first');
-                let today = new Date(a);
-                let todayd = today.setDate(today.getDate(a) + 28);
-                console.log("todayd",todayd);
-                return todayd;
-
-            })(),
-
-            // onInit: function () {
-            //     let today = total.date_first;
-            //     eDisplayMoment = document.getElementById('datepicker_2');
-            //     eDisplayMoment.value = moment(today, "DD.MM.YYYY").add(29, "days").format('DD.MM.YYYY');
-            //     total.date_last = eDisplayMoment.value;
-            //     let a = Date('total.date_first');
-            //     let today1 = new Date(a);
-            //     let todayd = today1.setDate(today1.getDate(a) + 28);
-            //     return todayd;
-            //     total.getTarif()
-            // },
-
-
-            // fromValue: function () {
-            //     let a = Date('total.date_first');
-            //     let today = new Date(a);
-            //     let newDate = today.setDate(today.getDate(a) + 29);
-            //     console.log("total.date_first+++",total.date_first)
-            //     console.log("total.date_last+++",total.date_last)
-            //     return newDate;
-            // },
-
-            // onRender: function () {
-            //
-            //     console.log("render start")
-            // }
-
-        });
-        //min +30d
-        // min: (function () {
-        //     let a = Date('total.date_first');
-        //     let today = new Date(a);
-        //     let todayd = today.setDate(today.getDate() + 28);
-        //     return todayd;
-        // })(),
-
-        // fromValue: function () {
-        //      let a = Date('total.date_first');
-        //      let today = new Date(a);
-        //      let newDate = today.setDate(today.getDate() + 29);
-        //      console.log("total.date_last",total.date_last)
-        //      return newDate;
-            // let date = new Date()
-            // let newDate = date.setDate(date.getDate() + 29);
-            // return newDate
-        // },
-        // onInit: function () {
-        //     let a = Date('total.date_first');
-        //     let today = new Date(a);
-        //     let newDate = today.setDate(today.getDate() + 29);
-        //     console.log("total.date_last",total.date_last)
-        //     return newDate;
-        // },
-
-        // onInit: function () {
-        //     let today = total.date_first;
-        //     eDisplayMoment = document.getElementById('datepicker_2');
-        //     eDisplayMoment.value = moment(today, "DD.MM.YYYY").add(29, "days").format('DD.MM.YYYY');
-        //     total.date_last = eDisplayMoment.value;
-        //     return total.date_last
-        //     total.getTarif()
-        // },
-
-        // openOn: function () {
-        //     let a = Date('total.date_first');
-        //     let today = new Date(a);
-        //     let newDate = today.setDate(today.getDate() + 29);
-        //     return newDate;
-        //     },
-
-        // onChange: function (date) {
-        //     total.date_last = date;
-        //     total.getTarif()
-        // },
-
-        // openOn: (function () {
-        //          let today = total.date_first;
-        //          let last = moment(today, "DD.MM.YYYY").add(29, "days").format('DD.MM.YYYY');
-        //          //console.log("today",today)
-        //          return total.date_last
-        //      })(),
-
-
-}
-
+});
 
 //range slider
 function fun1() {
@@ -520,7 +452,6 @@ function fun1() {
     // }
 }
 }
-
 //fun1();
 
 

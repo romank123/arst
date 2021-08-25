@@ -1,5 +1,3 @@
-let getName = {name: 0, aboutWork:'не указано', adres: 'адрес не указан', param: {item: 0}};
-
 let select = document.getElementsByTagName('select')[0];
 
 if (select) {
@@ -25,8 +23,6 @@ if (select) {
 }
 
 function getSelect() {
-
-
 
     let selectVal = document.querySelectorAll('select')[0].value;
     loadparams1(selectVal).then(r => {
@@ -104,7 +100,6 @@ async function loadparams1(id) {
 
                                 console.log("elemSel2",elemSel2)
 
-
                                 elemSel2.forEach((elem) => {
 
                                     elem.addEventListener('click', () => {
@@ -124,9 +119,7 @@ async function loadparams1(id) {
 
                                 console.log("contains sel-2")
 
-
                             } else {
-
 
                                 if (elem.parentNode.parentNode.parentNode.querySelectorAll('.selected-2')) {
 
@@ -141,85 +134,184 @@ async function loadparams1(id) {
                                     }
 
                                     //getAllParam();
-
                                 }
                             }
-
-
                         })
 
                     })
 
                 }, 500)
 
-                function getAboutWork() {
-                    let aboutWork = document.getElementById('aboutWork');
-
-                    aboutWork.addEventListener('change', function () {
-
-                        let aboutWorkText = document.getElementById('aboutWork').value;
-
-                        getName.aboutWork = aboutWorkText;
-
-                    })
-                }
-
-                function getAdress() {
-                    let adres = document.getElementById('adress');
-
-                    adres.addEventListener('change', function () {
-
-                        let adres = document.getElementById('adress').value;
-
-                        getName.adres = adres;
-
-                    })
-                }
-
-                function getAllParam() {
-
-                    let allBtnActive = document.querySelectorAll('.activated');
-
-                    let select = document.getElementsByTagName('select')[0];
-
-                    let selectText = select.options[select.selectedIndex].text;
-
-                    getName.name = selectText + '\n';
-
-                    let textArea = document.getElementById('formArea');
-
-                    textArea.innerHTML = getName.name + '\n';
-
-                    for (let i = 0; i < allBtnActive.length; i++) {
-
-                        getName.param[i] = allBtnActive[i].innerHTML;
-
-                        textArea.innerHTML += getName.param[i] + '\n';
-
-                        if (i == (allBtnActive.length - 1)) {
-                            textArea.innerHTML += getName.aboutWork + '\n';
-                            textArea.innerHTML += getName.adres + '\n';
-
-                        }
-
-                    }
-                }
-
-                let btnZakaz = document.getElementsByClassName('btn-zakaz')[0];
-
-                btnZakaz.addEventListener('click', function (){
-
-                    getAboutWork();
-                    getAdress();
-                    getAllParam();
-
-                })
-
-                console.log("btnZakaz", btnZakaz);
             })
         });
 
 
     } //response ok
 }
+
+//сбор данных формы сотрудничества
+let getName = {select: 0, mass:'', value:'нет данных', aboutWork:'описание: не указано', adres: 'адрес: не указан', r:'', param: {item: 0}, ndsName:'', innerPrice:'',nameT:'', massa:''};
+
+let btnZakaz = document.getElementsByClassName('btn-zakaz')[0];
+
+function getValue(){
+
+    let r = "";
+
+    let items = document.getElementsByClassName('load')[0].children;
+
+    for (let item of items) {
+        if (item.classList.contains('value')) {
+            r += item.getElementsByTagName('span')[0].innerText +
+                ':' +
+                item.getElementsByTagName('input')[0].value +
+                '\n ';
+        } else if (item.classList.contains('dop-items')) {
+            let result = "";
+            for (let i of item.getElementsByClassName('activated')) {
+                result += i.innerText + ', ';
+            }
+
+            r += item.getElementsByTagName('span')[0].innerText +
+                ':' +
+                result +
+                '\n ';
+        } else if (item.classList.contains('param-range')) {
+            r += item.getElementsByTagName('span')[0].innerText +
+                ':' +
+                item.getElementsByTagName('input')[0].value +
+                '\n ';
+        }
+    }
+
+    getName.r = r;
+
+}
+
+btnZakaz.addEventListener('click', function (){
+
+
+    function getAllParam() {
+
+        getName.mass = document
+            .getElementsByClassName('load-mass')[0]
+            .getElementsByClassName('activated')[0].innerText;
+
+        let select = document.getElementsByTagName('select')[0];
+
+        let selectText = select.options[select.selectedIndex].text;
+
+        getName.select = selectText;
+
+        let textArea = document.getElementById('formArea');
+
+        textArea.innerHTML = getName.select + '\n'+
+            getName.mass +'\n'+
+            getName.r +'\n'+
+            getName.aboutWork +'\n'+
+            getName.adres
+    }
+
+    function getAboutWork() {
+        let aboutWork = document.getElementById('aboutWork');
+
+        let aboutWorkText = document.getElementById('aboutWork').value;
+
+        getName.aboutWork = aboutWorkText;
+
+    }
+
+    function getAdress() {
+
+        let adres = document.getElementById('adress').value;
+
+        getName.adres = adres;
+
+    }
+
+    getValue();
+    getAboutWork();
+    getAdress();
+    getAllParam();
+})
+
+//!сбор данных формы сотрудничества
+
+let btnZakazMain = document.getElementsByClassName('btn-zakaz-main')[0];
+
+btnZakazMain.addEventListener('click', function () {
+
+//сбор данных итоговая стоимость
+    let tab = document.querySelectorAll('.tabs > .active')[0].innerHTML
+    getName.ndsName = tabs;
+
+    let sectionTabs = document.querySelectorAll('.section-tabs.active')[0].getElementsByTagName('div')[2].innerText
+
+    getName.innerPrice = sectionTabs;
+
+    //сбор данных с формы заказа
+
+    let nameT = document
+        .getElementsByClassName('zakaz')[0]
+        .getElementsByTagName('img')[0]
+        .getAttribute('title')
+
+    getName.namet = nameT
+
+    let cardBtn = document.querySelectorAll('.w-full.-mt-48')[0].children
+
+    let r = "";
+
+    for (let item of cardBtn) {
+        if (item.classList.contains('mass') || item.classList.contains('rezhim')) {
+
+             r += item.getElementsByTagName('span')[0].innerText +
+                 ':' +
+                 item.getElementsByClassName('activated')[0].innerText +
+                 '\n ';
+
+        } else if (item.classList.contains('load')) {
+
+            getValue();
+
+            r += getName.r;
+
+        } else if (item.classList.contains('set-date')) {
+
+            r += item.getElementsByTagName('span')[0].innerText +
+                ':'
+            r += item.getElementsByTagName('input')[0].value +
+                '-'
+            r += item.getElementsByTagName('input')[1].value + '\n '
+
+        } else if (item.classList.contains('counter') || item.classList.contains('adres')) {
+            r += item.getElementsByTagName('span')[0].innerText +
+                ':'
+            r += item.getElementsByTagName('input')[0].value + '\n '
+
+        } else {
+            r += item.getElementsByTagName('span')[0].innerText +
+                ':'
+            r += item.getElementsByTagName('textarea')[0].value + '\n '
+        }
+    }
+
+    let textArea = document.getElementById('form-config-text-area');
+
+    textArea.innerText = r + '\n ' + getName.innerPrice;
+
+
+})
+
+document.getElementById('form-config').onsubmit = function (e){
+    e.preventDefault()
+}
+
+
+
+
+
+
+
+
 

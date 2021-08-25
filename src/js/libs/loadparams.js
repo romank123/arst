@@ -56,7 +56,7 @@ async function loadparams(id) {
             } else if (item.IBLOCK_CODE === 'params_range') {
 
                 let res = `
-<div class="flex flex-col px-7 md:px-0 lg:px-0">
+<div class="flex param-range flex-col px-7 md:px-0 lg:px-0">
 
 
 

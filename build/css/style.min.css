@@ -732,13 +732,13 @@ video {
 	margin-top: 1.25rem;
 	margin-bottom: 1.25rem;
 }
-.my-2 {
-	margin-top: 0.5rem;
-	margin-bottom: 0.5rem;
-}
 .mx-auto {
 	margin-left: auto;
 	margin-right: auto;
+}
+.my-2 {
+	margin-top: 0.5rem;
+	margin-bottom: 0.5rem;
 }
 .my-40 {
 	margin-top: 10rem;
@@ -1204,14 +1204,14 @@ video {
 .text-right {
 	text-align: right;
 }
+.font-MontserratBold {
+	font-family: "MontserratBold", sans-serif;
+}
 .font-MontserratSemiBold {
 	font-family: "MontserratSemiBold", sans-serif;
 }
 .font-MontserratMedium {
 	font-family: "MontserratMedium", sans-serif;
-}
-.font-MontserratBold {
-	font-family: "MontserratBold", sans-serif;
 }
 .font-MontserratRegular {
 	font-family: "MontserratRegular", sans-serif;
