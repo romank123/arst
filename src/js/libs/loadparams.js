@@ -42,7 +42,7 @@ async function loadparams(id) {
                 let res = `<div class="value flex flex-col p-7 md:p-0 w-full">` +
                     `<span class="font-MontserratMedium text-base my-5 md:mt-10 mt-5">${item.PROPERTIES.title.VALUE}</span>` +
                     `<div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-5">` +
-                    `<input type="text"
+                    `<input type="${item.PROPERTIES.types.VALUE_XML_ID}" 
                                    class="col-span-2 rounded-xl px-4 py-3 focus:outline-none bg-grey w-full"
                                    placeholder="Введите параметр"/>
                             <div class="flex lg:flex-col flex-wrap  lg:justify-center items-center w-full font-MontserratRegular text-sm text-brownish-grey">

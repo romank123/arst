@@ -3,7 +3,7 @@ let modal = document.getElementById("myModal");
 
 let btn = document.getElementsByClassName("myBtn-open");
 
-let close = document.getElementsByClassName("close-btn")[0];
+//let close = document.getElementsByClassName("close-btn")[0];
 
 for (let item of btn){
 
@@ -12,9 +12,19 @@ for (let item of btn){
     }
 }
 
-close.onclick = function() {
+let close = document.querySelectorAll(".close-btn");
+close.forEach((elem) => {
+    elem.addEventListener('click', () => {
+
     modal.style.display = "none";
-}
+
+    let modal1 = document.getElementById('success');
+    if (modal1){
+        modal1.style.display = "none";
+    }
+
+});
+});
 
 document.addEventListener('keydown', function(e) {
     if (e.key === 'Escape') {

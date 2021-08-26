@@ -163,7 +163,7 @@ function getValue(){
     for (let item of items) {
         if (item.classList.contains('value')) {
             r += item.getElementsByTagName('span')[0].innerText +
-                ':' +
+                ': ' +
                 item.getElementsByTagName('input')[0].value +
                 '\n ';
         } else if (item.classList.contains('dop-items')) {
@@ -173,12 +173,12 @@ function getValue(){
             }
 
             r += item.getElementsByTagName('span')[0].innerText +
-                ':' +
+                ': ' +
                 result +
                 '\n ';
         } else if (item.classList.contains('param-range')) {
             r += item.getElementsByTagName('span')[0].innerText +
-                ':' +
+                ': ' +
                 item.getElementsByTagName('input')[0].value +
                 '\n ';
         }
@@ -188,56 +188,61 @@ function getValue(){
 
 }
 
-btnZakaz.addEventListener('click', function (){
+if  (btnZakaz) {
+
+    btnZakaz.addEventListener('click', function () {
 
 
-    function getAllParam() {
+        function getAllParam() {
 
-        getName.mass = document
-            .getElementsByClassName('load-mass')[0]
-            .getElementsByClassName('activated')[0].innerText;
+            getName.mass = document
+                .getElementsByClassName('load-mass')[0]
+                .getElementsByClassName('activated')[0].innerText;
 
-        let select = document.getElementsByTagName('select')[0];
+            let select = document.getElementsByTagName('select')[0];
 
-        let selectText = select.options[select.selectedIndex].text;
+            let selectText = select.options[select.selectedIndex].text;
 
-        getName.select = selectText;
+            getName.select = selectText;
 
-        let textArea = document.getElementById('formArea');
+            let textArea = document.getElementById('formArea');
 
-        textArea.innerHTML = getName.select + '\n'+
-            getName.mass +'\n'+
-            getName.r +'\n'+
-            getName.aboutWork +'\n'+
-            getName.adres
-    }
+            textArea.value = getName.select + '\n' +
+                getName.mass + '\n' +
+                getName.r + '\n' +
+                getName.aboutWork + '\n' +
+                getName.adres
+        }
 
-    function getAboutWork() {
-        let aboutWork = document.getElementById('aboutWork');
+        function getAboutWork() {
+            let aboutWork = document.getElementById('aboutWork');
 
-        let aboutWorkText = document.getElementById('aboutWork').value;
+            let aboutWorkText = document.getElementById('aboutWork').value;
 
-        getName.aboutWork = aboutWorkText;
+            getName.aboutWork = aboutWorkText;
 
-    }
+        }
 
-    function getAdress() {
+        function getAdress() {
 
-        let adres = document.getElementById('adress').value;
+            let adres = document.getElementById('adress').value;
 
-        getName.adres = adres;
+            getName.adres = adres;
 
-    }
+        }
 
-    getValue();
-    getAboutWork();
-    getAdress();
-    getAllParam();
-})
+        getValue();
+        getAboutWork();
+        getAdress();
+        getAllParam();
+    })
+}
 
 //!сбор данных формы сотрудничества
 
 let btnZakazMain = document.getElementsByClassName('btn-zakaz-main')[0];
+
+if (btnZakazMain){
 
 btnZakazMain.addEventListener('click', function () {
 
@@ -266,7 +271,7 @@ btnZakazMain.addEventListener('click', function () {
         if (item.classList.contains('mass') || item.classList.contains('rezhim')) {
 
              r += item.getElementsByTagName('span')[0].innerText +
-                 ':' +
+                 ': ' +
                  item.getElementsByClassName('activated')[0].innerText +
                  '\n ';
 
@@ -279,33 +284,34 @@ btnZakazMain.addEventListener('click', function () {
         } else if (item.classList.contains('set-date')) {
 
             r += item.getElementsByTagName('span')[0].innerText +
-                ':'
+                ': '
             r += item.getElementsByTagName('input')[0].value +
                 '-'
             r += item.getElementsByTagName('input')[1].value + '\n '
 
         } else if (item.classList.contains('counter') || item.classList.contains('adres')) {
             r += item.getElementsByTagName('span')[0].innerText +
-                ':'
+                ': '
             r += item.getElementsByTagName('input')[0].value + '\n '
 
         } else {
             r += item.getElementsByTagName('span')[0].innerText +
-                ':'
+                ': '
             r += item.getElementsByTagName('textarea')[0].value + '\n '
         }
     }
 
     let textArea = document.getElementById('form-config-text-area');
 
-    textArea.innerText = r + '\n ' + getName.innerPrice;
+    textArea.value = r + '\n ' + getName.innerPrice;
 
 
 })
-
-document.getElementById('form-config').onsubmit = function (e){
-    e.preventDefault()
 }
+
+// document.getElementById('form-config').onsubmit = function (e){
+//     e.preventDefault()
+// }
 
 
 
