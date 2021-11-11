@@ -278,28 +278,28 @@ body {
 }
 
 .four-blocks .bg-image {
-  background: url("/img/users.png") no-repeat left center;
+  background: url("../img/users.png") no-repeat left center;
   height: 54px;
   display: inline-block;
   line-height: 54px;
 }
 
 .four-blocks .bg-image-2 {
-  background: url("/img/shield.png") no-repeat left center;
+  background: url("../img/shield.png") no-repeat left center;
   height: 54px;
   display: inline-block;
   line-height: 54px;
 }
 
 .four-blocks .bg-image-3 {
-  background: url("/img/auto.png") no-repeat left center;
+  background: url("../img/auto.png") no-repeat left center;
   height: 54px;
   display: inline-block;
   line-height: 54px;
 }
 
 .four-blocks .bg-image-4 {
-  background: url("/img/raketa.png") no-repeat left center;
+  background: url("../img/raketa.png") no-repeat left center;
   height: 54px;
   display: inline-block;
   line-height: 54px;
@@ -386,7 +386,7 @@ body {
 }
 
 .advant .bg-check {
-  background: url("/img/check.png") no-repeat left 5%;
+  background: url("../img/check.png") no-repeat left 5%;
 }
 
 .block-about-our-service .round-digit {
@@ -408,7 +408,7 @@ body {
 }
 
 .block-about-our-service .bg-image {
-  background: url(/img/bg-image.jpg) no-repeat center 35%;
+  background: url(../img/bg-image.jpg) no-repeat center 35%;
   height: 700px;
 }
 
@@ -490,7 +490,7 @@ body {
 }
 
 .how-to-work .bg-check {
-  background: url("/img/check.png") no-repeat left 5%;
+  background: url("../img/check.png") no-repeat left 5%;
 }
 
 .map {
@@ -549,28 +549,28 @@ body {
 }
 
 .four-blocks-vladelcam .bg-image {
-  background: url("/img/users.png") no-repeat left center;
+  background: url("../img/users.png") no-repeat left center;
   height: 54px;
   display: inline-block;
   line-height: 54px;
 }
 
 .four-blocks-vladelcam .bg-image-2 {
-  background: url("/img/shield.png") no-repeat left center;
+  background: url("../img/shield.png") no-repeat left center;
   height: 54px;
   display: inline-block;
   line-height: 54px;
 }
 
 .four-blocks-vladelcam .bg-image-3 {
-  background: url("/img/auto.png") no-repeat left center;
+  background: url("../img/auto.png") no-repeat left center;
   height: 54px;
   display: inline-block;
   line-height: 54px;
 }
 
 .four-blocks-vladelcam .bg-image-4 {
-  background: url("/img/raketa.png") no-repeat left center;
+  background: url("../img/raketa.png") no-repeat left center;
   height: 54px;
   display: inline-block;
   line-height: 54px;
@@ -609,7 +609,7 @@ body {
 }
 
 .block-rents-zakaz .bg-image {
-  background: url(/img/bg-image.jpg) no-repeat center 35%;
+  background: url(../img/bg-image.jpg) no-repeat center 35%;
   height: 700px;
 }
 
@@ -640,7 +640,7 @@ body {
 }
 
 .block-rents .bg-image {
-  background: url(/img/bg-image.jpg) no-repeat center 35%;
+  background: url(../img/bg-image.jpg) no-repeat center 35%;
   height: 700px;
 }
 
@@ -915,7 +915,7 @@ body {
 }
 
 .main-banner-vladelcam .bg-main-banner-vladelcam {
-  background: url("/img/main-banner-vladelcam.jpg") no-repeat center center;
+  background: url("../img/main-banner-vladelcam.jpg") no-repeat center center;
   min-height: 600px;
 }
 
@@ -1324,7 +1324,7 @@ body {
 }
 
 .main-banner-zakaz .bg-main-banner-zakaz {
-  background: url("/img/bg-main-banner-zakaz.jpg") no-repeat center center;
+  background: url("../img/bg-main-banner-zakaz.jpg") no-repeat center center;
   min-height: 600px;
 }
 
